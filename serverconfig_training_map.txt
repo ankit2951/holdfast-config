@@ -1,0 +1,83 @@
+###- Server & Steam Ports (All 3 ports must be unique per server instance).
+
+server_port 84567
+steam_communications_port 22258
+steam_query_port 26541
+
+
+
+###- Server Settings
+
+server_name New Holdfast NaW Server - Linebattle Event
+server_welcome_message Welcome to my new game server!
+server_region usa
+server_admin_password ChangeThisPassword
+#server_password ChangeThisPassword
+###- Bandwidth & Performance Settings
+
+network_broadcast_mode LowBandwidth
+
+
+
+###- Global Gameplay & Map Settings
+
+artillery_fieldgun_respawn_timer 120
+artillery_rocketlauncher_respawn_timer 120
+map_rotation_start_randomise false
+
+
+
+###- Map Rotations
+#Rotation 1 = Traininggrounds
+!map_rotation start
+map_name Traininggrounds
+game_mode ArmyBattlefield
+game_type Hardcore
+round_time_minutes -1
+reinforcements_per_faction 9999
+wave_spawn_time_seconds -1
+max_player_respawns -1
+faction_balancing false
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 200
+time_hour 15
+time_dynamic false
+weather_preset calm
+weather_dynamic false
+friendly_fire true
+faction_attacking prussian
+faction_defending british
+
+sappers_attacking_starting_materials 10000
+sappers_defending_starting_materials 10000
+
+sappers_buildlimit InfantryStakes defending 255
+sappers_buildlimit Gabion defending 255
+sappers_buildlimit ChevauxDeFriseLarge defending 255
+sappers_buildlimit ChevauxDeFriseSmall defending 255
+sappers_buildlimit ExplosiveBarrel defending 255
+sappers_buildlimit Palisade defending 255
+sappers_buildlimit ShootingPlatform defending 255
+sappers_buildlimit Chair defending 255
+sappers_buildlimit Earthworks defending 255
+sappers_buildlimit Sandbag defending 255
+sappers_buildlimit SwivelGun defending 255
+sappers_buildlimit Ammobox defending 255
+sappers_buildlimit RocketStack defending 255
+
+sappers_buildlimit InfantryStakes attacking 255
+sappers_buildlimit Gabion attacking 255
+sappers_buildlimit ChevauxDeFriseLarge attacking 255
+sappers_buildlimit ChevauxDeFriseSmall attacking 255
+sappers_buildlimit ExplosiveBarrel attacking 255
+sappers_buildlimit Palisade attacking 255
+sappers_buildlimit ShootingPlatform attacking 255
+sappers_buildlimit Chair attacking 255
+sappers_buildlimit Earthworks attacking 255
+sappers_buildlimit Sandbag attacking 255
+sappers_buildlimit SwivelGun attacking 255
+sappers_buildlimit Ammobox attacking 255
+sappers_buildlimit RocketStack attacking 255
+!map_rotation end

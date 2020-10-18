@@ -1,0 +1,467 @@
+###- Server & Steam Ports (All 3 ports must be unique per server instance).
+
+server_port 20106
+steam_communications_port 8706
+steam_query_port 27006
+
+
+
+###- Server Settings
+
+server_name New Holdfast NaW Server - Naval Battle Event
+server_welcome_message Welcome to my new game server!
+server_region usa
+server_admin_password ChangeThisPassword
+#server_password ChangeThisPassword
+
+
+
+###- Server Intro Message
+
+server_intro_title Public Naval Battle - Event
+server_intro_body Greetings ladies and gentleman. Welcome to the Public Naval Battle event! Kindly follow the rules set by the event hosts to participate. <br><br>Come join the community on Discord. We look forward to seeing you there! <br><br><b><color=yellow>discord.gg/holdfastgame</color></b><br><br><b>Event Rules</b><br><b>1.</b> Play with your crewmates.
+
+
+
+###- Bandwidth & Performance Settings
+
+network_broadcast_mode LowBandwidth
+
+
+
+###- Global Gameplay & Map Settings
+
+artillery_fieldgun_respawn_timer 120
+artillery_rocketlauncher_respawn_timer 120
+map_rotation_start_randomise false
+
+
+
+###- Map Rotations
+
+#--- Rotation Group 1 (Naval Assault) --- 
+
+
+#1 = Caribbean [Naval Assault] - STAGING - Calm | Morning (9)
+!map_rotation start
+map_name Caribbean
+game_mode NavalAssault
+game_type Standard
+round_time_minutes -1
+max_player_respawns -1
+faction_balancing false
+faction_balancing_discrepancy_amount 20
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 80
+time_hour 9
+time_dynamic false
+weather_preset calm3
+weather_dynamic false
+wind_strength 1
+wind_direction south
+ships_respawn_time_seconds 90
+ships_preset 37
+ships_spawn frigate50gun 0 british
+ships_spawn brigsloop13gun 0 british
+ships_spawn schooner8gun 0 british
+ships_spawn schooner2gun 0 british
+ships_spawn rocketboat 0 british
+ships_spawn gunboat 1 british
+ships_spawn frigate50gun 0 french
+ships_spawn brigsloop13gun 0 french
+ships_spawn schooner8gun 0 french
+ships_spawn schooner2gun 0 french
+ships_spawn rocketboat 0 french
+ships_spawn gunboat 1 french
+rowboat_cooldown_timer 120
+rowboat_cooldown_while_sinking_timer 5
+sappers_attacking_starting_materials 150
+sappers_defending_starting_materials 150
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 0
+sappers_buildlimit palisade defending 0
+sappers_buildlimit shootingplatform attacking 0
+sappers_buildlimit shootingplatform defending 0
+sappers_buildlimit swivelgun attacking 1
+sappers_buildlimit swivelgun defending 1
+faction_attacking french
+faction_defending british
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+class_system_orders true
+
+#Spawnpoint Override
+objects_override spawnsection 2106.25 9.59 656.75 0.00 18.64 0.00 11,Paradise,Camp,Defending,10,10
+objects_override spawnsection 2261.75 9.68 1028.62 0.00 171.00 0.00 12,Paradise,Camp,Attacking,10,10
+
+#Spawn Override
+spawn_override K ArmyInfantryOfficer 10
+spawn_override K ArmyLineInfantry 125
+spawn_override K ArmyLineInfantry2 125
+spawn_override K Grenadier 125
+spawn_override K Guard 125
+spawn_override K LightInfantry 125
+#spawn_override K Rifleman 0 (Not Used)
+spawn_override K FlagBearer 6
+spawn_override K Drummer 3
+spawn_override K Fifer 3
+spawn_override K Bagpiper 3
+spawn_override K Surgeon 4
+spawn_override K Sapper 3
+#spawn_override K Carpenter 0 (Not Used)
+spawn_override K Cannoneer 40
+spawn_override K Rocketeer 40
+#spawn_override K Hussar 0 (Not Used)
+#spawn_override K CuirassierDragoon 0 (Not Used)
+
+spawn_override K NavalMarine 125
+spawn_override K CoastGuard 125
+spawn_override K Customs 125
+
+spawn_override L ArmyInfantryOfficer 10
+spawn_override L ArmyLineInfantry 125
+spawn_override L ArmyLineInfantry2 125
+spawn_override L Grenadier 125
+spawn_override L Guard 125
+spawn_override L LightInfantry 125
+#spawn_override L Rifleman 0 (Not Used)
+spawn_override L FlagBearer 6
+spawn_override L Drummer 3
+spawn_override L Fifer 3
+spawn_override L Bagpiper 3
+spawn_override L Surgeon 4
+spawn_override L Sapper 3
+#spawn_override L Carpenter 0 (Not Used)
+spawn_override L Cannoneer 40
+spawn_override L Rocketeer 40
+#spawn_override L Hussar 0 (Not Used)
+#spawn_override L CuirassierDragoon 0 (Not Used)
+
+spawn_override L NavalMarine 125
+spawn_override L CoastGuard 125
+spawn_override L Customs 125
+
+#Spawn Override Ships
+ships_spawn_detail_override Gunboat british NavalSailor 0
+ships_spawn_detail_override Gunboat french NavalSailor 0
+
+#Object Overrides
+objects_override House2v2_Brittany 2244.71 11.50 1019.59 0.00 79.59 0.00
+objects_override PierGroup_Destruction 2209.05 -0.79 861.50 0.00 216.47 0.00
+objects_override PierGroup_Destruction 2202.04 -0.79 851.92 0.00 216.47 0.00
+objects_override PierGroup_Destruction 2195.03 -0.79 842.34 0.00 216.47 0.00
+objects_override PierGroup_Destruction 2188.02 -0.79 832.76 0.00 216.47 0.00
+objects_override PierGroup_Destruction 2181.01 -0.79 823.18 0.00 216.47 0.00
+objects_override PierGroup_Destruction 2174.00 -0.79 813.60 0.00 216.47 0.00
+objects_override PierGroup_Destruction 2166.99 -0.79 804.02 0.00 216.47 0.00
+objects_override Campfire 2104.57 1.24 747.30 0.00 111.99 0.00
+objects_override Shipyard_Hut 2166.69 0.87 697.29 0.00 161.98 0.00
+
+#Automated Commands - Round Start
+rc set allowFiring true
+
+!map_rotation end
+
+
+#2 = Open Oceans [Naval Assault] - [2x 50-Gun Frigate] - Calm | Morning (8)
+!map_rotation start
+map_name RandomWaters
+game_mode NavalAssault
+game_type Standard
+round_time_minutes 20
+max_player_respawns -1
+faction_balancing false
+faction_balancing_discrepancy_amount 20
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 80
+time_hour 8
+time_dynamic false
+weather_preset calm2
+weather_dynamic false
+wind_strength 1
+wind_direction east
+ships_respawn_time_seconds 90
+ships_preset 37
+ships_spawn frigate50gun 2 british
+ships_spawn brigsloop13gun 0 british
+ships_spawn schooner8gun 0 british
+ships_spawn schooner2gun 0 british
+ships_spawn rocketboat 0 british
+ships_spawn gunboat 0 british
+ships_spawn frigate50gun 2 french
+ships_spawn brigsloop13gun 0 french
+ships_spawn schooner8gun 0 french
+ships_spawn schooner2gun 0 french
+ships_spawn rocketboat 0 french
+ships_spawn gunboat 0 french
+rowboat_cooldown_timer 120
+rowboat_cooldown_while_sinking_timer 5
+faction_attacking british
+faction_defending french
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+class_system_orders false
+!map_rotation end
+
+
+#3 = Caribbean [Naval Assault] - [1x 50-Gun Frigate & 13-Gun Brig-Sloop & 1x 8-Gun Schooner] - Calm | Morning (8)
+!map_rotation start
+map_name Caribbean
+game_mode NavalAssault
+game_type Standard
+round_time_minutes 20
+max_player_respawns -1
+faction_balancing false
+faction_balancing_discrepancy_amount 20
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 80
+time_hour 8
+time_dynamic false
+weather_preset calm3
+weather_dynamic false
+wind_strength 1
+wind_direction east
+ships_respawn_time_seconds 90
+ships_preset 37
+ships_spawn frigate50gun 1 british
+ships_spawn brigsloop13gun 1 british
+ships_spawn schooner8gun 1 british
+ships_spawn schooner2gun 0 british
+ships_spawn rocketboat 0 british
+ships_spawn gunboat 0 british
+ships_spawn frigate50gun 1 french
+ships_spawn brigsloop13gun 1 french
+ships_spawn schooner8gun 1 french
+ships_spawn schooner2gun 0 french
+ships_spawn rocketboat 0 french
+ships_spawn gunboat 0 french
+rowboat_cooldown_timer 120
+rowboat_cooldown_while_sinking_timer 5
+faction_attacking british
+faction_defending french
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+class_system_orders false
+!map_rotation end
+
+
+#4 = Harouti Islands [Naval Assault] - [1x 13-Gun Brig-Sloop & 1x 8-Gun Schooner & 1x 2-Gun Schooner & 1x Rocketboat & 2x Gunboat] - Calm | Morning (8)
+!map_rotation start
+map_name HaroutiIslands
+game_type Standard
+game_mode NavalAssault
+round_time_minutes 20
+max_player_respawns -1
+faction_balancing false
+faction_balancing_discrepancy_amount 20
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 80
+time_hour 8
+time_dynamic false
+weather_preset calm2
+weather_dynamic false
+wind_strength 1
+wind_direction east
+ships_respawn_time_seconds 90
+ships_preset 37
+ships_spawn frigate50gun 0 british
+ships_spawn brigsloop13gun 1 british
+ships_spawn schooner8gun 1 british
+ships_spawn schooner2gun 1 british
+ships_spawn rocketboat 1 british
+ships_spawn gunboat 2 british
+ships_spawn frigate50gun 0 french
+ships_spawn brigsloop13gun 1 french
+ships_spawn schooner8gun 1 french
+ships_spawn schooner2gun 1 french
+ships_spawn rocketboat 1 french
+ships_spawn gunboat 2 french
+rowboat_cooldown_timer 120
+rowboat_cooldown_while_sinking_timer 5
+faction_attacking british
+faction_defending french
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+class_system_orders false
+!map_rotation end
+
+
+#--- Rotation Group 2 (Coastal Siege) --- 
+
+
+#5 = Balamor Bay [Coastal Siege] - Calm | Morning (8)
+!map_rotation start
+map_name BalamorBay
+game_mode CoastalSiege
+game_type Standard
+round_time_minutes 30
+reinforcements_per_faction 400
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+faction_balancing true
+faction_balancing_discrepancy_amount 5
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 80
+time_hour 8
+time_dynamic false
+weather_preset calm
+weather_dynamic false
+wind_strength 1
+wind_direction south
+ships_respawn_time_seconds 15
+ships_preset 37
+ships_spawn frigate50gun 0 british
+ships_spawn brigsloop13gun 0 british
+ships_spawn schooner8gun 0 british
+ships_spawn schooner2gun 2 british
+ships_spawn rocketboat 1 british
+ships_spawn gunboat 5 british
+rowboat_cooldown_timer 30
+rowboat_cooldown_while_sinking_timer 5
+faction_attacking british
+faction_defending french
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+class_system_orders false
+!map_rotation end
+
+
+#6 = Fort Imperial [Coastal Siege] - Calm | Morning (8)
+!map_rotation start
+map_name FortNational
+game_mode CoastalSiege
+round_time_minutes 30
+reinforcements_per_faction 300
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+faction_balancing true
+faction_balancing_discrepancy_amount 5
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 80
+time_hour 8
+time_dynamic false
+weather_preset calm3
+weather_dynamic false
+wind_strength 1
+wind_direction east
+ships_respawn_time_seconds 15
+ships_preset 37
+ships_spawn frigate50gun 0 british
+ships_spawn brigsloop13gun 0 british
+ships_spawn schooner8gun 2 british
+ships_spawn schooner2gun 2 british
+ships_spawn rocketboat 1 british
+ships_spawn gunboat 4 british
+rowboat_cooldown_timer 30
+rowboat_cooldown_while_sinking_timer 5
+faction_attacking british
+faction_defending french
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+class_system_orders false
+!map_rotation end
+
+
+#7 = Martello Tower [Coastal Siege] - Calm | Morning (8)
+!map_rotation start
+map_name MartelloTower
+game_mode CoastalSiege
+round_time_minutes 30
+reinforcements_per_faction 350
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+faction_balancing true
+faction_balancing_discrepancy_amount 5
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 80
+time_hour 8
+time_dynamic false
+weather_preset calm3
+weather_dynamic false
+wind_strength 1
+wind_direction south
+ships_respawn_time_seconds 15
+ships_preset 37
+ships_spawn frigate50gun 0 british
+ships_spawn brigsloop13gun 0 british
+ships_spawn schooner8gun 1 british
+ships_spawn schooner2gun 2 british
+ships_spawn rocketboat 1 british
+ships_spawn gunboat 4 british
+rowboat_cooldown_timer 30
+rowboat_cooldown_while_sinking_timer 5
+faction_attacking british
+faction_defending french
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+class_system_orders false
+!map_rotation end
+
+
+#8 = South Sea Castle [Coastal Siege] - Calm | Morning (9)
+!map_rotation start
+map_name SouthSeaCastle
+game_mode CoastalSiege
+round_time_minutes 30
+reinforcements_per_faction 400
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+faction_balancing true
+faction_balancing_discrepancy_amount 5
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 80
+time_hour 8
+time_dynamic false
+weather_preset calm2
+weather_dynamic false
+wind_strength 1
+wind_direction east
+ships_respawn_time_seconds 15
+ships_preset 37
+ships_spawn frigate50gun 0 french
+ships_spawn brigsloop13gun 0 french
+ships_spawn schooner8gun 0 french
+ships_spawn schooner2gun 2 french
+ships_spawn rocketboat 1 french
+ships_spawn gunboat 5 french
+rowboat_cooldown_timer 30
+rowboat_cooldown_while_sinking_timer 5
+faction_attacking french
+faction_defending british
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+class_system_orders false
+!map_rotation end

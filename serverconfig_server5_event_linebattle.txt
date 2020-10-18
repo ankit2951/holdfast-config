@@ -1,0 +1,3344 @@
+###- Server & Steam Ports (All 3 ports must be unique per server instance).
+
+server_port 20105
+steam_communications_port 8705
+steam_query_port 27005
+
+
+
+###- Server Settings
+
+server_name New Holdfast NaW Server - Linebattle Event
+server_welcome_message Welcome to my new game server!
+server_region usa
+server_admin_password ChangeThisPassword
+#server_password ChangeThisPassword
+
+
+
+###- Server Intro Message
+
+server_intro_title Public Linebattle - Event
+server_intro_body Greetings ladies and gentleman. Welcome to the Public Linebattle event! Kindly follow the rules set by the event hosts to participate. <br><br>Stick nearby a regiment and close to a line to play in glorious formations relevant to the Napoleonic era. <br><br>Come join the community on Discord. We look forward to seeing you there! <br><br><b><color=yellow>discord.gg/holdfastgame</color></b><br><br><b>Event Rules</b><br><b>1.</b> Follow other players when playing in this server.<br><b>2.</b> You must be in a line to shoot your weapon.
+
+
+
+###- Bandwidth & Performance Settings
+
+network_broadcast_mode LowBandwidth
+
+
+
+###- Global Gameplay & Map Settings
+
+artillery_fieldgun_respawn_timer 120
+artillery_rocketlauncher_respawn_timer 120
+map_rotation_start_randomise false
+
+
+
+###- Map Rotations
+
+#--- Rotation Group 1 (Assault Linebattles) --- 
+
+
+#1 = Sharpton [Army Battlefield] - STAGING - Calm | Morning (9)
+!map_rotation start
+map_name sharpton
+game_mode ArmyBattlefield
+game_type Hardcore
+round_time_minutes -1
+reinforcements_per_faction 9999
+wave_spawn_time_seconds -1
+wave_spawn_vehicle_time_seconds 10
+spawn_immunity_timer 2
+faction_balancing false
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 180
+time_hour 9
+time_dynamic false
+weather_preset calm2
+weather_dynamic false
+friendly_fire false
+friendly_fire_melee_bounce true
+damage_split 0
+sappers_attacking_starting_materials 150
+sappers_defending_starting_materials 150
+sappers_buildlimit explosivebarrel attacking 0
+sappers_buildlimit explosivebarrel defending 0
+sappers_buildlimit palisade attacking 0
+sappers_buildlimit palisade defending 0
+sappers_buildlimit shootingplatform attacking 0
+sappers_buildlimit shootingplatform defending 0
+sappers_buildlimit swivelgun attacking 0
+sappers_buildlimit swivelgun defending 0
+officers_spawn_mounted false
+faction_attacking french
+faction_defending british
+
+#Spawn Override
+spawn_override A ArmyInfantryOfficer 10
+spawn_override A ArmyLineInfantry 125
+spawn_override A ArmyLineInfantry2 125
+spawn_override A Grenadier 125
+spawn_override A Guard 125
+spawn_override A LightInfantry 125
+#spawn_override A Rifleman 0 (Not Used)
+spawn_override A FlagBearer 6
+spawn_override A Drummer 3
+spawn_override A Fifer 3
+spawn_override A Bagpiper 3
+spawn_override A Surgeon 4
+spawn_override A Sapper 3
+#spawn_override A Carpenter 0 (Not Used)
+spawn_override A Cannoneer 20
+spawn_override A Rocketeer 20
+#spawn_override A Hussar 0 (Not Used)
+#spawn_override A CuirassierDragoon 0 (Not Used)
+
+spawn_override A NavalMarine 125
+spawn_override A CoastGuard 125
+spawn_override A Customs 125
+
+spawn_override B ArmyInfantryOfficer 10
+spawn_override B ArmyLineInfantry 125
+spawn_override B ArmyLineInfantry2 125
+spawn_override B Grenadier 125
+spawn_override B Guard 125
+spawn_override B LightInfantry 125
+#spawn_override B Rifleman 0 (Not Used)
+spawn_override B FlagBearer 6
+spawn_override B Drummer 3
+spawn_override B Fifer 3
+spawn_override B Bagpiper 3
+spawn_override B Surgeon 4
+spawn_override B Sapper 3
+#spawn_override B Carpenter 0 (Not Used)
+spawn_override B Cannoneer 20
+spawn_override B Rocketeer 20
+#spawn_override B Hussar 0 (Not Used)
+#spawn_override B CuirassierDragoon 0 (Not Used)
+
+spawn_override B NavalMarine 125
+spawn_override B CoastGuard 125
+spawn_override B Customs 125
+
+#Starting Weapon Override
+starting_weapons_override British Hussar 4 4 Unarmed Pistol_NewLandPattern Sabre_1796PatternLightCavalry BearingFlagBritish
+starting_weapons_override British CuirassierDragoon 4 4 Unarmed Carbine_Elliot Sword_Pattern1803FlankOfficerCavalry BearingFlagBritish
+starting_weapons_override French Hussar 4 4 Unarmed Pistol_XIII Sabre_AnXILightCavalry BearingFlagFrench
+starting_weapons_override French CuirassierDragoon 4 4 Unarmed Carbine_CharlevilleCavalryIXXIII Sabre_AnXILightCavalry BearingFlagFrench
+starting_weapons_override Prussian Hussar 4 4 Unarmed Pistol_XIII Sabre_AnXILightCavalry BearingFlagPrussian
+starting_weapons_override Prussian CuirassierDragoon 4 4 Unarmed Carbine_CharlevilleCavalryIXXIII Sabre_AnXILightCavalry BearingFlagPrussian
+
+#Automated Commands - Round Start
+rc set allowFiring true
+
+rc set characterRespawntime 1
+rc set characterVehicleRespawnTime 1
+
+rc set cannonMoverSpeedMultiplier 1
+rc set cannonMoverRotationMultiplier 1
+rc set rocketMoverSpeedMultiplier 1
+rc set rocketMoverRotationMultiplier 1
+
+#Automated Commands - Special Horses
+rc set useSpecialHorseVariants true
+
+#Automated Commands - Idle Cavalry
+#rc set secondsToPassAfterDismounted 30
+#rc set secondsSpawnedBeforeDespawn 30
+#rc set secondsToPassAfterHealthUpdated 15
+
+!map_rotation end
+
+
+#2 = Tahir Desert [Army Assault] - Calm | Morning (9)
+!map_rotation start
+map_name egypt
+game_mode ArmyAssault
+game_type Hardcore
+round_time_minutes 15
+round_spawn_close_timer_seconds 180
+faction_balancing false
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 180
+time_hour 9
+time_dynamic false
+weather_preset calm
+weather_dynamic false
+friendly_fire false
+friendly_fire_melee_bounce true
+damage_split 0
+sappers_attacking_starting_materials 150
+sappers_defending_starting_materials 150
+sappers_buildlimit explosivebarrel attacking 0
+sappers_buildlimit explosivebarrel defending 0
+sappers_buildlimit palisade attacking 0
+sappers_buildlimit palisade defending 0
+sappers_buildlimit shootingplatform attacking 0
+sappers_buildlimit shootingplatform defending 0
+sappers_buildlimit swivelgun attacking 0
+sappers_buildlimit swivelgun defending 0
+officers_spawn_mounted false
+faction_attacking french
+faction_defending british
+
+#Spawn Overrides
+spawn_override A ArmyInfantryOfficer 10
+spawn_override A ArmyLineInfantry 125
+spawn_override A ArmyLineInfantry2 125
+spawn_override A Grenadier 125
+spawn_override A Guard 125
+spawn_override A LightInfantry 125
+#spawn_override A Rifleman 0 (Not Used)
+spawn_override A FlagBearer 6
+spawn_override A Drummer 3
+spawn_override A Fifer 3
+spawn_override A Bagpiper 3
+spawn_override A Surgeon 4
+spawn_override A Sapper 3
+#spawn_override A Carpenter 0 (Not Used)
+spawn_override A Cannoneer 20
+spawn_override A Rocketeer 20
+spawn_override A Hussar 4
+spawn_override A CuirassierDragoon 4
+
+spawn_override A NavalMarine 125
+spawn_override A CoastGuard 125
+spawn_override A Customs 125
+
+spawn_override B ArmyInfantryOfficer 10
+spawn_override B ArmyLineInfantry 125
+spawn_override B ArmyLineInfantry2 125
+spawn_override B Grenadier 125
+spawn_override B Guard 125
+spawn_override B LightInfantry 125
+#spawn_override B Rifleman 0 (Not Used)
+spawn_override B FlagBearer 6
+spawn_override B Drummer 3
+spawn_override B Fifer 3
+spawn_override B Bagpiper 3
+spawn_override B Surgeon 4
+spawn_override B Sapper 3
+#spawn_override B Carpenter 0 (Not Used)
+spawn_override B Cannoneer 20
+spawn_override B Rocketeer 20
+spawn_override B Hussar 4
+spawn_override B CuirassierDragoon 4
+
+spawn_override B NavalMarine 125
+spawn_override B CoastGuard 125
+spawn_override B Customs 125
+
+#Starting Weapon Override
+starting_weapons_override British Hussar 4 4 Unarmed Pistol_NewLandPattern Sabre_1796PatternLightCavalry BearingFlagBritish
+starting_weapons_override British CuirassierDragoon 4 4 Unarmed Carbine_Elliot Sword_Pattern1803FlankOfficerCavalry BearingFlagBritish
+starting_weapons_override French Hussar 4 4 Unarmed Pistol_XIII Sabre_AnXILightCavalry BearingFlagFrench
+starting_weapons_override French CuirassierDragoon 4 4 Unarmed Carbine_CharlevilleCavalryIXXIII Sabre_AnXILightCavalry BearingFlagFrench
+starting_weapons_override Prussian Hussar 4 4 Unarmed Pistol_XIII Sabre_AnXILightCavalry BearingFlagPrussian
+starting_weapons_override Prussian CuirassierDragoon 4 4 Unarmed Carbine_CharlevilleCavalryIXXIII Sabre_AnXILightCavalry BearingFlagPrussian
+
+#Automated Commands - Round Start
+rc set allowFiring true
+
+rc set characterRespawntime 1
+rc set characterVehicleRespawnTime 1
+
+rc set cannonMoverSpeedMultiplier 1
+rc set cannonMoverRotationMultiplier 1
+rc set rocketMoverSpeedMultiplier 1
+rc set rocketMoverRotationMultiplier 1
+
+!map_rotation end
+
+
+#3 = Desert Plains 1 (L) [Army Assault] - Calm | Afternoon (16)
+!map_rotation start
+map_name desertplains
+game_mode ArmyAssault
+game_type Hardcore
+round_time_minutes 15
+round_spawn_close_timer_seconds 180
+faction_balancing false
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 180
+time_hour 16
+time_dynamic false
+weather_preset calm
+weather_dynamic false
+friendly_fire false
+friendly_fire_melee_bounce true
+damage_split 0
+sappers_attacking_starting_materials 150
+sappers_defending_starting_materials 150
+sappers_buildlimit explosivebarrel attacking 0
+sappers_buildlimit explosivebarrel defending 0
+sappers_buildlimit palisade attacking 0
+sappers_buildlimit palisade defending 0
+sappers_buildlimit shootingplatform attacking 0
+sappers_buildlimit shootingplatform defending 0
+sappers_buildlimit swivelgun attacking 0
+sappers_buildlimit swivelgun defending 0
+officers_spawn_mounted false
+faction_attacking prussian
+faction_defending british
+
+#Spawn Overrides
+spawn_override A ArmyInfantryOfficer 10
+spawn_override A ArmyLineInfantry 125
+spawn_override A ArmyLineInfantry2 125
+spawn_override A Grenadier 125
+spawn_override A Guard 125
+spawn_override A LightInfantry 125
+#spawn_override A Rifleman 0 (Not Used)
+spawn_override A FlagBearer 6
+spawn_override A Drummer 3
+spawn_override A Fifer 3
+spawn_override A Bagpiper 3
+spawn_override A Surgeon 4
+spawn_override A Sapper 3
+#spawn_override A Carpenter 0 (Not Used)
+spawn_override A Cannoneer 20
+spawn_override A Rocketeer 20
+spawn_override A Hussar 4
+spawn_override A CuirassierDragoon 4
+
+#spawn_override A NavalMarine 125 (No Prussian Naval Units)
+#spawn_override A CoastGuard 125 (No Prussian Naval Units)
+#spawn_override A Customs 125 (No Prussian Naval Units)
+
+spawn_override B ArmyInfantryOfficer 10
+spawn_override B ArmyLineInfantry 125
+spawn_override B ArmyLineInfantry2 125
+spawn_override B Grenadier 125
+spawn_override B Guard 125
+spawn_override B LightInfantry 125
+#spawn_override B Rifleman 0 (Not Used)
+spawn_override B FlagBearer 6
+spawn_override B Drummer 3
+spawn_override B Fifer 3
+spawn_override B Bagpiper 3
+spawn_override B Surgeon 4
+spawn_override B Sapper 3
+#spawn_override B Carpenter 0 (Not Used)
+spawn_override B Cannoneer 20
+spawn_override B Rocketeer 20
+spawn_override B Hussar 4
+spawn_override B CuirassierDragoon 4
+
+spawn_override B NavalMarine 125
+spawn_override B CoastGuard 125
+spawn_override B Customs 125
+
+#Starting Weapon Override
+starting_weapons_override British Hussar 4 4 Unarmed Pistol_NewLandPattern Sabre_1796PatternLightCavalry BearingFlagBritish
+starting_weapons_override British CuirassierDragoon 4 4 Unarmed Carbine_Elliot Sword_Pattern1803FlankOfficerCavalry BearingFlagBritish
+starting_weapons_override French Hussar 4 4 Unarmed Pistol_XIII Sabre_AnXILightCavalry BearingFlagFrench
+starting_weapons_override French CuirassierDragoon 4 4 Unarmed Carbine_CharlevilleCavalryIXXIII Sabre_AnXILightCavalry BearingFlagFrench
+starting_weapons_override Prussian Hussar 4 4 Unarmed Pistol_XIII Sabre_AnXILightCavalry BearingFlagPrussian
+starting_weapons_override Prussian CuirassierDragoon 4 4 Unarmed Carbine_CharlevilleCavalryIXXIII Sabre_AnXILightCavalry BearingFlagPrussian
+
+#Automated Commands - Round Start
+rc set allowFiring true
+
+rc set characterRespawntime 1
+rc set characterVehicleRespawnTime 1
+
+rc set cannonMoverSpeedMultiplier 1
+rc set cannonMoverRotationMultiplier 1
+rc set rocketMoverSpeedMultiplier 1
+rc set rocketMoverRotationMultiplier 1
+
+!map_rotation end
+
+
+#4 = Ancient Plains 1 (L) [Army Assault] - Calm | Morning (8)
+!map_rotation start
+map_name ancientplains
+game_mode ArmyAssault
+game_type Hardcore
+round_time_minutes 15
+round_spawn_close_timer_seconds 180
+faction_balancing false
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 180
+time_hour 8
+time_dynamic false
+weather_preset calm2
+weather_dynamic false
+friendly_fire false
+friendly_fire_melee_bounce true
+damage_split 0
+sappers_attacking_starting_materials 150
+sappers_defending_starting_materials 150
+sappers_buildlimit explosivebarrel attacking 0
+sappers_buildlimit explosivebarrel defending 0
+sappers_buildlimit palisade attacking 0
+sappers_buildlimit palisade defending 0
+sappers_buildlimit shootingplatform attacking 0
+sappers_buildlimit shootingplatform defending 0
+sappers_buildlimit swivelgun attacking 0
+sappers_buildlimit swivelgun defending 0
+officers_spawn_mounted false
+faction_attacking prussian
+faction_defending british
+
+#Spawn Overrides
+spawn_override A ArmyInfantryOfficer 10
+spawn_override A ArmyLineInfantry 125
+spawn_override A ArmyLineInfantry2 125
+spawn_override A Grenadier 125
+spawn_override A Guard 125
+spawn_override A LightInfantry 125
+#spawn_override A Rifleman 0 (Not Used)
+spawn_override A FlagBearer 6
+spawn_override A Drummer 3
+spawn_override A Fifer 3
+spawn_override A Bagpiper 3
+spawn_override A Surgeon 4
+spawn_override A Sapper 3
+#spawn_override A Carpenter 0 (Not Used)
+spawn_override A Cannoneer 20
+spawn_override A Rocketeer 20
+spawn_override A Hussar 4
+spawn_override A CuirassierDragoon 4
+
+#spawn_override A NavalMarine 125 (No Prussian Naval Units)
+#spawn_override A CoastGuard 125 (No Prussian Naval Units)
+#spawn_override A Customs 125 (No Prussian Naval Units)
+
+spawn_override B ArmyInfantryOfficer 10
+spawn_override B ArmyLineInfantry 125
+spawn_override B ArmyLineInfantry2 125
+spawn_override B Grenadier 125
+spawn_override B Guard 125
+spawn_override B LightInfantry 125
+#spawn_override B Rifleman 0 (Not Used)
+spawn_override B FlagBearer 6
+spawn_override B Drummer 3
+spawn_override B Fifer 3
+spawn_override B Bagpiper 3
+spawn_override B Surgeon 4
+spawn_override B Sapper 3
+#spawn_override B Carpenter 0 (Not Used)
+spawn_override B Cannoneer 20
+spawn_override B Rocketeer 20
+spawn_override B Hussar 4
+spawn_override B CuirassierDragoon 4
+
+spawn_override B NavalMarine 125
+spawn_override B CoastGuard 125
+spawn_override B Customs 125
+
+#Starting Weapon Override
+starting_weapons_override British Hussar 4 4 Unarmed Pistol_NewLandPattern Sabre_1796PatternLightCavalry BearingFlagBritish
+starting_weapons_override British CuirassierDragoon 4 4 Unarmed Carbine_Elliot Sword_Pattern1803FlankOfficerCavalry BearingFlagBritish
+starting_weapons_override French Hussar 4 4 Unarmed Pistol_XIII Sabre_AnXILightCavalry BearingFlagFrench
+starting_weapons_override French CuirassierDragoon 4 4 Unarmed Carbine_CharlevilleCavalryIXXIII Sabre_AnXILightCavalry BearingFlagFrench
+starting_weapons_override Prussian Hussar 4 4 Unarmed Pistol_XIII Sabre_AnXILightCavalry BearingFlagPrussian
+starting_weapons_override Prussian CuirassierDragoon 4 4 Unarmed Carbine_CharlevilleCavalryIXXIII Sabre_AnXILightCavalry BearingFlagPrussian
+
+#Automated Commands - Round Start
+rc set allowFiring true
+
+rc set characterRespawntime 1
+rc set characterVehicleRespawnTime 1
+
+rc set cannonMoverSpeedMultiplier 1
+rc set cannonMoverRotationMultiplier 1
+rc set rocketMoverSpeedMultiplier 1
+rc set rocketMoverRotationMultiplier 1
+
+!map_rotation end
+
+
+#5 = Grassy Plains 1 (L) [Army Assault] - Calm | Evening (17)
+!map_rotation start
+map_name grassyplains
+game_mode ArmyAssault
+game_type Hardcore
+round_time_minutes 15
+round_spawn_close_timer_seconds 180
+faction_balancing false
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 180
+time_hour 17
+time_dynamic false
+weather_preset calm3
+weather_dynamic false
+friendly_fire false
+friendly_fire_melee_bounce true
+damage_split 0
+sappers_attacking_starting_materials 150
+sappers_defending_starting_materials 150
+sappers_buildlimit explosivebarrel attacking 0
+sappers_buildlimit explosivebarrel defending 0
+sappers_buildlimit palisade attacking 0
+sappers_buildlimit palisade defending 0
+sappers_buildlimit shootingplatform attacking 0
+sappers_buildlimit shootingplatform defending 0
+sappers_buildlimit swivelgun attacking 0
+sappers_buildlimit swivelgun defending 0
+officers_spawn_mounted false
+faction_attacking french
+faction_defending british
+
+#Spawn Overrides
+spawn_override A ArmyInfantryOfficer 10
+spawn_override A ArmyLineInfantry 125
+spawn_override A ArmyLineInfantry2 125
+spawn_override A Grenadier 125
+spawn_override A Guard 125
+spawn_override A LightInfantry 125
+#spawn_override A Rifleman 0 (Not Used)
+spawn_override A FlagBearer 6
+spawn_override A Drummer 3
+spawn_override A Fifer 3
+spawn_override A Bagpiper 3
+spawn_override A Surgeon 4
+spawn_override A Sapper 3
+#spawn_override A Carpenter 0 (Not Used)
+spawn_override A Cannoneer 20
+spawn_override A Rocketeer 20
+spawn_override A Hussar 4
+spawn_override A CuirassierDragoon 4
+
+spawn_override A NavalMarine 125
+spawn_override A CoastGuard 125
+spawn_override A Customs 125
+
+spawn_override B ArmyInfantryOfficer 10
+spawn_override B ArmyLineInfantry 125
+spawn_override B ArmyLineInfantry2 125
+spawn_override B Grenadier 125
+spawn_override B Guard 125
+spawn_override B LightInfantry 125
+#spawn_override B Rifleman 0 (Not Used)
+spawn_override B FlagBearer 6
+spawn_override B Drummer 3
+spawn_override B Fifer 3
+spawn_override B Bagpiper 3
+spawn_override B Surgeon 4
+spawn_override B Sapper 3
+#spawn_override B Carpenter 0 (Not Used)
+spawn_override B Cannoneer 20
+spawn_override B Rocketeer 20
+spawn_override B Hussar 4
+spawn_override B CuirassierDragoon 4
+
+spawn_override B NavalMarine 125
+spawn_override B CoastGuard 125
+spawn_override B Customs 125
+
+#Starting Weapon Override
+starting_weapons_override British Hussar 4 4 Unarmed Pistol_NewLandPattern Sabre_1796PatternLightCavalry BearingFlagBritish
+starting_weapons_override British CuirassierDragoon 4 4 Unarmed Carbine_Elliot Sword_Pattern1803FlankOfficerCavalry BearingFlagBritish
+starting_weapons_override French Hussar 4 4 Unarmed Pistol_XIII Sabre_AnXILightCavalry BearingFlagFrench
+starting_weapons_override French CuirassierDragoon 4 4 Unarmed Carbine_CharlevilleCavalryIXXIII Sabre_AnXILightCavalry BearingFlagFrench
+starting_weapons_override Prussian Hussar 4 4 Unarmed Pistol_XIII Sabre_AnXILightCavalry BearingFlagPrussian
+starting_weapons_override Prussian CuirassierDragoon 4 4 Unarmed Carbine_CharlevilleCavalryIXXIII Sabre_AnXILightCavalry BearingFlagPrussian
+
+#Automated Commands - Round Start
+rc set allowFiring true
+
+rc set characterRespawntime 1
+rc set characterVehicleRespawnTime 1
+
+rc set cannonMoverSpeedMultiplier 1
+rc set cannonMoverRotationMultiplier 1
+rc set rocketMoverSpeedMultiplier 1
+rc set rocketMoverRotationMultiplier 1
+
+!map_rotation end
+
+
+#6 = Grassy Plains 2 (L) [Army Assault] - Calm | Morning (10)
+!map_rotation start
+map_name grassyplainsii
+game_mode ArmyAssault
+game_type Hardcore
+round_time_minutes 15
+round_spawn_close_timer_seconds 180
+faction_balancing false
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 180
+time_hour 10
+time_dynamic false
+weather_preset calm4
+weather_dynamic false
+friendly_fire false
+friendly_fire_melee_bounce true
+damage_split 0
+sappers_attacking_starting_materials 150
+sappers_defending_starting_materials 150
+sappers_buildlimit explosivebarrel attacking 0
+sappers_buildlimit explosivebarrel defending 0
+sappers_buildlimit palisade attacking 0
+sappers_buildlimit palisade defending 0
+sappers_buildlimit shootingplatform attacking 0
+sappers_buildlimit shootingplatform defending 0
+sappers_buildlimit swivelgun attacking 0
+sappers_buildlimit swivelgun defending 0
+officers_spawn_mounted false
+faction_attacking french
+faction_defending british
+
+#Spawn Overrides
+spawn_override A ArmyInfantryOfficer 10
+spawn_override A ArmyLineInfantry 125
+spawn_override A ArmyLineInfantry2 125
+spawn_override A Grenadier 125
+spawn_override A Guard 125
+spawn_override A LightInfantry 125
+#spawn_override A Rifleman 0 (Not Used)
+spawn_override A FlagBearer 6
+spawn_override A Drummer 3
+spawn_override A Fifer 3
+spawn_override A Bagpiper 3
+spawn_override A Surgeon 4
+spawn_override A Sapper 3
+#spawn_override A Carpenter 0 (Not Used)
+spawn_override A Cannoneer 20
+spawn_override A Rocketeer 20
+spawn_override A Hussar 4
+spawn_override A CuirassierDragoon 4
+
+spawn_override A NavalMarine 125
+spawn_override A CoastGuard 125
+spawn_override A Customs 125
+
+spawn_override B ArmyInfantryOfficer 10
+spawn_override B ArmyLineInfantry 125
+spawn_override B ArmyLineInfantry2 125
+spawn_override B Grenadier 125
+spawn_override B Guard 125
+spawn_override B LightInfantry 125
+#spawn_override B Rifleman 0 (Not Used)
+spawn_override B FlagBearer 6
+spawn_override B Drummer 3
+spawn_override B Fifer 3
+spawn_override B Bagpiper 3
+spawn_override B Surgeon 4
+spawn_override B Sapper 3
+#spawn_override B Carpenter 0 (Not Used)
+spawn_override B Cannoneer 20
+spawn_override B Rocketeer 20
+spawn_override B Hussar 4
+spawn_override B CuirassierDragoon 4
+
+spawn_override B NavalMarine 125
+spawn_override B CoastGuard 125
+spawn_override B Customs 125
+
+#Starting Weapon Override
+starting_weapons_override British Hussar 4 4 Unarmed Pistol_NewLandPattern Sabre_1796PatternLightCavalry BearingFlagBritish
+starting_weapons_override British CuirassierDragoon 4 4 Unarmed Carbine_Elliot Sword_Pattern1803FlankOfficerCavalry BearingFlagBritish
+starting_weapons_override French Hussar 4 4 Unarmed Pistol_XIII Sabre_AnXILightCavalry BearingFlagFrench
+starting_weapons_override French CuirassierDragoon 4 4 Unarmed Carbine_CharlevilleCavalryIXXIII Sabre_AnXILightCavalry BearingFlagFrench
+starting_weapons_override Prussian Hussar 4 4 Unarmed Pistol_XIII Sabre_AnXILightCavalry BearingFlagPrussian
+starting_weapons_override Prussian CuirassierDragoon 4 4 Unarmed Carbine_CharlevilleCavalryIXXIII Sabre_AnXILightCavalry BearingFlagPrussian
+
+#Automated Commands - Round Start
+rc set allowFiring true
+
+rc set characterRespawntime 1
+rc set characterVehicleRespawnTime 1
+
+rc set cannonMoverSpeedMultiplier 1
+rc set cannonMoverRotationMultiplier 1
+rc set rocketMoverSpeedMultiplier 1
+rc set rocketMoverRotationMultiplier 1
+
+!map_rotation end
+
+
+#7 = Grassy Plains 3 (L) [Army Assault] - Calm | Morning (9)
+!map_rotation start
+map_name grassyplainsiii
+game_mode ArmyAssault
+game_type Hardcore
+round_time_minutes 15
+round_spawn_close_timer_seconds 180
+faction_balancing false
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 180
+time_hour 9
+time_dynamic false
+weather_preset calm2
+weather_dynamic false
+friendly_fire false
+friendly_fire_melee_bounce true
+damage_split 0
+sappers_attacking_starting_materials 150
+sappers_defending_starting_materials 150
+sappers_buildlimit explosivebarrel attacking 0
+sappers_buildlimit explosivebarrel defending 0
+sappers_buildlimit palisade attacking 0
+sappers_buildlimit palisade defending 0
+sappers_buildlimit shootingplatform attacking 0
+sappers_buildlimit shootingplatform defending 0
+sappers_buildlimit swivelgun attacking 0
+sappers_buildlimit swivelgun defending 0
+officers_spawn_mounted false
+faction_attacking prussian
+faction_defending british
+
+#Spawn Overrides
+spawn_override A ArmyInfantryOfficer 10
+spawn_override A ArmyLineInfantry 125
+spawn_override A ArmyLineInfantry2 125
+spawn_override A Grenadier 125
+spawn_override A Guard 125
+spawn_override A LightInfantry 125
+#spawn_override A Rifleman 0 (Not Used)
+spawn_override A FlagBearer 6
+spawn_override A Drummer 3
+spawn_override A Fifer 3
+spawn_override A Bagpiper 3
+spawn_override A Surgeon 4
+spawn_override A Sapper 3
+#spawn_override A Carpenter 0 (Not Used)
+spawn_override A Cannoneer 20
+spawn_override A Rocketeer 20
+spawn_override A Hussar 4
+spawn_override A CuirassierDragoon 4
+
+#spawn_override A NavalMarine 125 (No Prussian Naval Units)
+#spawn_override A CoastGuard 125 (No Prussian Naval Units)
+#spawn_override A Customs 125 (No Prussian Naval Units)
+
+spawn_override B ArmyInfantryOfficer 10
+spawn_override B ArmyLineInfantry 125
+spawn_override B ArmyLineInfantry2 125
+spawn_override B Grenadier 125
+spawn_override B Guard 125
+spawn_override B LightInfantry 125
+#spawn_override B Rifleman 0 (Not Used)
+spawn_override B FlagBearer 6
+spawn_override B Drummer 3
+spawn_override B Fifer 3
+spawn_override B Bagpiper 3
+spawn_override B Surgeon 4
+spawn_override B Sapper 3
+#spawn_override B Carpenter 0 (Not Used)
+spawn_override B Cannoneer 20
+spawn_override B Rocketeer 20
+spawn_override B Hussar 4
+spawn_override B CuirassierDragoon 4
+
+spawn_override B NavalMarine 125
+spawn_override B CoastGuard 125
+spawn_override B Customs 125
+
+#Starting Weapon Override
+starting_weapons_override British Hussar 4 4 Unarmed Pistol_NewLandPattern Sabre_1796PatternLightCavalry BearingFlagBritish
+starting_weapons_override British CuirassierDragoon 4 4 Unarmed Carbine_Elliot Sword_Pattern1803FlankOfficerCavalry BearingFlagBritish
+starting_weapons_override French Hussar 4 4 Unarmed Pistol_XIII Sabre_AnXILightCavalry BearingFlagFrench
+starting_weapons_override French CuirassierDragoon 4 4 Unarmed Carbine_CharlevilleCavalryIXXIII Sabre_AnXILightCavalry BearingFlagFrench
+starting_weapons_override Prussian Hussar 4 4 Unarmed Pistol_XIII Sabre_AnXILightCavalry BearingFlagPrussian
+starting_weapons_override Prussian CuirassierDragoon 4 4 Unarmed Carbine_CharlevilleCavalryIXXIII Sabre_AnXILightCavalry BearingFlagPrussian
+
+#Automated Commands - Round Start
+rc set allowFiring true
+
+rc set characterRespawntime 1
+rc set characterVehicleRespawnTime 1
+
+rc set cannonMoverSpeedMultiplier 1
+rc set cannonMoverRotationMultiplier 1
+rc set rocketMoverSpeedMultiplier 1
+rc set rocketMoverRotationMultiplier 1
+
+!map_rotation end
+
+
+#8 = Snowy Plains 1 (L) [Army Assault] - Snowy | Evening (17)
+!map_rotation start
+map_name snowyplains
+game_mode ArmyAssault
+game_type Hardcore
+round_time_minutes 15
+round_spawn_close_timer_seconds 180
+faction_balancing false
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 180
+time_hour 17
+time_dynamic false
+weather_preset snowy
+weather_dynamic false
+friendly_fire false
+friendly_fire_melee_bounce true
+damage_split 0
+sappers_attacking_starting_materials 150
+sappers_defending_starting_materials 150
+sappers_buildlimit explosivebarrel attacking 0
+sappers_buildlimit explosivebarrel defending 0
+sappers_buildlimit palisade attacking 0
+sappers_buildlimit palisade defending 0
+sappers_buildlimit shootingplatform attacking 0
+sappers_buildlimit shootingplatform defending 0
+sappers_buildlimit swivelgun attacking 0
+sappers_buildlimit swivelgun defending 0
+officers_spawn_mounted false
+faction_attacking french
+faction_defending british
+
+#Spawn Overrides
+spawn_override A ArmyInfantryOfficer 10
+spawn_override A ArmyLineInfantry 125
+spawn_override A ArmyLineInfantry2 125
+spawn_override A Grenadier 125
+spawn_override A Guard 125
+spawn_override A LightInfantry 125
+#spawn_override A Rifleman 0 (Not Used)
+spawn_override A FlagBearer 6
+spawn_override A Drummer 3
+spawn_override A Fifer 3
+spawn_override A Bagpiper 3
+spawn_override A Surgeon 4
+spawn_override A Sapper 3
+#spawn_override A Carpenter 0 (Not Used)
+spawn_override A Cannoneer 20
+spawn_override A Rocketeer 20
+spawn_override A Hussar 4
+spawn_override A CuirassierDragoon 4
+
+spawn_override A NavalMarine 125
+spawn_override A CoastGuard 125
+spawn_override A Customs 125
+
+spawn_override B ArmyInfantryOfficer 10
+spawn_override B ArmyLineInfantry 125
+spawn_override B ArmyLineInfantry2 125
+spawn_override B Grenadier 125
+spawn_override B Guard 125
+spawn_override B LightInfantry 125
+#spawn_override B Rifleman 0 (Not Used)
+spawn_override B FlagBearer 6
+spawn_override B Drummer 3
+spawn_override B Fifer 3
+spawn_override B Bagpiper 3
+spawn_override B Surgeon 4
+spawn_override B Sapper 3
+#spawn_override B Carpenter 0 (Not Used)
+spawn_override B Cannoneer 20
+spawn_override B Rocketeer 20
+spawn_override B Hussar 4
+spawn_override B CuirassierDragoon 4
+
+spawn_override B NavalMarine 125
+spawn_override B CoastGuard 125
+spawn_override B Customs 125
+
+#Starting Weapon Override
+starting_weapons_override British Hussar 4 4 Unarmed Pistol_NewLandPattern Sabre_1796PatternLightCavalry BearingFlagBritish
+starting_weapons_override British CuirassierDragoon 4 4 Unarmed Carbine_Elliot Sword_Pattern1803FlankOfficerCavalry BearingFlagBritish
+starting_weapons_override French Hussar 4 4 Unarmed Pistol_XIII Sabre_AnXILightCavalry BearingFlagFrench
+starting_weapons_override French CuirassierDragoon 4 4 Unarmed Carbine_CharlevilleCavalryIXXIII Sabre_AnXILightCavalry BearingFlagFrench
+starting_weapons_override Prussian Hussar 4 4 Unarmed Pistol_XIII Sabre_AnXILightCavalry BearingFlagPrussian
+starting_weapons_override Prussian CuirassierDragoon 4 4 Unarmed Carbine_CharlevilleCavalryIXXIII Sabre_AnXILightCavalry BearingFlagPrussian
+
+#Automated Commands - Round Start
+rc set allowFiring true
+
+rc set characterRespawntime 1
+rc set characterVehicleRespawnTime 1
+
+rc set cannonMoverSpeedMultiplier 1
+rc set cannonMoverRotationMultiplier 1
+rc set rocketMoverSpeedMultiplier 1
+rc set rocketMoverRotationMultiplier 1
+
+!map_rotation end
+
+
+#9 = Snowy Plains 2 (L) [Army Assault] - Snowy | Morning (8)
+!map_rotation start
+map_name snowyplainsii
+game_mode ArmyAssault
+game_type Hardcore
+round_time_minutes 15
+round_spawn_close_timer_seconds 180
+faction_balancing false
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 180
+time_hour 8
+time_dynamic false
+weather_preset snowy
+weather_dynamic false
+friendly_fire false
+friendly_fire_melee_bounce true
+damage_split 0
+sappers_attacking_starting_materials 150
+sappers_defending_starting_materials 150
+sappers_buildlimit explosivebarrel attacking 0
+sappers_buildlimit explosivebarrel defending 0
+sappers_buildlimit palisade attacking 0
+sappers_buildlimit palisade defending 0
+sappers_buildlimit shootingplatform attacking 0
+sappers_buildlimit shootingplatform defending 0
+sappers_buildlimit swivelgun attacking 0
+sappers_buildlimit swivelgun defending 0
+officers_spawn_mounted false
+faction_attacking french
+faction_defending british
+
+#Spawn Overrides
+spawn_override A ArmyInfantryOfficer 10
+spawn_override A ArmyLineInfantry 125
+spawn_override A ArmyLineInfantry2 125
+spawn_override A Grenadier 125
+spawn_override A Guard 125
+spawn_override A LightInfantry 125
+#spawn_override A Rifleman 0 (Not Used)
+spawn_override A FlagBearer 6
+spawn_override A Drummer 3
+spawn_override A Fifer 3
+spawn_override A Bagpiper 3
+spawn_override A Surgeon 4
+spawn_override A Sapper 3
+#spawn_override A Carpenter 0 (Not Used)
+spawn_override A Cannoneer 20
+spawn_override A Rocketeer 20
+spawn_override A Hussar 4
+spawn_override A CuirassierDragoon 4
+
+spawn_override A NavalMarine 125
+spawn_override A CoastGuard 125
+spawn_override A Customs 125
+
+spawn_override B ArmyInfantryOfficer 10
+spawn_override B ArmyLineInfantry 125
+spawn_override B ArmyLineInfantry2 125
+spawn_override B Grenadier 125
+spawn_override B Guard 125
+spawn_override B LightInfantry 125
+#spawn_override B Rifleman 0 (Not Used)
+spawn_override B FlagBearer 6
+spawn_override B Drummer 3
+spawn_override B Fifer 3
+spawn_override B Bagpiper 3
+spawn_override B Surgeon 4
+spawn_override B Sapper 3
+#spawn_override B Carpenter 0 (Not Used)
+spawn_override B Cannoneer 20
+spawn_override B Rocketeer 20
+spawn_override B Hussar 4
+spawn_override B CuirassierDragoon 4
+
+spawn_override B NavalMarine 125
+spawn_override B CoastGuard 125
+spawn_override B Customs 125
+
+#Starting Weapon Override
+starting_weapons_override British Hussar 4 4 Unarmed Pistol_NewLandPattern Sabre_1796PatternLightCavalry BearingFlagBritish
+starting_weapons_override British CuirassierDragoon 4 4 Unarmed Carbine_Elliot Sword_Pattern1803FlankOfficerCavalry BearingFlagBritish
+starting_weapons_override French Hussar 4 4 Unarmed Pistol_XIII Sabre_AnXILightCavalry BearingFlagFrench
+starting_weapons_override French CuirassierDragoon 4 4 Unarmed Carbine_CharlevilleCavalryIXXIII Sabre_AnXILightCavalry BearingFlagFrench
+starting_weapons_override Prussian Hussar 4 4 Unarmed Pistol_XIII Sabre_AnXILightCavalry BearingFlagPrussian
+starting_weapons_override Prussian CuirassierDragoon 4 4 Unarmed Carbine_CharlevilleCavalryIXXIII Sabre_AnXILightCavalry BearingFlagPrussian
+
+#Automated Commands - Round Start
+rc set allowFiring true
+
+rc set characterRespawntime 1
+rc set characterVehicleRespawnTime 1
+
+rc set cannonMoverSpeedMultiplier 1
+rc set cannonMoverRotationMultiplier 1
+rc set rocketMoverSpeedMultiplier 1
+rc set rocketMoverRotationMultiplier 1
+
+!map_rotation end
+
+
+#10 = Snowy Plains 3 (L) [Army Assault] - Snowy | Morning (8)
+!map_rotation start
+map_name snowyplainsiii
+game_mode ArmyAssault
+game_type Hardcore
+round_time_minutes 15
+round_spawn_close_timer_seconds 180
+faction_balancing false
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 180
+time_hour 8
+time_dynamic false
+weather_preset snowy
+weather_dynamic false
+friendly_fire false
+friendly_fire_melee_bounce true
+damage_split 0
+sappers_attacking_starting_materials 150
+sappers_defending_starting_materials 150
+sappers_buildlimit explosivebarrel attacking 0
+sappers_buildlimit explosivebarrel defending 0
+sappers_buildlimit palisade attacking 0
+sappers_buildlimit palisade defending 0
+sappers_buildlimit shootingplatform attacking 0
+sappers_buildlimit shootingplatform defending 0
+sappers_buildlimit swivelgun attacking 0
+sappers_buildlimit swivelgun defending 0
+officers_spawn_mounted false
+faction_attacking prussian
+faction_defending british
+
+#Spawn Overrides
+spawn_override A ArmyInfantryOfficer 10
+spawn_override A ArmyLineInfantry 125
+spawn_override A ArmyLineInfantry2 125
+spawn_override A Grenadier 125
+spawn_override A Guard 125
+spawn_override A LightInfantry 125
+#spawn_override A Rifleman 0 (Not Used)
+spawn_override A FlagBearer 6
+spawn_override A Drummer 3
+spawn_override A Fifer 3
+spawn_override A Bagpiper 3
+spawn_override A Surgeon 4
+spawn_override A Sapper 3
+#spawn_override A Carpenter 0 (Not Used)
+spawn_override A Cannoneer 20
+spawn_override A Rocketeer 20
+spawn_override A Hussar 4
+spawn_override A CuirassierDragoon 4
+
+#spawn_override A NavalMarine 125 (No Prussian Naval Units)
+#spawn_override A CoastGuard 125 (No Prussian Naval Units)
+#spawn_override A Customs 125 (No Prussian Naval Units)
+
+spawn_override B ArmyInfantryOfficer 10
+spawn_override B ArmyLineInfantry 125
+spawn_override B ArmyLineInfantry2 125
+spawn_override B Grenadier 125
+spawn_override B Guard 125
+spawn_override B LightInfantry 125
+#spawn_override B Rifleman 0 (Not Used)
+spawn_override B FlagBearer 6
+spawn_override B Drummer 3
+spawn_override B Fifer 3
+spawn_override B Bagpiper 3
+spawn_override B Surgeon 4
+spawn_override B Sapper 3
+#spawn_override B Carpenter 0 (Not Used)
+spawn_override B Cannoneer 20
+spawn_override B Rocketeer 20
+spawn_override B Hussar 4
+spawn_override B CuirassierDragoon 4
+
+spawn_override B NavalMarine 125
+spawn_override B CoastGuard 125
+spawn_override B Customs 125
+
+#Starting Weapon Override
+starting_weapons_override British Hussar 4 4 Unarmed Pistol_NewLandPattern Sabre_1796PatternLightCavalry BearingFlagBritish
+starting_weapons_override British CuirassierDragoon 4 4 Unarmed Carbine_Elliot Sword_Pattern1803FlankOfficerCavalry BearingFlagBritish
+starting_weapons_override French Hussar 4 4 Unarmed Pistol_XIII Sabre_AnXILightCavalry BearingFlagFrench
+starting_weapons_override French CuirassierDragoon 4 4 Unarmed Carbine_CharlevilleCavalryIXXIII Sabre_AnXILightCavalry BearingFlagFrench
+starting_weapons_override Prussian Hussar 4 4 Unarmed Pistol_XIII Sabre_AnXILightCavalry BearingFlagPrussian
+starting_weapons_override Prussian CuirassierDragoon 4 4 Unarmed Carbine_CharlevilleCavalryIXXIII Sabre_AnXILightCavalry BearingFlagPrussian
+
+#Automated Commands - Round Start
+rc set allowFiring true
+
+rc set characterRespawntime 1
+rc set characterVehicleRespawnTime 1
+
+rc set cannonMoverSpeedMultiplier 1
+rc set cannonMoverRotationMultiplier 1
+rc set rocketMoverSpeedMultiplier 1
+rc set rocketMoverRotationMultiplier 1
+
+!map_rotation end
+
+
+#11 = Snowy Plains 4 (L) [Army Assault] - Snowy | Morning (8)
+!map_rotation start
+map_name snowyplainsiv
+game_mode ArmyAssault
+game_type Hardcore
+round_time_minutes 15
+round_spawn_close_timer_seconds 180
+faction_balancing false
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 180
+time_hour 8
+time_dynamic false
+weather_preset snowy
+weather_dynamic false
+friendly_fire false
+friendly_fire_melee_bounce true
+damage_split 0
+sappers_attacking_starting_materials 150
+sappers_defending_starting_materials 150
+sappers_buildlimit explosivebarrel attacking 0
+sappers_buildlimit explosivebarrel defending 0
+sappers_buildlimit palisade attacking 0
+sappers_buildlimit palisade defending 0
+sappers_buildlimit shootingplatform attacking 0
+sappers_buildlimit shootingplatform defending 0
+sappers_buildlimit swivelgun attacking 0
+sappers_buildlimit swivelgun defending 0
+officers_spawn_mounted false
+faction_attacking french
+faction_defending british
+
+#Spawn Overrides
+spawn_override A ArmyInfantryOfficer 10
+spawn_override A ArmyLineInfantry 125
+spawn_override A ArmyLineInfantry2 125
+spawn_override A Grenadier 125
+spawn_override A Guard 125
+spawn_override A LightInfantry 125
+#spawn_override A Rifleman 0 (Not Used)
+spawn_override A FlagBearer 6
+spawn_override A Drummer 3
+spawn_override A Fifer 3
+spawn_override A Bagpiper 3
+spawn_override A Surgeon 4
+spawn_override A Sapper 3
+#spawn_override A Carpenter 0 (Not Used)
+spawn_override A Cannoneer 20
+spawn_override A Rocketeer 20
+spawn_override A Hussar 4
+spawn_override A CuirassierDragoon 4
+
+spawn_override A NavalMarine 125
+spawn_override A CoastGuard 125
+spawn_override A Customs 125
+
+spawn_override B ArmyInfantryOfficer 10
+spawn_override B ArmyLineInfantry 125
+spawn_override B ArmyLineInfantry2 125
+spawn_override B Grenadier 125
+spawn_override B Guard 125
+spawn_override B LightInfantry 125
+#spawn_override B Rifleman 0 (Not Used)
+spawn_override B FlagBearer 6
+spawn_override B Drummer 3
+spawn_override B Fifer 3
+spawn_override B Bagpiper 3
+spawn_override B Surgeon 4
+spawn_override B Sapper 3
+#spawn_override B Carpenter 0 (Not Used)
+spawn_override B Cannoneer 20
+spawn_override B Rocketeer 20
+spawn_override B Hussar 4
+spawn_override B CuirassierDragoon 4
+
+spawn_override B NavalMarine 125
+spawn_override B CoastGuard 125
+spawn_override B Customs 125
+
+#Starting Weapon Override
+starting_weapons_override British Hussar 4 4 Unarmed Pistol_NewLandPattern Sabre_1796PatternLightCavalry BearingFlagBritish
+starting_weapons_override British CuirassierDragoon 4 4 Unarmed Carbine_Elliot Sword_Pattern1803FlankOfficerCavalry BearingFlagBritish
+starting_weapons_override French Hussar 4 4 Unarmed Pistol_XIII Sabre_AnXILightCavalry BearingFlagFrench
+starting_weapons_override French CuirassierDragoon 4 4 Unarmed Carbine_CharlevilleCavalryIXXIII Sabre_AnXILightCavalry BearingFlagFrench
+starting_weapons_override Prussian Hussar 4 4 Unarmed Pistol_XIII Sabre_AnXILightCavalry BearingFlagPrussian
+starting_weapons_override Prussian CuirassierDragoon 4 4 Unarmed Carbine_CharlevilleCavalryIXXIII Sabre_AnXILightCavalry BearingFlagPrussian
+
+#Automated Commands - Round Start
+rc set allowFiring true
+
+rc set characterRespawntime 1
+rc set characterVehicleRespawnTime 1
+
+rc set cannonMoverSpeedMultiplier 1
+rc set cannonMoverRotationMultiplier 1
+rc set rocketMoverSpeedMultiplier 1
+rc set rocketMoverRotationMultiplier 1
+
+!map_rotation end
+
+
+#12 = Snowy Plains 5 (L) [Army Assault] - Snowy | Morning (8)
+!map_rotation start
+map_name snowyplainsv
+game_mode ArmyAssault
+game_type Hardcore
+round_time_minutes 15
+round_spawn_close_timer_seconds 180
+faction_balancing false
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 180
+time_hour 8
+time_dynamic false
+weather_preset snowy
+weather_dynamic false
+friendly_fire false
+friendly_fire_melee_bounce true
+damage_split 0
+sappers_attacking_starting_materials 150
+sappers_defending_starting_materials 150
+sappers_buildlimit explosivebarrel attacking 0
+sappers_buildlimit explosivebarrel defending 0
+sappers_buildlimit palisade attacking 0
+sappers_buildlimit palisade defending 0
+sappers_buildlimit shootingplatform attacking 0
+sappers_buildlimit shootingplatform defending 0
+sappers_buildlimit swivelgun attacking 0
+sappers_buildlimit swivelgun defending 0
+officers_spawn_mounted false
+faction_attacking prussian
+faction_defending british
+
+#Spawn Overrides
+spawn_override A ArmyInfantryOfficer 10
+spawn_override A ArmyLineInfantry 125
+spawn_override A ArmyLineInfantry2 125
+spawn_override A Grenadier 125
+spawn_override A Guard 125
+spawn_override A LightInfantry 125
+#spawn_override A Rifleman 0 (Not Used)
+spawn_override A FlagBearer 6
+spawn_override A Drummer 3
+spawn_override A Fifer 3
+spawn_override A Bagpiper 3
+spawn_override A Surgeon 4
+spawn_override A Sapper 3
+#spawn_override A Carpenter 0 (Not Used)
+spawn_override A Cannoneer 20
+spawn_override A Rocketeer 20
+spawn_override A Hussar 4
+spawn_override A CuirassierDragoon 4
+
+#spawn_override A NavalMarine 125 (No Prussian Naval Units)
+#spawn_override A CoastGuard 125 (No Prussian Naval Units)
+#spawn_override A Customs 125 (No Prussian Naval Units)
+
+spawn_override B ArmyInfantryOfficer 10
+spawn_override B ArmyLineInfantry 125
+spawn_override B ArmyLineInfantry2 125
+spawn_override B Grenadier 125
+spawn_override B Guard 125
+spawn_override B LightInfantry 125
+#spawn_override B Rifleman 0 (Not Used)
+spawn_override B FlagBearer 6
+spawn_override B Drummer 3
+spawn_override B Fifer 3
+spawn_override B Bagpiper 3
+spawn_override B Surgeon 4
+spawn_override B Sapper 3
+#spawn_override A Carpenter 0 (Not Used)
+spawn_override B Cannoneer 20
+spawn_override B Rocketeer 20
+spawn_override B Hussar 4
+spawn_override B CuirassierDragoon 4
+
+spawn_override B NavalMarine 125
+spawn_override B CoastGuard 125
+spawn_override B Customs 125
+
+#Starting Weapon Override
+starting_weapons_override British Hussar 4 4 Unarmed Pistol_NewLandPattern Sabre_1796PatternLightCavalry BearingFlagBritish
+starting_weapons_override British CuirassierDragoon 4 4 Unarmed Carbine_Elliot Sword_Pattern1803FlankOfficerCavalry BearingFlagBritish
+starting_weapons_override French Hussar 4 4 Unarmed Pistol_XIII Sabre_AnXILightCavalry BearingFlagFrench
+starting_weapons_override French CuirassierDragoon 4 4 Unarmed Carbine_CharlevilleCavalryIXXIII Sabre_AnXILightCavalry BearingFlagFrench
+starting_weapons_override Prussian Hussar 4 4 Unarmed Pistol_XIII Sabre_AnXILightCavalry BearingFlagPrussian
+starting_weapons_override Prussian CuirassierDragoon 4 4 Unarmed Carbine_CharlevilleCavalryIXXIII Sabre_AnXILightCavalry BearingFlagPrussian
+
+#Automated Commands - Round Start
+rc set allowFiring true
+
+rc set characterRespawntime 1
+rc set characterVehicleRespawnTime 1
+
+rc set cannonMoverSpeedMultiplier 1
+rc set cannonMoverRotationMultiplier 1
+rc set rocketMoverSpeedMultiplier 1
+rc set rocketMoverRotationMultiplier 1
+
+!map_rotation end
+
+
+#13 = Training Grounds [Army Battlefield] - TRAINING & PROMOTIONS - Calm | Morning (8)
+!map_rotation start
+map_name traininggrounds
+game_mode ArmyBattlefield
+game_type Hardcore
+round_time_minutes -1
+reinforcements_per_faction 9999
+wave_spawn_time_seconds -1
+wave_spawn_vehicle_time_seconds 10
+spawn_immunity_timer 2
+faction_balancing false
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 180
+time_hour 8
+time_dynamic false
+weather_preset calm3
+weather_dynamic false
+friendly_fire false
+friendly_fire_melee_bounce true
+damage_split 0
+sappers_attacking_starting_materials 150
+sappers_defending_starting_materials 150
+sappers_buildlimit explosivebarrel attacking 0
+sappers_buildlimit explosivebarrel defending 0
+sappers_buildlimit palisade attacking 0
+sappers_buildlimit palisade defending 0
+sappers_buildlimit shootingplatform attacking 0
+sappers_buildlimit shootingplatform defending 0
+sappers_buildlimit swivelgun attacking 0
+sappers_buildlimit swivelgun defending 0
+officers_spawn_mounted false
+faction_attacking french
+faction_defending british
+
+#Starting Weapon Override
+starting_weapons_override British Hussar 4 4 Unarmed Pistol_NewLandPattern Sabre_1796PatternLightCavalry BearingFlagBritish
+starting_weapons_override British CuirassierDragoon 4 4 Unarmed Carbine_Elliot Sword_Pattern1803FlankOfficerCavalry BearingFlagBritish
+starting_weapons_override French Hussar 4 4 Unarmed Pistol_XIII Sabre_AnXILightCavalry BearingFlagFrench
+starting_weapons_override French CuirassierDragoon 4 4 Unarmed Carbine_CharlevilleCavalryIXXIII Sabre_AnXILightCavalry BearingFlagFrench
+starting_weapons_override Prussian Hussar 4 4 Unarmed Pistol_XIII Sabre_AnXILightCavalry BearingFlagPrussian
+starting_weapons_override Prussian CuirassierDragoon 4 4 Unarmed Carbine_CharlevilleCavalryIXXIII Sabre_AnXILightCavalry BearingFlagPrussian
+
+#Automated Commands - Round Start
+rc set allowFiring true
+
+rc set characterRespawntime 1
+rc set characterVehicleRespawnTime 1
+
+rc set cannonMoverSpeedMultiplier 1
+rc set cannonMoverRotationMultiplier 1
+rc set rocketMoverSpeedMultiplier 1
+rc set rocketMoverRotationMultiplier 1
+
+!map_rotation end
+
+
+#--- Rotation Group 2 (Conquest Linebattles) --- 
+
+#14 = Dutch Canals [Army Conquest] - Calm | Afternoon (14)
+!map_rotation start
+map_name dutchcanals
+game_mode ArmyConquest
+game_type Hardcore 
+round_time_minutes 31.5
+round_spawn_close_timer_seconds 1740
+conquest_tick_reward 1
+conquest_max_tickets 4500
+conquest_ticker_time_seconds 1
+conquest_tickets_per_capture 150
+max_player_respawns -1
+faction_balancing true
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 180
+time_hour 14
+time_dynamic false
+weather_preset calm
+weather_dynamic false
+friendly_fire false
+friendly_fire_melee_bounce true
+damage_split 0
+sappers_attacking_starting_materials 150
+sappers_defending_starting_materials 150
+sappers_buildlimit explosivebarrel attacking 0
+sappers_buildlimit explosivebarrel defending 0
+sappers_buildlimit palisade attacking 0
+sappers_buildlimit palisade defending 0
+sappers_buildlimit shootingplatform attacking 0
+sappers_buildlimit shootingplatform defending 0
+sappers_buildlimit swivelgun attacking 0
+sappers_buildlimit swivelgun defending 0
+officers_spawn_mounted false
+faction_attacking french
+faction_defending british
+
+#Spawn Overrides
+spawn_override A ArmyInfantryOfficer 0
+spawn_override B ArmyInfantryOfficer 0
+spawn_override C ArmyInfantryOfficer 0
+
+spawn_override D ArmyInfantryOfficer 10
+spawn_override D ArmyLineInfantry 125
+spawn_override D ArmyLineInfantry2 125
+spawn_override D Grenadier 125
+spawn_override D Guard 125
+spawn_override D LightInfantry 125
+#spawn_override D Rifleman 0 (Not Used)
+spawn_override D FlagBearer 6
+spawn_override D Drummer 3
+spawn_override D Fifer 3
+spawn_override D Bagpiper 3
+spawn_override D Surgeon 4
+spawn_override D Sapper 3
+#spawn_override D Carpenter 0 (Not Used)
+spawn_override D Cannoneer 20
+spawn_override D Rocketeer 20
+spawn_override D Hussar 4
+spawn_override D CuirassierDragoon 4
+
+spawn_override D NavalMarine 125
+spawn_override D CoastGuard 125
+spawn_override D Customs 125
+
+spawn_override E ArmyInfantryOfficer 10
+spawn_override E ArmyLineInfantry 125
+spawn_override E ArmyLineInfantry2 125
+spawn_override E Grenadier 125
+spawn_override E Guard 125
+spawn_override E LightInfantry 125
+#spawn_override E Rifleman 0 (Not Used)
+spawn_override E FlagBearer 6
+spawn_override E Drummer 3
+spawn_override E Fifer 3
+spawn_override E Bagpiper 3
+spawn_override E Surgeon 4
+spawn_override E Sapper 3
+#spawn_override E Carpenter 0 (Not Used)
+spawn_override E Cannoneer 20
+spawn_override E Rocketeer 20
+spawn_override E Hussar 4
+spawn_override E CuirassierDragoon 4
+
+spawn_override E NavalMarine 125
+spawn_override E CoastGuard 125
+spawn_override E Customs 125
+
+#Firearm Ammo Override
+firearm_ammo_override British Hussar Pistol_NewLandPattern 2 1 10
+firearm_ammo_override British CuirassierDragoon Carbine_Elliot 2 1 10
+firearm_ammo_override French Hussar Pistol_XIII 2 1 10
+firearm_ammo_override French CuirassierDragoon Carbine_CharlevilleCavalryIXXIII 2 1 10
+firearm_ammo_override Prussian Hussar Pistol_XIII 2 1 10
+firearm_ammo_override Prussian CuirassierDragoon Carbine_CharlevilleCavalryIXXIII 2 1 10
+
+#Starting Weapon Override
+starting_weapons_override British Hussar 4 4 Unarmed Pistol_NewLandPattern Sabre_1796PatternLightCavalry BearingFlagBritish
+starting_weapons_override British CuirassierDragoon 4 4 Unarmed Carbine_Elliot Sword_Pattern1803FlankOfficerCavalry BearingFlagBritish
+starting_weapons_override French Hussar 4 4 Unarmed Pistol_XIII Sabre_AnXILightCavalry BearingFlagFrench
+starting_weapons_override French CuirassierDragoon 4 4 Unarmed Carbine_CharlevilleCavalryIXXIII Sabre_AnXILightCavalry BearingFlagFrench
+starting_weapons_override Prussian Hussar 4 4 Unarmed Pistol_XIII Sabre_AnXILightCavalry BearingFlagPrussian
+starting_weapons_override Prussian CuirassierDragoon 4 4 Unarmed Carbine_CharlevilleCavalryIXXIII Sabre_AnXILightCavalry BearingFlagPrussian
+
+#Automated Commands - Round Start
+rc set allowFiring true
+
+rc set characterRespawnTime 1
+rc set characterVehicleRespawnTime 1
+
+rc set cannonMoverSpeedMultiplier 0
+rc set cannonMoverRotationMultiplier 0
+rc set rocketMoverSpeedMultiplier 0
+rc set rocketMoverRotationMultiplier 0
+
+#Automated Commands - Timed
+rc delayed 1876 broadcast broadcast LIVE AT 30:00! - Don't move out early. - Artillery enabled at 25:00.
+rc delayed 1866 broadcast [EVENT RULES]
+rc delayed 1861 broadcast Form a line with 3+ men. No gaps.
+rc delayed 1861 broadcast Do not fire while charging (Unless Cavalry).
+rc delayed 1861 broadcast Do not fire out of line.
+rc delayed 1861 broadcast Do not charge alone. Stay with your line or cavalry formation.
+rc delayed 1861 broadcast To capture the point you must have a line of 3+ men.
+
+rc delayed 1861 broadcast LIVE AT 30:00! - Don't move out early. - Artillery enabled at 25:00.
+rc delayed 1807 broadcast [EVENT RULES]
+rc delayed 1802 broadcast Form a line with 3+ men. No gaps.
+rc delayed 1802 broadcast Do not fire while charging (Unless Cavalry).
+rc delayed 1802 broadcast Do not fire out of line.
+rc delayed 1802 broadcast Do not charge alone. Stay with your line or cavalry formation.
+rc delayed 1802 broadcast To capture the point you must have a line of 3+ men.
+
+rc delayed 1801 broadcast Match Is Now LIVE!
+
+rc delayed 1770 set characterRespawntime 9999999999
+rc delayed 1770 set characterVehicleRespawnTime 9999999999
+
+rc delayed 1501 broadcast [EVENT RULES]
+rc delayed 1501 broadcast Form a line with 3+ men. No gaps.
+rc delayed 1501 broadcast Do not fire while charging (Unless Cavalry).
+rc delayed 1501 broadcast Do not fire out of line.
+rc delayed 1501 broadcast Do not charge alone. Stay with your line or cavalry formation.
+rc delayed 1501 broadcast To capture the point you must have a line of 3+ men.
+rc delayed 1500 broadcast Artillery Is Now Allowed! :)
+
+rc delayed 1505 set cannonMoverSpeedMultiplier 1
+rc delayed 1505 set cannonMoverRotationMultiplier 1
+rc delayed 1505 set rocketMoverSpeedMultiplier 1
+rc delayed 1505 set rocketMoverRotationMultiplier 1
+
+rc delayed 1501 set characterRespawnTime 1
+rc delayed 1501 set characterVehicleRespawnTime 1
+rc delayed 1470 set characterRespawntime 9999999999
+rc delayed 1470 set characterVehicleRespawnTime 9999999999
+rc delayed 1201 set characterRespawnTime 1
+rc delayed 1201 set characterVehicleRespawnTime 1
+
+rc delayed 1201 broadcast [EVENT RULES]
+rc delayed 1201 broadcast Form a line with 3+ men. No gaps.
+rc delayed 1201 broadcast Do not fire while charging (Unless Cavalry).
+rc delayed 1201 broadcast Do not fire out of line.
+rc delayed 1201 broadcast Do not charge alone. Stay with your line or cavalry formation.
+rc delayed 1201 broadcast To capture the point you must have a line of 3+ men.
+
+rc delayed 1170 set characterRespawntime 9999999999
+rc delayed 1170 set characterVehicleRespawnTime 9999999999
+rc delayed 901 set characterRespawnTime 1
+rc delayed 901 set characterVehicleRespawnTime 1
+
+rc delayed 901 broadcast [EVENT RULES]
+rc delayed 901 broadcast Form a line with 3+ men. No gaps.
+rc delayed 901 broadcast Do not fire while charging (Unless Cavalry).
+rc delayed 901 broadcast Do not fire out of line.
+rc delayed 901 broadcast Do not charge alone. Stay with your line or cavalry formation.
+rc delayed 901 broadcast To capture the point you must have a line of 3+ men.
+
+rc delayed 870 set characterRespawntime 9999999999
+rc delayed 870 set characterVehicleRespawnTime 9999999999
+rc delayed 601 set characterRespawnTime 1
+rc delayed 601 set characterVehicleRespawnTime 1
+
+rc delayed 601 broadcast [EVENT RULES]
+rc delayed 601 broadcast Form a line with 3+ men. No gaps.
+rc delayed 601 broadcast Do not fire while charging (Unless Cavalry).
+rc delayed 601 broadcast Do not fire out of line.
+rc delayed 601 broadcast Do not charge alone. Stay with your line or cavalry formation.
+rc delayed 601 broadcast To capture the point you must have a line of 3+ men.
+
+rc delayed 570 set characterRespawntime 9999999999
+rc delayed 570 set characterVehicleRespawnTime 9999999999
+rc delayed 301 set characterRespawnTime 1
+rc delayed 301 set characterVehicleRespawnTime 1
+
+rc delayed 601 broadcast [EVENT RULES]
+rc delayed 601 broadcast Form a line with 3+ men. No gaps.
+rc delayed 601 broadcast Do not fire while charging (Unless Cavalry).
+rc delayed 601 broadcast Do not fire out of line.
+rc delayed 601 broadcast Do not charge alone. Stay with your line or cavalry formation.
+rc delayed 601 broadcast To capture the point you must have a line of 3+ men.
+
+rc delayed 301 broadcast All Charge At 3:00! (You will be allowed to respawn)
+
+rc delayed 270 set characterRespawntime 9999999999
+rc delayed 270 set characterVehicleRespawnTime 9999999999
+rc delayed 181 set characterRespawntime 1
+rc delayed 181 set characterVehicleRespawnTime 1
+
+rc delayed 181 set allowFiring false
+
+rc delayed 180 broadcast ALL CHARGE! Melee Only. No Cannons.
+
+rc delayed 175 set characterRespawntime 9999999999
+rc delayed 175 set characterVehicleRespawnTime 9999999999
+
+rc delayed 1 set allowFiring true
+rc delayed 1 set characterRespawntime 1
+rc delayed 1 set characterVehicleRespawnTime 1
+
+!map_rotation end
+
+
+#15 = Tahir Desert [Army Conquest] - Calm | Afternoon (14)
+!map_rotation start
+map_name egypt
+game_mode ArmyConquest
+game_type Hardcore 
+round_time_minutes 31.5
+round_spawn_close_timer_seconds 1740
+conquest_tick_reward 1
+conquest_max_tickets 4000
+conquest_ticker_time_seconds 1
+conquest_tickets_per_capture 150
+max_player_respawns -1
+faction_balancing true
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 180
+time_hour 14
+time_dynamic false
+weather_preset calm
+weather_dynamic false
+friendly_fire false
+friendly_fire_melee_bounce true
+damage_split 0
+sappers_attacking_starting_materials 150
+sappers_defending_starting_materials 150
+sappers_buildlimit explosivebarrel attacking 0
+sappers_buildlimit explosivebarrel defending 0
+sappers_buildlimit palisade attacking 0
+sappers_buildlimit palisade defending 0
+sappers_buildlimit shootingplatform attacking 0
+sappers_buildlimit shootingplatform defending 0
+sappers_buildlimit swivelgun attacking 0
+sappers_buildlimit swivelgun defending 0
+officers_spawn_mounted false
+faction_attacking french
+faction_defending british
+
+#Spawn Overrides
+spawn_override A ArmyInfantryOfficer 0
+spawn_override B ArmyInfantryOfficer 0
+spawn_override C ArmyInfantryOfficer 0
+
+spawn_override D ArmyInfantryOfficer 10
+spawn_override D ArmyLineInfantry 125
+spawn_override D ArmyLineInfantry2 125
+spawn_override D Grenadier 125
+spawn_override D Guard 125
+spawn_override D LightInfantry 125
+#spawn_override D Rifleman 0 (Not Used)
+spawn_override D FlagBearer 6
+spawn_override D Drummer 3
+spawn_override D Fifer 3
+spawn_override D Bagpiper 3
+spawn_override D Surgeon 4
+spawn_override D Sapper 3
+#spawn_override D Carpenter 0 (Not Used)
+spawn_override D Cannoneer 20
+spawn_override D Rocketeer 20
+spawn_override D Hussar 4
+spawn_override D CuirassierDragoon 4
+
+spawn_override D NavalMarine 125
+spawn_override D CoastGuard 125
+spawn_override D Customs 125
+
+spawn_override E ArmyInfantryOfficer 10
+spawn_override E ArmyLineInfantry 125
+spawn_override E ArmyLineInfantry2 125
+spawn_override E Grenadier 125
+spawn_override E Guard 125
+spawn_override E LightInfantry 125
+#spawn_override E Rifleman 0 (Not Used)
+spawn_override E FlagBearer 6
+spawn_override E Drummer 3
+spawn_override E Fifer 3
+spawn_override E Bagpiper 3
+spawn_override E Surgeon 4
+spawn_override E Sapper 3
+#spawn_override E Carpenter 0 (Not Used)
+spawn_override E Cannoneer 20
+spawn_override E Rocketeer 20
+spawn_override E Hussar 4
+spawn_override E CuirassierDragoon 4
+
+spawn_override E NavalMarine 125
+spawn_override E CoastGuard 125
+spawn_override E Customs 125
+
+#Firearm Ammo Override
+firearm_ammo_override British Hussar Pistol_NewLandPattern 2 1 10
+firearm_ammo_override British CuirassierDragoon Carbine_Elliot 2 1 10
+firearm_ammo_override French Hussar Pistol_XIII 2 1 10
+firearm_ammo_override French CuirassierDragoon Carbine_CharlevilleCavalryIXXIII 2 1 10
+firearm_ammo_override Prussian Hussar Pistol_XIII 2 1 10
+firearm_ammo_override Prussian CuirassierDragoon Carbine_CharlevilleCavalryIXXIII 2 1 10
+
+#Starting Weapon Override
+starting_weapons_override British Hussar 4 4 Unarmed Pistol_NewLandPattern Sabre_1796PatternLightCavalry BearingFlagBritish
+starting_weapons_override British CuirassierDragoon 4 4 Unarmed Carbine_Elliot Sword_Pattern1803FlankOfficerCavalry BearingFlagBritish
+starting_weapons_override French Hussar 4 4 Unarmed Pistol_XIII Sabre_AnXILightCavalry BearingFlagFrench
+starting_weapons_override French CuirassierDragoon 4 4 Unarmed Carbine_CharlevilleCavalryIXXIII Sabre_AnXILightCavalry BearingFlagFrench
+starting_weapons_override Prussian Hussar 4 4 Unarmed Pistol_XIII Sabre_AnXILightCavalry BearingFlagPrussian
+starting_weapons_override Prussian CuirassierDragoon 4 4 Unarmed Carbine_CharlevilleCavalryIXXIII Sabre_AnXILightCavalry BearingFlagPrussian
+
+#Automated Commands - Round Start
+rc set allowFiring true
+
+rc set characterRespawnTime 1
+rc set characterVehicleRespawnTime 1
+
+rc set cannonMoverSpeedMultiplier 0
+rc set cannonMoverRotationMultiplier 0
+rc set rocketMoverSpeedMultiplier 0
+rc set rocketMoverRotationMultiplier 0
+
+#Automated Commands - Timed
+rc delayed 1876 broadcast broadcast LIVE AT 30:00! - Don't move out early. - Artillery enabled at 25:00.
+rc delayed 1866 broadcast [EVENT RULES]
+rc delayed 1861 broadcast Form a line with 3+ men. No gaps.
+rc delayed 1861 broadcast Do not fire while charging (Unless Cavalry).
+rc delayed 1861 broadcast Do not fire out of line.
+rc delayed 1861 broadcast Do not charge alone. Stay with your line or cavalry formation.
+rc delayed 1861 broadcast To capture the point you must have a line of 3+ men.
+
+rc delayed 1861 broadcast LIVE AT 30:00! - Don't move out early. - Artillery enabled at 25:00.
+rc delayed 1807 broadcast [EVENT RULES]
+rc delayed 1802 broadcast Form a line with 3+ men. No gaps.
+rc delayed 1802 broadcast Do not fire while charging (Unless Cavalry).
+rc delayed 1802 broadcast Do not fire out of line.
+rc delayed 1802 broadcast Do not charge alone. Stay with your line or cavalry formation.
+rc delayed 1802 broadcast To capture the point you must have a line of 3+ men.
+
+rc delayed 1801 broadcast Match Is Now LIVE!
+
+rc delayed 1770 set characterRespawntime 9999999999
+rc delayed 1770 set characterVehicleRespawnTime 9999999999
+
+rc delayed 1501 broadcast [EVENT RULES]
+rc delayed 1501 broadcast Form a line with 3+ men. No gaps.
+rc delayed 1501 broadcast Do not fire while charging (Unless Cavalry).
+rc delayed 1501 broadcast Do not fire out of line.
+rc delayed 1501 broadcast Do not charge alone. Stay with your line or cavalry formation.
+rc delayed 1501 broadcast To capture the point you must have a line of 3+ men.
+rc delayed 1500 broadcast Artillery Is Now Allowed! :)
+
+rc delayed 1505 set cannonMoverSpeedMultiplier 1
+rc delayed 1505 set cannonMoverRotationMultiplier 1
+rc delayed 1505 set rocketMoverSpeedMultiplier 1
+rc delayed 1505 set rocketMoverRotationMultiplier 1
+
+rc delayed 1501 set characterRespawnTime 1
+rc delayed 1501 set characterVehicleRespawnTime 1
+rc delayed 1470 set characterRespawntime 9999999999
+rc delayed 1470 set characterVehicleRespawnTime 9999999999
+rc delayed 1201 set characterRespawnTime 1
+rc delayed 1201 set characterVehicleRespawnTime 1
+
+rc delayed 1201 broadcast [EVENT RULES]
+rc delayed 1201 broadcast Form a line with 3+ men. No gaps.
+rc delayed 1201 broadcast Do not fire while charging (Unless Cavalry).
+rc delayed 1201 broadcast Do not fire out of line.
+rc delayed 1201 broadcast Do not charge alone. Stay with your line or cavalry formation.
+rc delayed 1201 broadcast To capture the point you must have a line of 3+ men.
+
+rc delayed 1170 set characterRespawntime 9999999999
+rc delayed 1170 set characterVehicleRespawnTime 9999999999
+rc delayed 901 set characterRespawnTime 1
+rc delayed 901 set characterVehicleRespawnTime 1
+
+rc delayed 901 broadcast [EVENT RULES]
+rc delayed 901 broadcast Form a line with 3+ men. No gaps.
+rc delayed 901 broadcast Do not fire while charging (Unless Cavalry).
+rc delayed 901 broadcast Do not fire out of line.
+rc delayed 901 broadcast Do not charge alone. Stay with your line or cavalry formation.
+rc delayed 901 broadcast To capture the point you must have a line of 3+ men.
+
+rc delayed 870 set characterRespawntime 9999999999
+rc delayed 870 set characterVehicleRespawnTime 9999999999
+rc delayed 601 set characterRespawnTime 1
+rc delayed 601 set characterVehicleRespawnTime 1
+
+rc delayed 601 broadcast [EVENT RULES]
+rc delayed 601 broadcast Form a line with 3+ men. No gaps.
+rc delayed 601 broadcast Do not fire while charging (Unless Cavalry).
+rc delayed 601 broadcast Do not fire out of line.
+rc delayed 601 broadcast Do not charge alone. Stay with your line or cavalry formation.
+rc delayed 601 broadcast To capture the point you must have a line of 3+ men.
+
+rc delayed 570 set characterRespawntime 9999999999
+rc delayed 570 set characterVehicleRespawnTime 9999999999
+rc delayed 301 set characterRespawnTime 1
+rc delayed 301 set characterVehicleRespawnTime 1
+
+rc delayed 601 broadcast [EVENT RULES]
+rc delayed 601 broadcast Form a line with 3+ men. No gaps.
+rc delayed 601 broadcast Do not fire while charging (Unless Cavalry).
+rc delayed 601 broadcast Do not fire out of line.
+rc delayed 601 broadcast Do not charge alone. Stay with your line or cavalry formation.
+rc delayed 601 broadcast To capture the point you must have a line of 3+ men.
+
+rc delayed 301 broadcast All Charge At 3:00! (You will be allowed to respawn)
+
+rc delayed 270 set characterRespawntime 9999999999
+rc delayed 270 set characterVehicleRespawnTime 9999999999
+rc delayed 181 set characterRespawntime 1
+rc delayed 181 set characterVehicleRespawnTime 1
+
+rc delayed 181 set allowFiring false
+
+rc delayed 180 broadcast ALL CHARGE! Melee Only. No Cannons.
+
+rc delayed 175 set characterRespawntime 9999999999
+rc delayed 175 set characterVehicleRespawnTime 9999999999
+
+rc delayed 1 set allowFiring true
+rc delayed 1 set characterRespawntime 1
+rc delayed 1 set characterVehicleRespawnTime 1
+
+!map_rotation end
+
+
+#16 = Ancient Plains 1 (L) [Army Conquest] - Calm | Morning (8)
+!map_rotation start
+map_name ancientplains
+game_mode ArmyConquest
+game_type Hardcore 
+round_time_minutes 31.5
+round_spawn_close_timer_seconds 1740
+conquest_tick_reward 1
+conquest_max_tickets 4500
+conquest_ticker_time_seconds 1
+conquest_tickets_per_capture 150
+max_player_respawns -1
+faction_balancing true
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 180
+time_hour 8
+time_dynamic false
+weather_preset calm3
+weather_dynamic false
+friendly_fire false
+friendly_fire_melee_bounce true
+damage_split 0
+sappers_attacking_starting_materials 150
+sappers_defending_starting_materials 150
+sappers_buildlimit explosivebarrel attacking 0
+sappers_buildlimit explosivebarrel defending 0
+sappers_buildlimit palisade attacking 0
+sappers_buildlimit palisade defending 0
+sappers_buildlimit shootingplatform attacking 0
+sappers_buildlimit shootingplatform defending 0
+sappers_buildlimit swivelgun attacking 0
+sappers_buildlimit swivelgun defending 0
+officers_spawn_mounted false
+faction_attacking prussian
+faction_defending british
+
+#Spawn Overrides
+spawn_override A ArmyInfantryOfficer 0
+spawn_override B ArmyInfantryOfficer 0
+spawn_override C ArmyInfantryOfficer 0
+
+spawn_override D ArmyInfantryOfficer 10
+spawn_override D ArmyLineInfantry 125
+spawn_override D ArmyLineInfantry2 125
+spawn_override D Grenadier 125
+spawn_override D Guard 125
+spawn_override D LightInfantry 125
+#spawn_override D Rifleman 0 (Not Used)
+spawn_override D FlagBearer 6
+spawn_override D Drummer 3
+spawn_override D Fifer 3
+spawn_override D Bagpiper 3
+spawn_override D Surgeon 4
+spawn_override D Sapper 3
+#spawn_override D Carpenter 0 (Not Used)
+spawn_override D Cannoneer 20
+spawn_override D Rocketeer 20
+spawn_override D Hussar 4
+spawn_override D CuirassierDragoon 4
+
+spawn_override D NavalMarine 125
+spawn_override D CoastGuard 125
+spawn_override D Customs 125
+
+spawn_override E ArmyInfantryOfficer 10
+spawn_override E ArmyLineInfantry 125
+spawn_override E ArmyLineInfantry2 125
+spawn_override E Grenadier 125
+spawn_override E Guard 125
+spawn_override E LightInfantry 125
+#spawn_override E Rifleman 0 (Not Used)
+spawn_override E FlagBearer 6
+spawn_override E Drummer 3
+spawn_override E Fifer 3
+spawn_override E Bagpiper 3
+spawn_override E Surgeon 4
+spawn_override E Sapper 3
+#spawn_override E Carpenter 0 (Not Used)
+spawn_override E Cannoneer 20
+spawn_override E Rocketeer 20
+spawn_override E Hussar 4
+spawn_override E CuirassierDragoon 4
+
+spawn_override E NavalMarine 125
+spawn_override E CoastGuard 125
+spawn_override E Customs 125
+
+#Firearm Ammo Override
+firearm_ammo_override British Hussar Pistol_NewLandPattern 2 1 10
+firearm_ammo_override British CuirassierDragoon Carbine_Elliot 2 1 10
+firearm_ammo_override French Hussar Pistol_XIII 2 1 10
+firearm_ammo_override French CuirassierDragoon Carbine_CharlevilleCavalryIXXIII 2 1 10
+firearm_ammo_override Prussian Hussar Pistol_XIII 2 1 10
+firearm_ammo_override Prussian CuirassierDragoon Carbine_CharlevilleCavalryIXXIII 2 1 10
+
+#Starting Weapon Override
+starting_weapons_override British Hussar 4 4 Unarmed Pistol_NewLandPattern Sabre_1796PatternLightCavalry BearingFlagBritish
+starting_weapons_override British CuirassierDragoon 4 4 Unarmed Carbine_Elliot Sword_Pattern1803FlankOfficerCavalry BearingFlagBritish
+starting_weapons_override French Hussar 4 4 Unarmed Pistol_XIII Sabre_AnXILightCavalry BearingFlagFrench
+starting_weapons_override French CuirassierDragoon 4 4 Unarmed Carbine_CharlevilleCavalryIXXIII Sabre_AnXILightCavalry BearingFlagFrench
+starting_weapons_override Prussian Hussar 4 4 Unarmed Pistol_XIII Sabre_AnXILightCavalry BearingFlagPrussian
+starting_weapons_override Prussian CuirassierDragoon 4 4 Unarmed Carbine_CharlevilleCavalryIXXIII Sabre_AnXILightCavalry BearingFlagPrussian
+
+#Automated Commands - Round Start
+rc set allowFiring true
+
+rc set characterRespawnTime 1
+rc set characterVehicleRespawnTime 1
+
+rc set cannonMoverSpeedMultiplier 0
+rc set cannonMoverRotationMultiplier 0
+rc set rocketMoverSpeedMultiplier 0
+rc set rocketMoverRotationMultiplier 0
+
+#Automated Commands - Timed
+rc delayed 1876 broadcast broadcast LIVE AT 30:00! - Don't move out early. - Artillery enabled at 25:00.
+rc delayed 1866 broadcast [EVENT RULES]
+rc delayed 1861 broadcast Form a line with 3+ men. No gaps.
+rc delayed 1861 broadcast Do not fire while charging (Unless Cavalry).
+rc delayed 1861 broadcast Do not fire out of line.
+rc delayed 1861 broadcast Do not charge alone. Stay with your line or cavalry formation.
+rc delayed 1861 broadcast To capture the point you must have a line of 3+ men.
+
+rc delayed 1861 broadcast LIVE AT 30:00! - Don't move out early. - Artillery enabled at 25:00.
+rc delayed 1807 broadcast [EVENT RULES]
+rc delayed 1802 broadcast Form a line with 3+ men. No gaps.
+rc delayed 1802 broadcast Do not fire while charging (Unless Cavalry).
+rc delayed 1802 broadcast Do not fire out of line.
+rc delayed 1802 broadcast Do not charge alone. Stay with your line or cavalry formation.
+rc delayed 1802 broadcast To capture the point you must have a line of 3+ men.
+
+rc delayed 1801 broadcast Match Is Now LIVE!
+
+rc delayed 1770 set characterRespawntime 9999999999
+rc delayed 1770 set characterVehicleRespawnTime 9999999999
+
+rc delayed 1501 broadcast [EVENT RULES]
+rc delayed 1501 broadcast Form a line with 3+ men. No gaps.
+rc delayed 1501 broadcast Do not fire while charging (Unless Cavalry).
+rc delayed 1501 broadcast Do not fire out of line.
+rc delayed 1501 broadcast Do not charge alone. Stay with your line or cavalry formation.
+rc delayed 1501 broadcast To capture the point you must have a line of 3+ men.
+rc delayed 1500 broadcast Artillery Is Now Allowed! :)
+
+rc delayed 1505 set cannonMoverSpeedMultiplier 1
+rc delayed 1505 set cannonMoverRotationMultiplier 1
+rc delayed 1505 set rocketMoverSpeedMultiplier 1
+rc delayed 1505 set rocketMoverRotationMultiplier 1
+
+rc delayed 1501 set characterRespawnTime 1
+rc delayed 1501 set characterVehicleRespawnTime 1
+rc delayed 1470 set characterRespawntime 9999999999
+rc delayed 1470 set characterVehicleRespawnTime 9999999999
+rc delayed 1201 set characterRespawnTime 1
+rc delayed 1201 set characterVehicleRespawnTime 1
+
+rc delayed 1201 broadcast [EVENT RULES]
+rc delayed 1201 broadcast Form a line with 3+ men. No gaps.
+rc delayed 1201 broadcast Do not fire while charging (Unless Cavalry).
+rc delayed 1201 broadcast Do not fire out of line.
+rc delayed 1201 broadcast Do not charge alone. Stay with your line or cavalry formation.
+rc delayed 1201 broadcast To capture the point you must have a line of 3+ men.
+
+rc delayed 1170 set characterRespawntime 9999999999
+rc delayed 1170 set characterVehicleRespawnTime 9999999999
+rc delayed 901 set characterRespawnTime 1
+rc delayed 901 set characterVehicleRespawnTime 1
+
+rc delayed 901 broadcast [EVENT RULES]
+rc delayed 901 broadcast Form a line with 3+ men. No gaps.
+rc delayed 901 broadcast Do not fire while charging (Unless Cavalry).
+rc delayed 901 broadcast Do not fire out of line.
+rc delayed 901 broadcast Do not charge alone. Stay with your line or cavalry formation.
+rc delayed 901 broadcast To capture the point you must have a line of 3+ men.
+
+rc delayed 870 set characterRespawntime 9999999999
+rc delayed 870 set characterVehicleRespawnTime 9999999999
+rc delayed 601 set characterRespawnTime 1
+rc delayed 601 set characterVehicleRespawnTime 1
+
+rc delayed 601 broadcast [EVENT RULES]
+rc delayed 601 broadcast Form a line with 3+ men. No gaps.
+rc delayed 601 broadcast Do not fire while charging (Unless Cavalry).
+rc delayed 601 broadcast Do not fire out of line.
+rc delayed 601 broadcast Do not charge alone. Stay with your line or cavalry formation.
+rc delayed 601 broadcast To capture the point you must have a line of 3+ men.
+
+rc delayed 570 set characterRespawntime 9999999999
+rc delayed 570 set characterVehicleRespawnTime 9999999999
+rc delayed 301 set characterRespawnTime 1
+rc delayed 301 set characterVehicleRespawnTime 1
+
+rc delayed 601 broadcast [EVENT RULES]
+rc delayed 601 broadcast Form a line with 3+ men. No gaps.
+rc delayed 601 broadcast Do not fire while charging (Unless Cavalry).
+rc delayed 601 broadcast Do not fire out of line.
+rc delayed 601 broadcast Do not charge alone. Stay with your line or cavalry formation.
+rc delayed 601 broadcast To capture the point you must have a line of 3+ men.
+
+rc delayed 301 broadcast All Charge At 3:00! (You will be allowed to respawn)
+
+rc delayed 270 set characterRespawntime 9999999999
+rc delayed 270 set characterVehicleRespawnTime 9999999999
+rc delayed 181 set characterRespawntime 1
+rc delayed 181 set characterVehicleRespawnTime 1
+
+rc delayed 181 set allowFiring false
+
+rc delayed 180 broadcast ALL CHARGE! Melee Only. No Cannons.
+
+rc delayed 175 set characterRespawntime 9999999999
+rc delayed 175 set characterVehicleRespawnTime 9999999999
+
+rc delayed 1 set allowFiring true
+rc delayed 1 set characterRespawntime 1
+rc delayed 1 set characterVehicleRespawnTime 1
+
+!map_rotation end
+
+
+#17 = Grassy Plains 2 (L) [Army Conquest] - Calm | Afternoon (14)
+!map_rotation start
+map_name grassyplainsii
+game_mode ArmyConquest
+game_type Hardcore 
+round_time_minutes 31.5
+round_spawn_close_timer_seconds 1740
+conquest_tick_reward 1
+conquest_max_tickets 4500
+conquest_ticker_time_seconds 1
+conquest_tickets_per_capture 150
+max_player_respawns -1
+faction_balancing true
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 180
+time_hour 14
+time_dynamic false
+weather_preset calm
+weather_dynamic false
+friendly_fire false
+friendly_fire_melee_bounce true
+damage_split 0
+sappers_attacking_starting_materials 150
+sappers_defending_starting_materials 150
+sappers_buildlimit explosivebarrel attacking 0
+sappers_buildlimit explosivebarrel defending 0
+sappers_buildlimit palisade attacking 0
+sappers_buildlimit palisade defending 0
+sappers_buildlimit shootingplatform attacking 0
+sappers_buildlimit shootingplatform defending 0
+sappers_buildlimit swivelgun attacking 0
+sappers_buildlimit swivelgun defending 0
+officers_spawn_mounted false
+faction_attacking french
+faction_defending british
+
+#Spawn Overrides
+spawn_override A ArmyInfantryOfficer 0
+spawn_override B ArmyInfantryOfficer 0
+spawn_override C ArmyInfantryOfficer 0
+
+spawn_override D ArmyInfantryOfficer 10
+spawn_override D ArmyLineInfantry 125
+spawn_override D ArmyLineInfantry2 125
+spawn_override D Grenadier 125
+spawn_override D Guard 125
+spawn_override D LightInfantry 125
+#spawn_override D Rifleman 0 (Not Used)
+spawn_override D FlagBearer 6
+spawn_override D Drummer 3
+spawn_override D Fifer 3
+spawn_override D Bagpiper 3
+spawn_override D Surgeon 4
+spawn_override D Sapper 3
+#spawn_override D Carpenter 0 (Not Used)
+spawn_override D Cannoneer 20
+spawn_override D Rocketeer 20
+spawn_override D Hussar 4
+spawn_override D CuirassierDragoon 4
+
+spawn_override D NavalMarine 125
+spawn_override D CoastGuard 125
+spawn_override D Customs 125
+
+spawn_override E ArmyInfantryOfficer 10
+spawn_override E ArmyLineInfantry 125
+spawn_override E ArmyLineInfantry2 125
+spawn_override E Grenadier 125
+spawn_override E Guard 125
+spawn_override E LightInfantry 125
+#spawn_override E Rifleman 0 (Not Used)
+spawn_override E FlagBearer 6
+spawn_override E Drummer 3
+spawn_override E Fifer 3
+spawn_override E Bagpiper 3
+spawn_override E Surgeon 4
+spawn_override E Sapper 3
+#spawn_override E Carpenter 0 (Not Used)
+spawn_override E Cannoneer 20
+spawn_override E Rocketeer 20
+spawn_override E Hussar 4
+spawn_override E CuirassierDragoon 4
+
+spawn_override E NavalMarine 125
+spawn_override E CoastGuard 125
+spawn_override E Customs 125
+
+#Firearm Ammo Override
+firearm_ammo_override British Hussar Pistol_NewLandPattern 2 1 10
+firearm_ammo_override British CuirassierDragoon Carbine_Elliot 2 1 10
+firearm_ammo_override French Hussar Pistol_XIII 2 1 10
+firearm_ammo_override French CuirassierDragoon Carbine_CharlevilleCavalryIXXIII 2 1 10
+firearm_ammo_override Prussian Hussar Pistol_XIII 2 1 10
+firearm_ammo_override Prussian CuirassierDragoon Carbine_CharlevilleCavalryIXXIII 2 1 10
+
+#Starting Weapon Override
+starting_weapons_override British Hussar 4 4 Unarmed Pistol_NewLandPattern Sabre_1796PatternLightCavalry BearingFlagBritish
+starting_weapons_override British CuirassierDragoon 4 4 Unarmed Carbine_Elliot Sword_Pattern1803FlankOfficerCavalry BearingFlagBritish
+starting_weapons_override French Hussar 4 4 Unarmed Pistol_XIII Sabre_AnXILightCavalry BearingFlagFrench
+starting_weapons_override French CuirassierDragoon 4 4 Unarmed Carbine_CharlevilleCavalryIXXIII Sabre_AnXILightCavalry BearingFlagFrench
+starting_weapons_override Prussian Hussar 4 4 Unarmed Pistol_XIII Sabre_AnXILightCavalry BearingFlagPrussian
+starting_weapons_override Prussian CuirassierDragoon 4 4 Unarmed Carbine_CharlevilleCavalryIXXIII Sabre_AnXILightCavalry BearingFlagPrussian
+
+#Automated Commands - Round Start
+rc set allowFiring true
+
+rc set characterRespawnTime 1
+rc set characterVehicleRespawnTime 1
+
+rc set cannonMoverSpeedMultiplier 0
+rc set cannonMoverRotationMultiplier 0
+rc set rocketMoverSpeedMultiplier 0
+rc set rocketMoverRotationMultiplier 0
+
+#Automated Commands - Timed
+rc delayed 1876 broadcast broadcast LIVE AT 30:00! - Don't move out early. - Artillery enabled at 25:00.
+rc delayed 1866 broadcast [EVENT RULES]
+rc delayed 1861 broadcast Form a line with 3+ men. No gaps.
+rc delayed 1861 broadcast Do not fire while charging (Unless Cavalry).
+rc delayed 1861 broadcast Do not fire out of line.
+rc delayed 1861 broadcast Do not charge alone. Stay with your line or cavalry formation.
+rc delayed 1861 broadcast To capture the point you must have a line of 3+ men.
+
+rc delayed 1861 broadcast LIVE AT 30:00! - Don't move out early. - Artillery enabled at 25:00.
+rc delayed 1807 broadcast [EVENT RULES]
+rc delayed 1802 broadcast Form a line with 3+ men. No gaps.
+rc delayed 1802 broadcast Do not fire while charging (Unless Cavalry).
+rc delayed 1802 broadcast Do not fire out of line.
+rc delayed 1802 broadcast Do not charge alone. Stay with your line or cavalry formation.
+rc delayed 1802 broadcast To capture the point you must have a line of 3+ men.
+
+rc delayed 1801 broadcast Match Is Now LIVE!
+
+rc delayed 1770 set characterRespawntime 9999999999
+rc delayed 1770 set characterVehicleRespawnTime 9999999999
+
+rc delayed 1501 broadcast [EVENT RULES]
+rc delayed 1501 broadcast Form a line with 3+ men. No gaps.
+rc delayed 1501 broadcast Do not fire while charging (Unless Cavalry).
+rc delayed 1501 broadcast Do not fire out of line.
+rc delayed 1501 broadcast Do not charge alone. Stay with your line or cavalry formation.
+rc delayed 1501 broadcast To capture the point you must have a line of 3+ men.
+rc delayed 1500 broadcast Artillery Is Now Allowed! :)
+
+rc delayed 1505 set cannonMoverSpeedMultiplier 1
+rc delayed 1505 set cannonMoverRotationMultiplier 1
+rc delayed 1505 set rocketMoverSpeedMultiplier 1
+rc delayed 1505 set rocketMoverRotationMultiplier 1
+
+rc delayed 1501 set characterRespawnTime 1
+rc delayed 1501 set characterVehicleRespawnTime 1
+rc delayed 1470 set characterRespawntime 9999999999
+rc delayed 1470 set characterVehicleRespawnTime 9999999999
+rc delayed 1201 set characterRespawnTime 1
+rc delayed 1201 set characterVehicleRespawnTime 1
+
+rc delayed 1201 broadcast [EVENT RULES]
+rc delayed 1201 broadcast Form a line with 3+ men. No gaps.
+rc delayed 1201 broadcast Do not fire while charging (Unless Cavalry).
+rc delayed 1201 broadcast Do not fire out of line.
+rc delayed 1201 broadcast Do not charge alone. Stay with your line or cavalry formation.
+rc delayed 1201 broadcast To capture the point you must have a line of 3+ men.
+
+rc delayed 1170 set characterRespawntime 9999999999
+rc delayed 1170 set characterVehicleRespawnTime 9999999999
+rc delayed 901 set characterRespawnTime 1
+rc delayed 901 set characterVehicleRespawnTime 1
+
+rc delayed 901 broadcast [EVENT RULES]
+rc delayed 901 broadcast Form a line with 3+ men. No gaps.
+rc delayed 901 broadcast Do not fire while charging (Unless Cavalry).
+rc delayed 901 broadcast Do not fire out of line.
+rc delayed 901 broadcast Do not charge alone. Stay with your line or cavalry formation.
+rc delayed 901 broadcast To capture the point you must have a line of 3+ men.
+
+rc delayed 870 set characterRespawntime 9999999999
+rc delayed 870 set characterVehicleRespawnTime 9999999999
+rc delayed 601 set characterRespawnTime 1
+rc delayed 601 set characterVehicleRespawnTime 1
+
+rc delayed 601 broadcast [EVENT RULES]
+rc delayed 601 broadcast Form a line with 3+ men. No gaps.
+rc delayed 601 broadcast Do not fire while charging (Unless Cavalry).
+rc delayed 601 broadcast Do not fire out of line.
+rc delayed 601 broadcast Do not charge alone. Stay with your line or cavalry formation.
+rc delayed 601 broadcast To capture the point you must have a line of 3+ men.
+
+rc delayed 570 set characterRespawntime 9999999999
+rc delayed 570 set characterVehicleRespawnTime 9999999999
+rc delayed 301 set characterRespawnTime 1
+rc delayed 301 set characterVehicleRespawnTime 1
+
+rc delayed 601 broadcast [EVENT RULES]
+rc delayed 601 broadcast Form a line with 3+ men. No gaps.
+rc delayed 601 broadcast Do not fire while charging (Unless Cavalry).
+rc delayed 601 broadcast Do not fire out of line.
+rc delayed 601 broadcast Do not charge alone. Stay with your line or cavalry formation.
+rc delayed 601 broadcast To capture the point you must have a line of 3+ men.
+
+rc delayed 301 broadcast All Charge At 3:00! (You will be allowed to respawn)
+
+rc delayed 270 set characterRespawntime 9999999999
+rc delayed 270 set characterVehicleRespawnTime 9999999999
+rc delayed 181 set characterRespawntime 1
+rc delayed 181 set characterVehicleRespawnTime 1
+
+rc delayed 181 set allowFiring false
+
+rc delayed 180 broadcast ALL CHARGE! Melee Only. No Cannons.
+
+rc delayed 175 set characterRespawntime 9999999999
+rc delayed 175 set characterVehicleRespawnTime 9999999999
+
+rc delayed 1 set allowFiring true
+rc delayed 1 set characterRespawntime 1
+rc delayed 1 set characterVehicleRespawnTime 1
+
+!map_rotation end
+
+
+#18 = Grassy Plains 3 (L) [Army Conquest] - Calm | Afternoon (14)
+!map_rotation start
+map_name grassyplainsiii
+game_mode ArmyConquest
+game_type Hardcore 
+round_time_minutes 31.5
+round_spawn_close_timer_seconds 1740
+conquest_tick_reward 1
+conquest_max_tickets 4000
+conquest_ticker_time_seconds 1
+conquest_tickets_per_capture 150
+max_player_respawns -1
+faction_balancing true
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 180
+time_hour 14
+time_dynamic false
+weather_preset calm
+weather_dynamic false
+friendly_fire false
+friendly_fire_melee_bounce true
+damage_split 0
+sappers_attacking_starting_materials 150
+sappers_defending_starting_materials 150
+sappers_buildlimit explosivebarrel attacking 0
+sappers_buildlimit explosivebarrel defending 0
+sappers_buildlimit palisade attacking 0
+sappers_buildlimit palisade defending 0
+sappers_buildlimit shootingplatform attacking 0
+sappers_buildlimit shootingplatform defending 0
+sappers_buildlimit swivelgun attacking 0
+sappers_buildlimit swivelgun defending 0
+officers_spawn_mounted false
+faction_attacking prussian
+faction_defending british
+
+#Spawn Overrides
+spawn_override A ArmyInfantryOfficer 0
+spawn_override B ArmyInfantryOfficer 0
+spawn_override C ArmyInfantryOfficer 0
+
+spawn_override D ArmyInfantryOfficer 10
+spawn_override D ArmyLineInfantry 125
+spawn_override D ArmyLineInfantry2 125
+spawn_override D Grenadier 125
+spawn_override D Guard 125
+spawn_override D LightInfantry 125
+#spawn_override D Rifleman 0 (Not Used)
+spawn_override D FlagBearer 6
+spawn_override D Drummer 3
+spawn_override D Fifer 3
+spawn_override D Bagpiper 3
+spawn_override D Surgeon 4
+spawn_override D Sapper 3
+#spawn_override D Carpenter 0 (Not Used)
+spawn_override D Cannoneer 20
+spawn_override D Rocketeer 20
+spawn_override D Hussar 4
+spawn_override D CuirassierDragoon 4
+
+spawn_override D NavalMarine 125
+spawn_override D CoastGuard 125
+spawn_override D Customs 125
+
+spawn_override E ArmyInfantryOfficer 10
+spawn_override E ArmyLineInfantry 125
+spawn_override E ArmyLineInfantry2 125
+spawn_override E Grenadier 125
+spawn_override E Guard 125
+spawn_override E LightInfantry 125
+#spawn_override E Rifleman 0 (Not Used)
+spawn_override E FlagBearer 6
+spawn_override E Drummer 3
+spawn_override E Fifer 3
+spawn_override E Bagpiper 3
+spawn_override E Surgeon 4
+spawn_override E Sapper 3
+#spawn_override E Carpenter 0 (Not Used)
+spawn_override E Cannoneer 20
+spawn_override E Rocketeer 20
+spawn_override E Hussar 4
+spawn_override E CuirassierDragoon 4
+
+spawn_override E NavalMarine 125
+spawn_override E CoastGuard 125
+spawn_override E Customs 125
+
+#Firearm Ammo Override
+firearm_ammo_override British Hussar Pistol_NewLandPattern 2 1 10
+firearm_ammo_override British CuirassierDragoon Carbine_Elliot 2 1 10
+firearm_ammo_override French Hussar Pistol_XIII 2 1 10
+firearm_ammo_override French CuirassierDragoon Carbine_CharlevilleCavalryIXXIII 2 1 10
+firearm_ammo_override Prussian Hussar Pistol_XIII 2 1 10
+firearm_ammo_override Prussian CuirassierDragoon Carbine_CharlevilleCavalryIXXIII 2 1 10
+
+#Starting Weapon Override
+starting_weapons_override British Hussar 4 4 Unarmed Pistol_NewLandPattern Sabre_1796PatternLightCavalry BearingFlagBritish
+starting_weapons_override British CuirassierDragoon 4 4 Unarmed Carbine_Elliot Sword_Pattern1803FlankOfficerCavalry BearingFlagBritish
+starting_weapons_override French Hussar 4 4 Unarmed Pistol_XIII Sabre_AnXILightCavalry BearingFlagFrench
+starting_weapons_override French CuirassierDragoon 4 4 Unarmed Carbine_CharlevilleCavalryIXXIII Sabre_AnXILightCavalry BearingFlagFrench
+starting_weapons_override Prussian Hussar 4 4 Unarmed Pistol_XIII Sabre_AnXILightCavalry BearingFlagPrussian
+starting_weapons_override Prussian CuirassierDragoon 4 4 Unarmed Carbine_CharlevilleCavalryIXXIII Sabre_AnXILightCavalry BearingFlagPrussian
+
+#Automated Commands - Round Start
+rc set allowFiring true
+
+rc set characterRespawnTime 1
+rc set characterVehicleRespawnTime 1
+
+rc set cannonMoverSpeedMultiplier 0
+rc set cannonMoverRotationMultiplier 0
+rc set rocketMoverSpeedMultiplier 0
+rc set rocketMoverRotationMultiplier 0
+
+#Automated Commands - Timed
+rc delayed 1876 broadcast broadcast LIVE AT 30:00! - Don't move out early. - Artillery enabled at 25:00.
+rc delayed 1866 broadcast [EVENT RULES]
+rc delayed 1861 broadcast Form a line with 3+ men. No gaps.
+rc delayed 1861 broadcast Do not fire while charging (Unless Cavalry).
+rc delayed 1861 broadcast Do not fire out of line.
+rc delayed 1861 broadcast Do not charge alone. Stay with your line or cavalry formation.
+rc delayed 1861 broadcast To capture the point you must have a line of 3+ men.
+
+rc delayed 1861 broadcast LIVE AT 30:00! - Don't move out early. - Artillery enabled at 25:00.
+rc delayed 1807 broadcast [EVENT RULES]
+rc delayed 1802 broadcast Form a line with 3+ men. No gaps.
+rc delayed 1802 broadcast Do not fire while charging (Unless Cavalry).
+rc delayed 1802 broadcast Do not fire out of line.
+rc delayed 1802 broadcast Do not charge alone. Stay with your line or cavalry formation.
+rc delayed 1802 broadcast To capture the point you must have a line of 3+ men.
+
+rc delayed 1801 broadcast Match Is Now LIVE!
+
+rc delayed 1770 set characterRespawntime 9999999999
+rc delayed 1770 set characterVehicleRespawnTime 9999999999
+
+rc delayed 1501 broadcast [EVENT RULES]
+rc delayed 1501 broadcast Form a line with 3+ men. No gaps.
+rc delayed 1501 broadcast Do not fire while charging (Unless Cavalry).
+rc delayed 1501 broadcast Do not fire out of line.
+rc delayed 1501 broadcast Do not charge alone. Stay with your line or cavalry formation.
+rc delayed 1501 broadcast To capture the point you must have a line of 3+ men.
+rc delayed 1500 broadcast Artillery Is Now Allowed! :)
+
+rc delayed 1505 set cannonMoverSpeedMultiplier 1
+rc delayed 1505 set cannonMoverRotationMultiplier 1
+rc delayed 1505 set rocketMoverSpeedMultiplier 1
+rc delayed 1505 set rocketMoverRotationMultiplier 1
+
+rc delayed 1501 set characterRespawnTime 1
+rc delayed 1501 set characterVehicleRespawnTime 1
+rc delayed 1470 set characterRespawntime 9999999999
+rc delayed 1470 set characterVehicleRespawnTime 9999999999
+rc delayed 1201 set characterRespawnTime 1
+rc delayed 1201 set characterVehicleRespawnTime 1
+
+rc delayed 1201 broadcast [EVENT RULES]
+rc delayed 1201 broadcast Form a line with 3+ men. No gaps.
+rc delayed 1201 broadcast Do not fire while charging (Unless Cavalry).
+rc delayed 1201 broadcast Do not fire out of line.
+rc delayed 1201 broadcast Do not charge alone. Stay with your line or cavalry formation.
+rc delayed 1201 broadcast To capture the point you must have a line of 3+ men.
+
+rc delayed 1170 set characterRespawntime 9999999999
+rc delayed 1170 set characterVehicleRespawnTime 9999999999
+rc delayed 901 set characterRespawnTime 1
+rc delayed 901 set characterVehicleRespawnTime 1
+
+rc delayed 901 broadcast [EVENT RULES]
+rc delayed 901 broadcast Form a line with 3+ men. No gaps.
+rc delayed 901 broadcast Do not fire while charging (Unless Cavalry).
+rc delayed 901 broadcast Do not fire out of line.
+rc delayed 901 broadcast Do not charge alone. Stay with your line or cavalry formation.
+rc delayed 901 broadcast To capture the point you must have a line of 3+ men.
+
+rc delayed 870 set characterRespawntime 9999999999
+rc delayed 870 set characterVehicleRespawnTime 9999999999
+rc delayed 601 set characterRespawnTime 1
+rc delayed 601 set characterVehicleRespawnTime 1
+
+rc delayed 601 broadcast [EVENT RULES]
+rc delayed 601 broadcast Form a line with 3+ men. No gaps.
+rc delayed 601 broadcast Do not fire while charging (Unless Cavalry).
+rc delayed 601 broadcast Do not fire out of line.
+rc delayed 601 broadcast Do not charge alone. Stay with your line or cavalry formation.
+rc delayed 601 broadcast To capture the point you must have a line of 3+ men.
+
+rc delayed 570 set characterRespawntime 9999999999
+rc delayed 570 set characterVehicleRespawnTime 9999999999
+rc delayed 301 set characterRespawnTime 1
+rc delayed 301 set characterVehicleRespawnTime 1
+
+rc delayed 601 broadcast [EVENT RULES]
+rc delayed 601 broadcast Form a line with 3+ men. No gaps.
+rc delayed 601 broadcast Do not fire while charging (Unless Cavalry).
+rc delayed 601 broadcast Do not fire out of line.
+rc delayed 601 broadcast Do not charge alone. Stay with your line or cavalry formation.
+rc delayed 601 broadcast To capture the point you must have a line of 3+ men.
+
+rc delayed 301 broadcast All Charge At 3:00! (You will be allowed to respawn)
+
+rc delayed 270 set characterRespawntime 9999999999
+rc delayed 270 set characterVehicleRespawnTime 9999999999
+rc delayed 181 set characterRespawntime 1
+rc delayed 181 set characterVehicleRespawnTime 1
+
+rc delayed 181 set allowFiring false
+
+rc delayed 180 broadcast ALL CHARGE! Melee Only. No Cannons.
+
+rc delayed 175 set characterRespawntime 9999999999
+rc delayed 175 set characterVehicleRespawnTime 9999999999
+
+rc delayed 1 set allowFiring true
+rc delayed 1 set characterRespawntime 1
+rc delayed 1 set characterVehicleRespawnTime 1
+
+!map_rotation end
+
+
+#19 = Snowy Plains 1 (L) [Army Conquest] - Snowy | Afternoon (14)
+!map_rotation start
+map_name snowyplains
+game_mode ArmyConquest
+game_type Hardcore 
+round_time_minutes 31.5
+round_spawn_close_timer_seconds 1740
+conquest_tick_reward 1
+conquest_max_tickets 4500
+conquest_ticker_time_seconds 1
+conquest_tickets_per_capture 150
+max_player_respawns -1
+faction_balancing true
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 180
+time_hour 14
+time_dynamic false
+weather_preset snowy
+weather_dynamic false
+friendly_fire false
+friendly_fire_melee_bounce true
+damage_split 0
+sappers_attacking_starting_materials 150
+sappers_defending_starting_materials 150
+sappers_buildlimit explosivebarrel attacking 0
+sappers_buildlimit explosivebarrel defending 0
+sappers_buildlimit palisade attacking 0
+sappers_buildlimit palisade defending 0
+sappers_buildlimit shootingplatform attacking 0
+sappers_buildlimit shootingplatform defending 0
+sappers_buildlimit swivelgun attacking 0
+sappers_buildlimit swivelgun defending 0
+officers_spawn_mounted false
+faction_attacking french
+faction_defending british
+
+#Spawn Overrides
+spawn_override A ArmyInfantryOfficer 0
+spawn_override B ArmyInfantryOfficer 0
+spawn_override C ArmyInfantryOfficer 0
+
+spawn_override D ArmyInfantryOfficer 10
+spawn_override D ArmyLineInfantry 125
+spawn_override D ArmyLineInfantry2 125
+spawn_override D Grenadier 125
+spawn_override D Guard 125
+spawn_override D LightInfantry 125
+#spawn_override D Rifleman 0 (Not Used)
+spawn_override D FlagBearer 6
+spawn_override D Drummer 3
+spawn_override D Fifer 3
+spawn_override D Bagpiper 3
+spawn_override D Surgeon 4
+spawn_override D Sapper 3
+#spawn_override D Carpenter 0 (Not Used)
+spawn_override D Cannoneer 20
+spawn_override D Rocketeer 20
+spawn_override D Hussar 4
+spawn_override D CuirassierDragoon 4
+
+spawn_override D NavalMarine 125
+spawn_override D CoastGuard 125
+spawn_override D Customs 125
+
+spawn_override E ArmyInfantryOfficer 10
+spawn_override E ArmyLineInfantry 125
+spawn_override E ArmyLineInfantry2 125
+spawn_override E Grenadier 125
+spawn_override E Guard 125
+spawn_override E LightInfantry 125
+#spawn_override E Rifleman 0 (Not Used)
+spawn_override E FlagBearer 6
+spawn_override E Drummer 3
+spawn_override E Fifer 3
+spawn_override E Bagpiper 3
+spawn_override E Surgeon 4
+spawn_override E Sapper 3
+#spawn_override E Carpenter 0 (Not Used)
+spawn_override E Cannoneer 20
+spawn_override E Rocketeer 20
+spawn_override E Hussar 4
+spawn_override E CuirassierDragoon 4
+
+spawn_override E NavalMarine 125
+spawn_override E CoastGuard 125
+spawn_override E Customs 125
+
+#Firearm Ammo Override
+firearm_ammo_override British Hussar Pistol_NewLandPattern 2 1 10
+firearm_ammo_override British CuirassierDragoon Carbine_Elliot 2 1 10
+firearm_ammo_override French Hussar Pistol_XIII 2 1 10
+firearm_ammo_override French CuirassierDragoon Carbine_CharlevilleCavalryIXXIII 2 1 10
+firearm_ammo_override Prussian Hussar Pistol_XIII 2 1 10
+firearm_ammo_override Prussian CuirassierDragoon Carbine_CharlevilleCavalryIXXIII 2 1 10
+
+#Starting Weapon Override
+starting_weapons_override British Hussar 4 4 Unarmed Pistol_NewLandPattern Sabre_1796PatternLightCavalry BearingFlagBritish
+starting_weapons_override British CuirassierDragoon 4 4 Unarmed Carbine_Elliot Sword_Pattern1803FlankOfficerCavalry BearingFlagBritish
+starting_weapons_override French Hussar 4 4 Unarmed Pistol_XIII Sabre_AnXILightCavalry BearingFlagFrench
+starting_weapons_override French CuirassierDragoon 4 4 Unarmed Carbine_CharlevilleCavalryIXXIII Sabre_AnXILightCavalry BearingFlagFrench
+starting_weapons_override Prussian Hussar 4 4 Unarmed Pistol_XIII Sabre_AnXILightCavalry BearingFlagPrussian
+starting_weapons_override Prussian CuirassierDragoon 4 4 Unarmed Carbine_CharlevilleCavalryIXXIII Sabre_AnXILightCavalry BearingFlagPrussian
+
+#Automated Commands - Round Start
+rc set allowFiring true
+
+rc set characterRespawnTime 1
+rc set characterVehicleRespawnTime 1
+
+rc set cannonMoverSpeedMultiplier 0
+rc set cannonMoverRotationMultiplier 0
+rc set rocketMoverSpeedMultiplier 0
+rc set rocketMoverRotationMultiplier 0
+
+#Automated Commands - Timed
+rc delayed 1876 broadcast broadcast LIVE AT 30:00! - Don't move out early. - Artillery enabled at 25:00.
+rc delayed 1866 broadcast [EVENT RULES]
+rc delayed 1861 broadcast Form a line with 3+ men. No gaps.
+rc delayed 1861 broadcast Do not fire while charging (Unless Cavalry).
+rc delayed 1861 broadcast Do not fire out of line.
+rc delayed 1861 broadcast Do not charge alone. Stay with your line or cavalry formation.
+rc delayed 1861 broadcast To capture the point you must have a line of 3+ men.
+
+rc delayed 1861 broadcast LIVE AT 30:00! - Don't move out early. - Artillery enabled at 25:00.
+rc delayed 1807 broadcast [EVENT RULES]
+rc delayed 1802 broadcast Form a line with 3+ men. No gaps.
+rc delayed 1802 broadcast Do not fire while charging (Unless Cavalry).
+rc delayed 1802 broadcast Do not fire out of line.
+rc delayed 1802 broadcast Do not charge alone. Stay with your line or cavalry formation.
+rc delayed 1802 broadcast To capture the point you must have a line of 3+ men.
+
+rc delayed 1801 broadcast Match Is Now LIVE!
+
+rc delayed 1770 set characterRespawntime 9999999999
+rc delayed 1770 set characterVehicleRespawnTime 9999999999
+
+rc delayed 1501 broadcast [EVENT RULES]
+rc delayed 1501 broadcast Form a line with 3+ men. No gaps.
+rc delayed 1501 broadcast Do not fire while charging (Unless Cavalry).
+rc delayed 1501 broadcast Do not fire out of line.
+rc delayed 1501 broadcast Do not charge alone. Stay with your line or cavalry formation.
+rc delayed 1501 broadcast To capture the point you must have a line of 3+ men.
+rc delayed 1500 broadcast Artillery Is Now Allowed! :)
+
+rc delayed 1505 set cannonMoverSpeedMultiplier 1
+rc delayed 1505 set cannonMoverRotationMultiplier 1
+rc delayed 1505 set rocketMoverSpeedMultiplier 1
+rc delayed 1505 set rocketMoverRotationMultiplier 1
+
+rc delayed 1501 set characterRespawnTime 1
+rc delayed 1501 set characterVehicleRespawnTime 1
+rc delayed 1470 set characterRespawntime 9999999999
+rc delayed 1470 set characterVehicleRespawnTime 9999999999
+rc delayed 1201 set characterRespawnTime 1
+rc delayed 1201 set characterVehicleRespawnTime 1
+
+rc delayed 1201 broadcast [EVENT RULES]
+rc delayed 1201 broadcast Form a line with 3+ men. No gaps.
+rc delayed 1201 broadcast Do not fire while charging (Unless Cavalry).
+rc delayed 1201 broadcast Do not fire out of line.
+rc delayed 1201 broadcast Do not charge alone. Stay with your line or cavalry formation.
+rc delayed 1201 broadcast To capture the point you must have a line of 3+ men.
+
+rc delayed 1170 set characterRespawntime 9999999999
+rc delayed 1170 set characterVehicleRespawnTime 9999999999
+rc delayed 901 set characterRespawnTime 1
+rc delayed 901 set characterVehicleRespawnTime 1
+
+rc delayed 901 broadcast [EVENT RULES]
+rc delayed 901 broadcast Form a line with 3+ men. No gaps.
+rc delayed 901 broadcast Do not fire while charging (Unless Cavalry).
+rc delayed 901 broadcast Do not fire out of line.
+rc delayed 901 broadcast Do not charge alone. Stay with your line or cavalry formation.
+rc delayed 901 broadcast To capture the point you must have a line of 3+ men.
+
+rc delayed 870 set characterRespawntime 9999999999
+rc delayed 870 set characterVehicleRespawnTime 9999999999
+rc delayed 601 set characterRespawnTime 1
+rc delayed 601 set characterVehicleRespawnTime 1
+
+rc delayed 601 broadcast [EVENT RULES]
+rc delayed 601 broadcast Form a line with 3+ men. No gaps.
+rc delayed 601 broadcast Do not fire while charging (Unless Cavalry).
+rc delayed 601 broadcast Do not fire out of line.
+rc delayed 601 broadcast Do not charge alone. Stay with your line or cavalry formation.
+rc delayed 601 broadcast To capture the point you must have a line of 3+ men.
+
+rc delayed 570 set characterRespawntime 9999999999
+rc delayed 570 set characterVehicleRespawnTime 9999999999
+rc delayed 301 set characterRespawnTime 1
+rc delayed 301 set characterVehicleRespawnTime 1
+
+rc delayed 601 broadcast [EVENT RULES]
+rc delayed 601 broadcast Form a line with 3+ men. No gaps.
+rc delayed 601 broadcast Do not fire while charging (Unless Cavalry).
+rc delayed 601 broadcast Do not fire out of line.
+rc delayed 601 broadcast Do not charge alone. Stay with your line or cavalry formation.
+rc delayed 601 broadcast To capture the point you must have a line of 3+ men.
+
+rc delayed 301 broadcast All Charge At 3:00! (You will be allowed to respawn)
+
+rc delayed 270 set characterRespawntime 9999999999
+rc delayed 270 set characterVehicleRespawnTime 9999999999
+rc delayed 181 set characterRespawntime 1
+rc delayed 181 set characterVehicleRespawnTime 1
+
+rc delayed 181 set allowFiring false
+
+rc delayed 180 broadcast ALL CHARGE! Melee Only. No Cannons.
+
+rc delayed 175 set characterRespawntime 9999999999
+rc delayed 175 set characterVehicleRespawnTime 9999999999
+
+rc delayed 1 set allowFiring true
+rc delayed 1 set characterRespawntime 1
+rc delayed 1 set characterVehicleRespawnTime 1
+
+!map_rotation end
+
+
+#20 = Snowy Plains 3 (L) [Army Conquest] - Snowy | Afternoon (14)
+!map_rotation start
+map_name snowyplainsiii
+game_mode ArmyConquest
+game_type Hardcore 
+round_time_minutes 31.5
+round_spawn_close_timer_seconds 1740
+conquest_tick_reward 1
+conquest_max_tickets 4500
+conquest_ticker_time_seconds 1
+conquest_tickets_per_capture 150
+max_player_respawns -1
+faction_balancing true
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 180
+time_hour 14
+time_dynamic false
+weather_preset snowy
+weather_dynamic false
+friendly_fire false
+friendly_fire_melee_bounce true
+damage_split 0
+sappers_attacking_starting_materials 150
+sappers_defending_starting_materials 150
+sappers_buildlimit explosivebarrel attacking 0
+sappers_buildlimit explosivebarrel defending 0
+sappers_buildlimit palisade attacking 0
+sappers_buildlimit palisade defending 0
+sappers_buildlimit shootingplatform attacking 0
+sappers_buildlimit shootingplatform defending 0
+sappers_buildlimit swivelgun attacking 0
+sappers_buildlimit swivelgun defending 0
+officers_spawn_mounted false
+faction_attacking prussian
+faction_defending british
+
+#Spawn Overrides
+spawn_override A ArmyInfantryOfficer 0
+spawn_override B ArmyInfantryOfficer 0
+spawn_override C ArmyInfantryOfficer 0
+
+spawn_override D ArmyInfantryOfficer 10
+spawn_override D ArmyLineInfantry 125
+spawn_override D ArmyLineInfantry2 125
+spawn_override D Grenadier 125
+spawn_override D Guard 125
+spawn_override D LightInfantry 125
+#spawn_override D Rifleman 0 (Not Used)
+spawn_override D FlagBearer 6
+spawn_override D Drummer 3
+spawn_override D Fifer 3
+spawn_override D Bagpiper 3
+spawn_override D Surgeon 4
+spawn_override D Sapper 3
+#spawn_override D Carpenter 0 (Not Used)
+spawn_override D Cannoneer 20
+spawn_override D Rocketeer 20
+spawn_override D Hussar 4
+spawn_override D CuirassierDragoon 4
+
+spawn_override D NavalMarine 125
+spawn_override D CoastGuard 125
+spawn_override D Customs 125
+
+spawn_override E ArmyInfantryOfficer 10
+spawn_override E ArmyLineInfantry 125
+spawn_override E ArmyLineInfantry2 125
+spawn_override E Grenadier 125
+spawn_override E Guard 125
+spawn_override E LightInfantry 125
+#spawn_override E Rifleman 0 (Not Used)
+spawn_override E FlagBearer 6
+spawn_override E Drummer 3
+spawn_override E Fifer 3
+spawn_override E Bagpiper 3
+spawn_override E Surgeon 4
+spawn_override E Sapper 3
+#spawn_override E Carpenter 0 (Not Used)
+spawn_override E Cannoneer 20
+spawn_override E Rocketeer 20
+spawn_override E Hussar 4
+spawn_override E CuirassierDragoon 4
+
+spawn_override E NavalMarine 125
+spawn_override E CoastGuard 125
+spawn_override E Customs 125
+
+#Firearm Ammo Override
+firearm_ammo_override British Hussar Pistol_NewLandPattern 2 1 10
+firearm_ammo_override British CuirassierDragoon Carbine_Elliot 2 1 10
+firearm_ammo_override French Hussar Pistol_XIII 2 1 10
+firearm_ammo_override French CuirassierDragoon Carbine_CharlevilleCavalryIXXIII 2 1 10
+firearm_ammo_override Prussian Hussar Pistol_XIII 2 1 10
+firearm_ammo_override Prussian CuirassierDragoon Carbine_CharlevilleCavalryIXXIII 2 1 10
+
+#Starting Weapon Override
+starting_weapons_override British Hussar 4 4 Unarmed Pistol_NewLandPattern Sabre_1796PatternLightCavalry BearingFlagBritish
+starting_weapons_override British CuirassierDragoon 4 4 Unarmed Carbine_Elliot Sword_Pattern1803FlankOfficerCavalry BearingFlagBritish
+starting_weapons_override French Hussar 4 4 Unarmed Pistol_XIII Sabre_AnXILightCavalry BearingFlagFrench
+starting_weapons_override French CuirassierDragoon 4 4 Unarmed Carbine_CharlevilleCavalryIXXIII Sabre_AnXILightCavalry BearingFlagFrench
+starting_weapons_override Prussian Hussar 4 4 Unarmed Pistol_XIII Sabre_AnXILightCavalry BearingFlagPrussian
+starting_weapons_override Prussian CuirassierDragoon 4 4 Unarmed Carbine_CharlevilleCavalryIXXIII Sabre_AnXILightCavalry BearingFlagPrussian
+
+#Automated Commands - Round Start
+rc set allowFiring true
+
+rc set characterRespawnTime 1
+rc set characterVehicleRespawnTime 1
+
+rc set cannonMoverSpeedMultiplier 0
+rc set cannonMoverRotationMultiplier 0
+rc set rocketMoverSpeedMultiplier 0
+rc set rocketMoverRotationMultiplier 0
+
+#Automated Commands - Timed
+rc delayed 1876 broadcast broadcast LIVE AT 30:00! - Don't move out early. - Artillery enabled at 25:00.
+rc delayed 1866 broadcast [EVENT RULES]
+rc delayed 1861 broadcast Form a line with 3+ men. No gaps.
+rc delayed 1861 broadcast Do not fire while charging (Unless Cavalry).
+rc delayed 1861 broadcast Do not fire out of line.
+rc delayed 1861 broadcast Do not charge alone. Stay with your line or cavalry formation.
+rc delayed 1861 broadcast To capture the point you must have a line of 3+ men.
+
+rc delayed 1861 broadcast LIVE AT 30:00! - Don't move out early. - Artillery enabled at 25:00.
+rc delayed 1807 broadcast [EVENT RULES]
+rc delayed 1802 broadcast Form a line with 3+ men. No gaps.
+rc delayed 1802 broadcast Do not fire while charging (Unless Cavalry).
+rc delayed 1802 broadcast Do not fire out of line.
+rc delayed 1802 broadcast Do not charge alone. Stay with your line or cavalry formation.
+rc delayed 1802 broadcast To capture the point you must have a line of 3+ men.
+
+rc delayed 1801 broadcast Match Is Now LIVE!
+
+rc delayed 1770 set characterRespawntime 9999999999
+rc delayed 1770 set characterVehicleRespawnTime 9999999999
+
+rc delayed 1501 broadcast [EVENT RULES]
+rc delayed 1501 broadcast Form a line with 3+ men. No gaps.
+rc delayed 1501 broadcast Do not fire while charging (Unless Cavalry).
+rc delayed 1501 broadcast Do not fire out of line.
+rc delayed 1501 broadcast Do not charge alone. Stay with your line or cavalry formation.
+rc delayed 1501 broadcast To capture the point you must have a line of 3+ men.
+rc delayed 1500 broadcast Artillery Is Now Allowed! :)
+
+rc delayed 1505 set cannonMoverSpeedMultiplier 1
+rc delayed 1505 set cannonMoverRotationMultiplier 1
+rc delayed 1505 set rocketMoverSpeedMultiplier 1
+rc delayed 1505 set rocketMoverRotationMultiplier 1
+
+rc delayed 1501 set characterRespawnTime 1
+rc delayed 1501 set characterVehicleRespawnTime 1
+rc delayed 1470 set characterRespawntime 9999999999
+rc delayed 1470 set characterVehicleRespawnTime 9999999999
+rc delayed 1201 set characterRespawnTime 1
+rc delayed 1201 set characterVehicleRespawnTime 1
+
+rc delayed 1201 broadcast [EVENT RULES]
+rc delayed 1201 broadcast Form a line with 3+ men. No gaps.
+rc delayed 1201 broadcast Do not fire while charging (Unless Cavalry).
+rc delayed 1201 broadcast Do not fire out of line.
+rc delayed 1201 broadcast Do not charge alone. Stay with your line or cavalry formation.
+rc delayed 1201 broadcast To capture the point you must have a line of 3+ men.
+
+rc delayed 1170 set characterRespawntime 9999999999
+rc delayed 1170 set characterVehicleRespawnTime 9999999999
+rc delayed 901 set characterRespawnTime 1
+rc delayed 901 set characterVehicleRespawnTime 1
+
+rc delayed 901 broadcast [EVENT RULES]
+rc delayed 901 broadcast Form a line with 3+ men. No gaps.
+rc delayed 901 broadcast Do not fire while charging (Unless Cavalry).
+rc delayed 901 broadcast Do not fire out of line.
+rc delayed 901 broadcast Do not charge alone. Stay with your line or cavalry formation.
+rc delayed 901 broadcast To capture the point you must have a line of 3+ men.
+
+rc delayed 870 set characterRespawntime 9999999999
+rc delayed 870 set characterVehicleRespawnTime 9999999999
+rc delayed 601 set characterRespawnTime 1
+rc delayed 601 set characterVehicleRespawnTime 1
+
+rc delayed 601 broadcast [EVENT RULES]
+rc delayed 601 broadcast Form a line with 3+ men. No gaps.
+rc delayed 601 broadcast Do not fire while charging (Unless Cavalry).
+rc delayed 601 broadcast Do not fire out of line.
+rc delayed 601 broadcast Do not charge alone. Stay with your line or cavalry formation.
+rc delayed 601 broadcast To capture the point you must have a line of 3+ men.
+
+rc delayed 570 set characterRespawntime 9999999999
+rc delayed 570 set characterVehicleRespawnTime 9999999999
+rc delayed 301 set characterRespawnTime 1
+rc delayed 301 set characterVehicleRespawnTime 1
+
+rc delayed 601 broadcast [EVENT RULES]
+rc delayed 601 broadcast Form a line with 3+ men. No gaps.
+rc delayed 601 broadcast Do not fire while charging (Unless Cavalry).
+rc delayed 601 broadcast Do not fire out of line.
+rc delayed 601 broadcast Do not charge alone. Stay with your line or cavalry formation.
+rc delayed 601 broadcast To capture the point you must have a line of 3+ men.
+
+rc delayed 301 broadcast All Charge At 3:00! (You will be allowed to respawn)
+
+rc delayed 270 set characterRespawntime 9999999999
+rc delayed 270 set characterVehicleRespawnTime 9999999999
+rc delayed 181 set characterRespawntime 1
+rc delayed 181 set characterVehicleRespawnTime 1
+
+rc delayed 181 set allowFiring false
+
+rc delayed 180 broadcast ALL CHARGE! Melee Only. No Cannons.
+
+rc delayed 175 set characterRespawntime 9999999999
+rc delayed 175 set characterVehicleRespawnTime 9999999999
+
+rc delayed 1 set allowFiring true
+rc delayed 1 set characterRespawntime 1
+rc delayed 1 set characterVehicleRespawnTime 1
+
+!map_rotation end
+
+
+#21 = Snowy Plains 4 (L) [Army Conquest] - Snowy | Morning (8)
+!map_rotation start
+map_name snowyplainsiv
+game_mode ArmyConquest
+game_type Hardcore 
+round_time_minutes 31.5
+round_spawn_close_timer_seconds 1740
+conquest_tick_reward 1
+conquest_max_tickets 4500
+conquest_ticker_time_seconds 1
+conquest_tickets_per_capture 150
+max_player_respawns -1
+faction_balancing true
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 180
+time_hour 8
+time_dynamic false
+weather_preset snowy
+weather_dynamic false
+friendly_fire false
+friendly_fire_melee_bounce true
+damage_split 0
+sappers_attacking_starting_materials 150
+sappers_defending_starting_materials 150
+sappers_buildlimit explosivebarrel attacking 0
+sappers_buildlimit explosivebarrel defending 0
+sappers_buildlimit palisade attacking 0
+sappers_buildlimit palisade defending 0
+sappers_buildlimit shootingplatform attacking 0
+sappers_buildlimit shootingplatform defending 0
+sappers_buildlimit swivelgun attacking 0
+sappers_buildlimit swivelgun defending 0
+officers_spawn_mounted false
+faction_attacking french
+faction_defending british
+
+#Spawn Overrides
+spawn_override A ArmyInfantryOfficer 0
+spawn_override B ArmyInfantryOfficer 0
+spawn_override C ArmyInfantryOfficer 0
+
+spawn_override D ArmyInfantryOfficer 10
+spawn_override D ArmyLineInfantry 125
+spawn_override D ArmyLineInfantry2 125
+spawn_override D Grenadier 125
+spawn_override D Guard 125
+spawn_override D LightInfantry 125
+#spawn_override D Rifleman 0 (Not Used)
+spawn_override D FlagBearer 6
+spawn_override D Drummer 3
+spawn_override D Fifer 3
+spawn_override D Bagpiper 3
+spawn_override D Surgeon 4
+spawn_override D Sapper 3
+#spawn_override D Carpenter 0 (Not Used)
+spawn_override D Cannoneer 20
+spawn_override D Rocketeer 20
+spawn_override D Hussar 4
+spawn_override D CuirassierDragoon 4
+
+spawn_override D NavalMarine 125
+spawn_override D CoastGuard 125
+spawn_override D Customs 125
+
+spawn_override E ArmyInfantryOfficer 10
+spawn_override E ArmyLineInfantry 125
+spawn_override E ArmyLineInfantry2 125
+spawn_override E Grenadier 125
+spawn_override E Guard 125
+spawn_override E LightInfantry 125
+#spawn_override E Rifleman 0 (Not Used)
+spawn_override E FlagBearer 6
+spawn_override E Drummer 3
+spawn_override E Fifer 3
+spawn_override E Bagpiper 3
+spawn_override E Surgeon 4
+spawn_override E Sapper 3
+#spawn_override E Carpenter 0 (Not Used)
+spawn_override E Cannoneer 20
+spawn_override E Rocketeer 20
+spawn_override E Hussar 4
+spawn_override E CuirassierDragoon 4
+
+spawn_override E NavalMarine 125
+spawn_override E CoastGuard 125
+spawn_override E Customs 125
+
+#Firearm Ammo Override
+firearm_ammo_override British Hussar Pistol_NewLandPattern 2 1 10
+firearm_ammo_override British CuirassierDragoon Carbine_Elliot 2 1 10
+firearm_ammo_override French Hussar Pistol_XIII 2 1 10
+firearm_ammo_override French CuirassierDragoon Carbine_CharlevilleCavalryIXXIII 2 1 10
+firearm_ammo_override Prussian Hussar Pistol_XIII 2 1 10
+firearm_ammo_override Prussian CuirassierDragoon Carbine_CharlevilleCavalryIXXIII 2 1 10
+
+#Starting Weapon Override
+starting_weapons_override British Hussar 4 4 Unarmed Pistol_NewLandPattern Sabre_1796PatternLightCavalry BearingFlagBritish
+starting_weapons_override British CuirassierDragoon 4 4 Unarmed Carbine_Elliot Sword_Pattern1803FlankOfficerCavalry BearingFlagBritish
+starting_weapons_override French Hussar 4 4 Unarmed Pistol_XIII Sabre_AnXILightCavalry BearingFlagFrench
+starting_weapons_override French CuirassierDragoon 4 4 Unarmed Carbine_CharlevilleCavalryIXXIII Sabre_AnXILightCavalry BearingFlagFrench
+starting_weapons_override Prussian Hussar 4 4 Unarmed Pistol_XIII Sabre_AnXILightCavalry BearingFlagPrussian
+starting_weapons_override Prussian CuirassierDragoon 4 4 Unarmed Carbine_CharlevilleCavalryIXXIII Sabre_AnXILightCavalry BearingFlagPrussian
+
+#Automated Commands - Round Start
+rc set allowFiring true
+
+rc set characterRespawnTime 1
+rc set characterVehicleRespawnTime 1
+
+rc set cannonMoverSpeedMultiplier 0
+rc set cannonMoverRotationMultiplier 0
+rc set rocketMoverSpeedMultiplier 0
+rc set rocketMoverRotationMultiplier 0
+
+#Automated Commands - Timed
+rc delayed 1876 broadcast broadcast LIVE AT 30:00! - Don't move out early. - Artillery enabled at 25:00.
+rc delayed 1866 broadcast [EVENT RULES]
+rc delayed 1861 broadcast Form a line with 3+ men. No gaps.
+rc delayed 1861 broadcast Do not fire while charging (Unless Cavalry).
+rc delayed 1861 broadcast Do not fire out of line.
+rc delayed 1861 broadcast Do not charge alone. Stay with your line or cavalry formation.
+rc delayed 1861 broadcast To capture the point you must have a line of 3+ men.
+
+rc delayed 1861 broadcast LIVE AT 30:00! - Don't move out early. - Artillery enabled at 25:00.
+rc delayed 1807 broadcast [EVENT RULES]
+rc delayed 1802 broadcast Form a line with 3+ men. No gaps.
+rc delayed 1802 broadcast Do not fire while charging (Unless Cavalry).
+rc delayed 1802 broadcast Do not fire out of line.
+rc delayed 1802 broadcast Do not charge alone. Stay with your line or cavalry formation.
+rc delayed 1802 broadcast To capture the point you must have a line of 3+ men.
+
+rc delayed 1801 broadcast Match Is Now LIVE!
+
+rc delayed 1770 set characterRespawntime 9999999999
+rc delayed 1770 set characterVehicleRespawnTime 9999999999
+
+rc delayed 1501 broadcast [EVENT RULES]
+rc delayed 1501 broadcast Form a line with 3+ men. No gaps.
+rc delayed 1501 broadcast Do not fire while charging (Unless Cavalry).
+rc delayed 1501 broadcast Do not fire out of line.
+rc delayed 1501 broadcast Do not charge alone. Stay with your line or cavalry formation.
+rc delayed 1501 broadcast To capture the point you must have a line of 3+ men.
+rc delayed 1500 broadcast Artillery Is Now Allowed! :)
+
+rc delayed 1505 set cannonMoverSpeedMultiplier 1
+rc delayed 1505 set cannonMoverRotationMultiplier 1
+rc delayed 1505 set rocketMoverSpeedMultiplier 1
+rc delayed 1505 set rocketMoverRotationMultiplier 1
+
+rc delayed 1501 set characterRespawnTime 1
+rc delayed 1501 set characterVehicleRespawnTime 1
+rc delayed 1470 set characterRespawntime 9999999999
+rc delayed 1470 set characterVehicleRespawnTime 9999999999
+rc delayed 1201 set characterRespawnTime 1
+rc delayed 1201 set characterVehicleRespawnTime 1
+
+rc delayed 1201 broadcast [EVENT RULES]
+rc delayed 1201 broadcast Form a line with 3+ men. No gaps.
+rc delayed 1201 broadcast Do not fire while charging (Unless Cavalry).
+rc delayed 1201 broadcast Do not fire out of line.
+rc delayed 1201 broadcast Do not charge alone. Stay with your line or cavalry formation.
+rc delayed 1201 broadcast To capture the point you must have a line of 3+ men.
+
+rc delayed 1170 set characterRespawntime 9999999999
+rc delayed 1170 set characterVehicleRespawnTime 9999999999
+rc delayed 901 set characterRespawnTime 1
+rc delayed 901 set characterVehicleRespawnTime 1
+
+rc delayed 901 broadcast [EVENT RULES]
+rc delayed 901 broadcast Form a line with 3+ men. No gaps.
+rc delayed 901 broadcast Do not fire while charging (Unless Cavalry).
+rc delayed 901 broadcast Do not fire out of line.
+rc delayed 901 broadcast Do not charge alone. Stay with your line or cavalry formation.
+rc delayed 901 broadcast To capture the point you must have a line of 3+ men.
+
+rc delayed 870 set characterRespawntime 9999999999
+rc delayed 870 set characterVehicleRespawnTime 9999999999
+rc delayed 601 set characterRespawnTime 1
+rc delayed 601 set characterVehicleRespawnTime 1
+
+rc delayed 601 broadcast [EVENT RULES]
+rc delayed 601 broadcast Form a line with 3+ men. No gaps.
+rc delayed 601 broadcast Do not fire while charging (Unless Cavalry).
+rc delayed 601 broadcast Do not fire out of line.
+rc delayed 601 broadcast Do not charge alone. Stay with your line or cavalry formation.
+rc delayed 601 broadcast To capture the point you must have a line of 3+ men.
+
+rc delayed 570 set characterRespawntime 9999999999
+rc delayed 570 set characterVehicleRespawnTime 9999999999
+rc delayed 301 set characterRespawnTime 1
+rc delayed 301 set characterVehicleRespawnTime 1
+
+rc delayed 601 broadcast [EVENT RULES]
+rc delayed 601 broadcast Form a line with 3+ men. No gaps.
+rc delayed 601 broadcast Do not fire while charging (Unless Cavalry).
+rc delayed 601 broadcast Do not fire out of line.
+rc delayed 601 broadcast Do not charge alone. Stay with your line or cavalry formation.
+rc delayed 601 broadcast To capture the point you must have a line of 3+ men.
+
+rc delayed 301 broadcast All Charge At 3:00! (You will be allowed to respawn)
+
+rc delayed 270 set characterRespawntime 9999999999
+rc delayed 270 set characterVehicleRespawnTime 9999999999
+rc delayed 181 set characterRespawntime 1
+rc delayed 181 set characterVehicleRespawnTime 1
+
+rc delayed 181 set allowFiring false
+
+rc delayed 180 broadcast ALL CHARGE! Melee Only. No Cannons.
+
+rc delayed 175 set characterRespawntime 9999999999
+rc delayed 175 set characterVehicleRespawnTime 9999999999
+
+rc delayed 1 set allowFiring true
+rc delayed 1 set characterRespawntime 1
+rc delayed 1 set characterVehicleRespawnTime 1
+
+!map_rotation end
+
+
+#22 = Snowy Plains 5 (L) [Army Conquest] - Snowy | Morning (8)
+!map_rotation start
+map_name snowyplainsv
+game_mode ArmyConquest
+game_type Hardcore 
+round_time_minutes 31.5
+round_spawn_close_timer_seconds 1740
+conquest_tick_reward 1
+conquest_max_tickets 4500
+conquest_ticker_time_seconds 1
+conquest_tickets_per_capture 150
+max_player_respawns -1
+faction_balancing true
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 180
+time_hour 8
+time_dynamic false
+weather_preset snowy
+weather_dynamic false
+friendly_fire false
+friendly_fire_melee_bounce true
+damage_split 0
+sappers_attacking_starting_materials 150
+sappers_defending_starting_materials 150
+sappers_buildlimit explosivebarrel attacking 0
+sappers_buildlimit explosivebarrel defending 0
+sappers_buildlimit palisade attacking 0
+sappers_buildlimit palisade defending 0
+sappers_buildlimit shootingplatform attacking 0
+sappers_buildlimit shootingplatform defending 0
+sappers_buildlimit swivelgun attacking 0
+sappers_buildlimit swivelgun defending 0
+officers_spawn_mounted false
+faction_attacking prussian
+faction_defending british
+
+#Spawn Overrides
+spawn_override A ArmyInfantryOfficer 0
+spawn_override B ArmyInfantryOfficer 0
+spawn_override C ArmyInfantryOfficer 0
+
+spawn_override D ArmyInfantryOfficer 10
+spawn_override D ArmyLineInfantry 125
+spawn_override D ArmyLineInfantry2 125
+spawn_override D Grenadier 125
+spawn_override D Guard 125
+spawn_override D LightInfantry 125
+#spawn_override D Rifleman 0 (Not Used)
+spawn_override D FlagBearer 6
+spawn_override D Drummer 3
+spawn_override D Fifer 3
+spawn_override D Bagpiper 3
+spawn_override D Surgeon 4
+spawn_override D Sapper 3
+#spawn_override D Carpenter 0 (Not Used)
+spawn_override D Cannoneer 20
+spawn_override D Rocketeer 20
+spawn_override D Hussar 4
+spawn_override D CuirassierDragoon 4
+
+spawn_override D NavalMarine 125
+spawn_override D CoastGuard 125
+spawn_override D Customs 125
+
+spawn_override E ArmyInfantryOfficer 10
+spawn_override E ArmyLineInfantry 125
+spawn_override E ArmyLineInfantry2 125
+spawn_override E Grenadier 125
+spawn_override E Guard 125
+spawn_override E LightInfantry 125
+#spawn_override E Rifleman 0 (Not Used)
+spawn_override E FlagBearer 6
+spawn_override E Drummer 3
+spawn_override E Fifer 3
+spawn_override E Bagpiper 3
+spawn_override E Surgeon 4
+spawn_override E Sapper 3
+#spawn_override E Carpenter 0 (Not Used)
+spawn_override E Cannoneer 20
+spawn_override E Rocketeer 20
+spawn_override E Hussar 4
+spawn_override E CuirassierDragoon 4
+
+spawn_override E NavalMarine 125
+spawn_override E CoastGuard 125
+spawn_override E Customs 125
+
+#Firearm Ammo Override
+firearm_ammo_override British Hussar Pistol_NewLandPattern 2 1 10
+firearm_ammo_override British CuirassierDragoon Carbine_Elliot 2 1 10
+firearm_ammo_override French Hussar Pistol_XIII 2 1 10
+firearm_ammo_override French CuirassierDragoon Carbine_CharlevilleCavalryIXXIII 2 1 10
+firearm_ammo_override Prussian Hussar Pistol_XIII 2 1 10
+firearm_ammo_override Prussian CuirassierDragoon Carbine_CharlevilleCavalryIXXIII 2 1 10
+
+#Starting Weapon Override
+starting_weapons_override British Hussar 4 4 Unarmed Pistol_NewLandPattern Sabre_1796PatternLightCavalry BearingFlagBritish
+starting_weapons_override British CuirassierDragoon 4 4 Unarmed Carbine_Elliot Sword_Pattern1803FlankOfficerCavalry BearingFlagBritish
+starting_weapons_override French Hussar 4 4 Unarmed Pistol_XIII Sabre_AnXILightCavalry BearingFlagFrench
+starting_weapons_override French CuirassierDragoon 4 4 Unarmed Carbine_CharlevilleCavalryIXXIII Sabre_AnXILightCavalry BearingFlagFrench
+starting_weapons_override Prussian Hussar 4 4 Unarmed Pistol_XIII Sabre_AnXILightCavalry BearingFlagPrussian
+starting_weapons_override Prussian CuirassierDragoon 4 4 Unarmed Carbine_CharlevilleCavalryIXXIII Sabre_AnXILightCavalry BearingFlagPrussian
+
+#Automated Commands - Round Start
+rc set allowFiring true
+
+rc set characterRespawnTime 1
+rc set characterVehicleRespawnTime 1
+
+rc set cannonMoverSpeedMultiplier 0
+rc set cannonMoverRotationMultiplier 0
+rc set rocketMoverSpeedMultiplier 0
+rc set rocketMoverRotationMultiplier 0
+
+#Automated Commands - Timed
+rc delayed 1876 broadcast broadcast LIVE AT 30:00! - Don't move out early. - Artillery enabled at 25:00.
+rc delayed 1866 broadcast [EVENT RULES]
+rc delayed 1861 broadcast Form a line with 3+ men. No gaps.
+rc delayed 1861 broadcast Do not fire while charging (Unless Cavalry).
+rc delayed 1861 broadcast Do not fire out of line.
+rc delayed 1861 broadcast Do not charge alone. Stay with your line or cavalry formation.
+rc delayed 1861 broadcast To capture the point you must have a line of 3+ men.
+
+rc delayed 1861 broadcast LIVE AT 30:00! - Don't move out early. - Artillery enabled at 25:00.
+rc delayed 1807 broadcast [EVENT RULES]
+rc delayed 1802 broadcast Form a line with 3+ men. No gaps.
+rc delayed 1802 broadcast Do not fire while charging (Unless Cavalry).
+rc delayed 1802 broadcast Do not fire out of line.
+rc delayed 1802 broadcast Do not charge alone. Stay with your line or cavalry formation.
+rc delayed 1802 broadcast To capture the point you must have a line of 3+ men.
+
+rc delayed 1801 broadcast Match Is Now LIVE!
+
+rc delayed 1770 set characterRespawntime 9999999999
+rc delayed 1770 set characterVehicleRespawnTime 9999999999
+
+rc delayed 1501 broadcast [EVENT RULES]
+rc delayed 1501 broadcast Form a line with 3+ men. No gaps.
+rc delayed 1501 broadcast Do not fire while charging (Unless Cavalry).
+rc delayed 1501 broadcast Do not fire out of line.
+rc delayed 1501 broadcast Do not charge alone. Stay with your line or cavalry formation.
+rc delayed 1501 broadcast To capture the point you must have a line of 3+ men.
+rc delayed 1500 broadcast Artillery Is Now Allowed! :)
+
+rc delayed 1505 set cannonMoverSpeedMultiplier 1
+rc delayed 1505 set cannonMoverRotationMultiplier 1
+rc delayed 1505 set rocketMoverSpeedMultiplier 1
+rc delayed 1505 set rocketMoverRotationMultiplier 1
+
+rc delayed 1501 set characterRespawnTime 1
+rc delayed 1501 set characterVehicleRespawnTime 1
+rc delayed 1470 set characterRespawntime 9999999999
+rc delayed 1470 set characterVehicleRespawnTime 9999999999
+rc delayed 1201 set characterRespawnTime 1
+rc delayed 1201 set characterVehicleRespawnTime 1
+
+rc delayed 1201 broadcast [EVENT RULES]
+rc delayed 1201 broadcast Form a line with 3+ men. No gaps.
+rc delayed 1201 broadcast Do not fire while charging (Unless Cavalry).
+rc delayed 1201 broadcast Do not fire out of line.
+rc delayed 1201 broadcast Do not charge alone. Stay with your line or cavalry formation.
+rc delayed 1201 broadcast To capture the point you must have a line of 3+ men.
+
+rc delayed 1170 set characterRespawntime 9999999999
+rc delayed 1170 set characterVehicleRespawnTime 9999999999
+rc delayed 901 set characterRespawnTime 1
+rc delayed 901 set characterVehicleRespawnTime 1
+
+rc delayed 901 broadcast [EVENT RULES]
+rc delayed 901 broadcast Form a line with 3+ men. No gaps.
+rc delayed 901 broadcast Do not fire while charging (Unless Cavalry).
+rc delayed 901 broadcast Do not fire out of line.
+rc delayed 901 broadcast Do not charge alone. Stay with your line or cavalry formation.
+rc delayed 901 broadcast To capture the point you must have a line of 3+ men.
+
+rc delayed 870 set characterRespawntime 9999999999
+rc delayed 870 set characterVehicleRespawnTime 9999999999
+rc delayed 601 set characterRespawnTime 1
+rc delayed 601 set characterVehicleRespawnTime 1
+
+rc delayed 601 broadcast [EVENT RULES]
+rc delayed 601 broadcast Form a line with 3+ men. No gaps.
+rc delayed 601 broadcast Do not fire while charging (Unless Cavalry).
+rc delayed 601 broadcast Do not fire out of line.
+rc delayed 601 broadcast Do not charge alone. Stay with your line or cavalry formation.
+rc delayed 601 broadcast To capture the point you must have a line of 3+ men.
+
+rc delayed 570 set characterRespawntime 9999999999
+rc delayed 570 set characterVehicleRespawnTime 9999999999
+rc delayed 301 set characterRespawnTime 1
+rc delayed 301 set characterVehicleRespawnTime 1
+
+rc delayed 601 broadcast [EVENT RULES]
+rc delayed 601 broadcast Form a line with 3+ men. No gaps.
+rc delayed 601 broadcast Do not fire while charging (Unless Cavalry).
+rc delayed 601 broadcast Do not fire out of line.
+rc delayed 601 broadcast Do not charge alone. Stay with your line or cavalry formation.
+rc delayed 601 broadcast To capture the point you must have a line of 3+ men.
+
+rc delayed 301 broadcast All Charge At 3:00! (You will be allowed to respawn)
+
+rc delayed 270 set characterRespawntime 9999999999
+rc delayed 270 set characterVehicleRespawnTime 9999999999
+rc delayed 181 set characterRespawntime 1
+rc delayed 181 set characterVehicleRespawnTime 1
+
+rc delayed 181 set allowFiring false
+
+rc delayed 180 broadcast ALL CHARGE! Melee Only. No Cannons.
+
+rc delayed 175 set characterRespawntime 9999999999
+rc delayed 175 set characterVehicleRespawnTime 9999999999
+
+rc delayed 1 set allowFiring true
+rc delayed 1 set characterRespawntime 1
+rc delayed 1 set characterVehicleRespawnTime 1
+
+!map_rotation end

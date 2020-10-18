@@ -1,0 +1,4530 @@
+###- Server & Steam Ports (All 3 ports must be unique per server instance).
+
+server_port 20101
+steam_communications_port 8701
+steam_query_port 27001
+
+
+
+###- Server Settings
+
+server_name New Holdfast NaW Server - Army Front
+server_welcome_message Welcome to my new game server!
+server_region usa
+server_admin_password ChangeThisPassword
+#server_password ChangeThisPassword
+
+
+
+###- Server Intro Message
+
+#server_intro_title Welcome To The Community!
+#server_intro_body Greetings ladies and gentleman. Welcome to the <b>community!</b><br><br>Come join us on our Discord. We look forward to seeing you there. <br><br><b><color=yellow>discord.gg/holdfastgame</color></b>
+
+
+
+###- Bandwidth & Performance Settings
+
+network_broadcast_mode LowBandwidth
+
+
+
+###- Player Population Settings
+
+population_low_min_players 30
+population_medium_min_players 50
+population_high_min_players 100
+
+
+
+###- Global Gameplay & Map Settings
+
+artillery_fieldgun_respawn_timer 120
+artillery_rocketlauncher_respawn_timer 120
+map_rotation_start_randomise true
+
+
+
+###- Map Rotations
+
+#--- Rotation Group 1 --- 
+
+
+#1 = Spanish Farm (Battlefield) - Calm | Morning (9) [Pop - Very Low, Low, Medium & High]
+!map_rotation start
+map_name spanishfarm
+game_mode ArmyBattlefield
+round_time_minutes 20
+reinforcements_per_faction 545
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 9
+time_dynamic false
+weather_preset calm
+weather_dynamic false
+faction_attacking french
+faction_defending british
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 70
+sappers_defending_starting_materials 70
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable true
+population_low_playable true
+population_medium_playable true
+population_high_playable true
+max_accumulated_faction_points -1
+
+#RC Commands - Idle Cavalry
+#rc set secondsToPassAfterDismounted 30
+#rc set secondsSpawnedBeforeDespawn 30
+#rc set secondsToPassAfterHealthUpdated 15
+
+!map_rotation end
+
+
+#2 = Camp Salamanca (Battlefield) - Calm | Morning (8) [Pop - Medium & High]
+!map_rotation start
+map_name campsalamanca
+game_mode ArmyBattlefield
+round_time_minutes 20
+reinforcements_per_faction 545
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 8
+time_dynamic false
+weather_preset calm4
+weather_dynamic false
+faction_attacking prussian 
+faction_defending french
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable false
+population_low_playable false
+population_medium_playable true
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#3 = Causeways (Conquest) - Fog | Morning (8) [Pop - Medium & High]
+!map_rotation start
+map_name causeways
+game_mode ArmyConquest
+round_time_minutes 20
+wave_spawn_time_seconds 12
+wave_spawn_vehicle_time_seconds 22
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 8
+time_dynamic false
+weather_preset fog
+weather_dynamic false
+conquest_tick_reward 1
+conquest_max_tickets 2500
+conquest_ticker_time_seconds 1
+conquest_tickets_per_capture 150
+faction_attacking british
+faction_defending french
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 0
+sappers_buildlimit palisade defending 0
+sappers_buildlimit shootingplatform attacking 0
+sappers_buildlimit shootingplatform defending 0
+population_verylow_playable false
+population_low_playable false
+population_medium_playable true
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#4 = Dutch Canals (Battlefield) - Calm | Afternoon (16) [Pop - Medium & High]
+!map_rotation start
+map_name dutchcanals
+game_mode ArmyBattlefield
+round_time_minutes 20
+reinforcements_per_faction 505
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 16
+time_dynamic false
+weather_preset calm4
+weather_dynamic false
+faction_attacking prussian 
+faction_defending british
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable false
+population_low_playable false
+population_medium_playable true
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#5 = Canyon (Battlefield) - Calm | Morning (9) [Pop - Very Low, Low & Medium] #Very Low Pop Exception (Exclude)
+!map_rotation start
+map_name canyon
+game_mode ArmyBattlefield
+round_time_minutes 20
+reinforcements_per_faction 350
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 2
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 9
+time_dynamic false
+weather_preset calm2
+weather_dynamic false
+faction_attacking prussian 
+faction_defending french
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 40
+sappers_defending_starting_materials 40
+sappers_buildlimit explosivebarrel attacking 2
+sappers_buildlimit explosivebarrel defending 2
+sappers_buildlimit palisade attacking 0
+sappers_buildlimit palisade defending 0
+sappers_buildlimit shootingplatform attacking 0
+sappers_buildlimit shootingplatform defending 0
+population_verylow_playable false
+population_low_playable true
+population_medium_playable true
+population_high_playable false
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#6 = Fort Christina (Siege) - Snowy | Afternoon (15) [Pop - High]
+!map_rotation start
+map_name fortchristiana
+game_mode ArmySiege
+round_time_minutes 20
+reinforcements_per_faction 390
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 2
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 15
+time_dynamic false
+weather_preset Snowy
+weather_dynamic false
+faction_attacking french
+faction_defending british
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 0
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable false
+population_low_playable false
+population_medium_playable false
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#7 = Ernest Ridge (Battlefield) - Calm | Morning (8) [Pop - Medium & High]
+!map_rotation start
+map_name ernestridge
+game_mode ArmyBattlefield
+round_time_minutes 20
+reinforcements_per_faction 505
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 8
+time_dynamic false
+weather_preset calm3
+weather_dynamic false
+faction_attacking french 
+faction_defending british
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable false
+population_low_playable false
+population_medium_playable true
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#8 = Tahir Desert (Battlefield) - Calm | Morning (9) [Pop - High]
+!map_rotation start
+map_name egypt
+game_mode ArmyBattlefield
+round_time_minutes 20
+reinforcements_per_faction 505
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 9
+time_dynamic false
+weather_preset calm4
+weather_dynamic false
+faction_attacking prussian
+faction_defending british
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 0
+sappers_buildlimit palisade defending 0
+sappers_buildlimit shootingplatform attacking 0
+sappers_buildlimit shootingplatform defending 0
+population_verylow_playable false
+population_low_playable false
+population_medium_playable false
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#9 = Sharpton (Conquest) - Calm Rain | Afternoon (14) [Pop - Medium & High]
+!map_rotation start
+map_name sharpton
+game_mode ArmyConquest
+round_time_minutes 20
+wave_spawn_time_seconds 12
+wave_spawn_vehicle_time_seconds 22
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 14
+time_dynamic false
+weather_preset calmrain
+weather_dynamic false
+conquest_tick_reward 1
+conquest_max_tickets 2500
+conquest_ticker_time_seconds 1
+conquest_tickets_per_capture 150
+faction_attacking prussian 
+faction_defending french
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable false
+population_low_playable false
+population_medium_playable true
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#10 = Fort Pierre (Siege) - Calm | Morning (8) [Pop - High]
+!map_rotation start
+map_name fortpierre
+game_mode ArmySiege
+round_time_minutes 20
+reinforcements_per_faction 400
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 2
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 8
+time_dynamic false
+weather_preset calm2
+weather_dynamic false
+faction_attacking prussian 
+faction_defending british
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 0
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable false
+population_low_playable false
+population_medium_playable false
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#11 = Grassy Plains 2 (L) [Linebattle Map] (Battlefield) - Calm | Morning (11) [Pop - High]
+!map_rotation start
+map_name grassyplainsii
+game_mode ArmyBattlefield
+round_time_minutes 20
+reinforcements_per_faction 545
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 11
+time_dynamic true
+weather_preset calm
+weather_dynamic false
+faction_attacking french 
+faction_defending british
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 150
+sappers_defending_starting_materials 150
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 0
+sappers_buildlimit palisade defending 0
+sappers_buildlimit shootingplatform attacking 0
+sappers_buildlimit shootingplatform defending 0
+population_verylow_playable false
+population_low_playable false
+population_medium_playable false
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#12 = King George (Battlefield) - Calm | Morning (9) [Pop - Low, Medium & High]
+!map_rotation start
+map_name kinggeorge
+game_mode ArmyBattlefield
+round_time_minutes 20
+reinforcements_per_faction 505
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 9
+time_dynamic false
+weather_preset calm2
+weather_dynamic false
+faction_attacking prussian
+faction_defending french
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable false
+population_low_playable true
+population_medium_playable true
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#13 = Linburg (Battlefield) - Calm | Afternoon (15) [Pop - Medium & High]
+!map_rotation start
+map_name linburg
+game_mode ArmyBattlefield
+round_time_minutes 20
+reinforcements_per_faction 505
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 15
+time_dynamic false
+weather_preset calm3
+weather_dynamic false
+faction_attacking french 
+faction_defending british
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable false
+population_low_playable false
+population_medium_playable true
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#14 = Cross Hills (Conquest) - Calm | Afternoon (14) [Pop - Low, Medium & High]
+!map_rotation start
+map_name crosshills
+game_mode ArmyConquest
+round_time_minutes 20
+wave_spawn_time_seconds 12
+wave_spawn_vehicle_time_seconds 22
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 14
+time_dynamic false
+weather_preset calm3
+weather_dynamic false
+conquest_tick_reward 1
+conquest_max_tickets 2500
+conquest_ticker_time_seconds 1
+conquest_tickets_per_capture 150
+faction_attacking prussian 
+faction_defending french
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable false
+population_low_playable true
+population_medium_playable true
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#15 = Fort Salettes (Battlefield) - Calm | Afternoon (15) [Pop - Low, Medium & High]
+!map_rotation start
+map_name fortsalettes
+game_mode ArmyBattlefield
+round_time_minutes 20
+reinforcements_per_faction 545
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 2
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 15
+time_dynamic false
+weather_preset calm3
+weather_dynamic false
+faction_attacking french 
+faction_defending british
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 40
+sappers_defending_starting_materials 40
+sappers_buildlimit explosivebarrel attacking 2
+sappers_buildlimit explosivebarrel defending 2
+sappers_buildlimit palisade attacking 0
+sappers_buildlimit palisade defending 0
+sappers_buildlimit shootingplatform attacking 0
+sappers_buildlimit shootingplatform defending 0
+population_verylow_playable false
+population_low_playable true
+population_medium_playable true
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#16 = Highlands (Battlefield) - Calm | Afternoon (14) [Pop - Medium & High]
+!map_rotation start
+map_name highlands
+game_mode ArmyBattlefield
+round_time_minutes 20
+reinforcements_per_faction 505
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 14
+time_dynamic false
+weather_preset calm
+weather_dynamic false
+faction_attacking british 
+faction_defending french
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable false
+population_low_playable false
+population_medium_playable true
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#17 = Snowy Plains 1 (L) [Linebattle Map] (Battlefield) - Snowy | Morning (8) [Pop - High]
+!map_rotation start
+map_name snowyplains
+game_mode ArmyBattlefield
+round_time_minutes 20
+reinforcements_per_faction 505
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 8
+time_dynamic false
+weather_preset snowy
+weather_dynamic false
+faction_attacking british
+faction_defending french
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 150
+sappers_defending_starting_materials 150
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 0
+sappers_buildlimit palisade defending 0
+sappers_buildlimit shootingplatform attacking 0
+sappers_buildlimit shootingplatform defending 0
+population_verylow_playable false
+population_low_playable false
+population_medium_playable false
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#18 = Fort Schwarz (Siege) - Calm | Morning (14) [Pop - High]
+!map_rotation start
+map_name fortschwarz
+game_mode ArmySiege
+round_time_minutes 20
+reinforcements_per_faction 400
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 2
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 14
+time_dynamic false
+weather_preset calm3
+weather_dynamic false 
+faction_attacking french 
+faction_defending prussian
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 0
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable false
+population_low_playable false
+population_medium_playable false
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#19 = Desert Ruins (Battlefield) - Calm | Afternoon (15) [Pop - Very Low, Low, Medium & High]
+!map_rotation start
+map_name desertruins
+game_mode ArmyBattlefield
+round_time_minutes 20
+reinforcements_per_faction 545
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 15
+time_dynamic false
+weather_preset calm2
+weather_dynamic false
+faction_attacking french 
+faction_defending british
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable true
+population_low_playable true
+population_medium_playable true
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#20 = Lamarsh Fen (Battlefield) - Calm | Morning (8) [Pop - Very Low, Low, Medium & High]
+!map_rotation start
+map_name lamarshfen
+game_mode ArmyBattlefield
+round_time_minutes 20
+reinforcements_per_faction 545
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 8
+time_dynamic false
+weather_preset calm2
+weather_dynamic false
+faction_attacking prussian
+faction_defending french
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 70
+sappers_defending_starting_materials 70
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable true
+population_low_playable true
+population_medium_playable true
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#21 = Canyon (Battlefield) - Calm | Morning (8) [Pop - Very Low, Low & Medium]
+!map_rotation start
+map_name canyon
+game_mode ArmyBattlefield
+round_time_minutes 20
+reinforcements_per_faction 350
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 2
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 8
+time_dynamic false
+weather_preset calm4
+weather_dynamic false
+faction_attacking british
+faction_defending french
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 40
+sappers_defending_starting_materials 40
+sappers_buildlimit explosivebarrel attacking 2
+sappers_buildlimit explosivebarrel defending 2
+sappers_buildlimit palisade attacking 0
+sappers_buildlimit palisade defending 0
+sappers_buildlimit shootingplatform attacking 0
+sappers_buildlimit shootingplatform defending 0
+population_verylow_playable true
+population_low_playable true
+population_medium_playable true
+population_high_playable false
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#22 = Causeways (Conquest) - Fog | Afternoon (17) [Pop - Medium & High]
+!map_rotation start
+map_name causeways
+game_mode ArmyConquest
+round_time_minutes 20
+wave_spawn_time_seconds 12
+wave_spawn_vehicle_time_seconds 22
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 17
+time_dynamic false
+weather_preset calm3
+weather_dynamic false
+conquest_tick_reward 1
+conquest_max_tickets 2500
+conquest_ticker_time_seconds 1
+conquest_tickets_per_capture 150
+faction_attacking french 
+faction_defending prussian
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 0
+sappers_buildlimit palisade defending 0
+sappers_buildlimit shootingplatform attacking 0
+sappers_buildlimit shootingplatform defending 0
+population_verylow_playable false
+population_low_playable false
+population_medium_playable true
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#23 = Fort Winston (Conquest) - Fog | Afternoon (16) [Pop - Medium & High]
+!map_rotation start
+map_name fortwinston
+game_mode ArmyConquest
+round_time_minutes 20
+wave_spawn_time_seconds 12
+wave_spawn_vehicle_time_seconds 22
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 16
+time_dynamic false
+weather_preset fog2
+weather_dynamic false
+conquest_tick_reward 1
+conquest_max_tickets 2500
+conquest_ticker_time_seconds 1
+conquest_tickets_per_capture 150
+faction_attacking british 
+faction_defending prussian
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable false
+population_low_playable false
+population_medium_playable true
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#24 = Grassy Plains 1 (L) [Linebattle Map] (Battlefield) - Calm | Morning (9) [Pop - High]
+!map_rotation start
+map_name grassyplains
+game_mode ArmyBattlefield
+round_time_minutes 20
+reinforcements_per_faction 505
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 9
+time_dynamic false
+weather_preset calm
+weather_dynamic false
+faction_attacking prussian 
+faction_defending french
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 150
+sappers_defending_starting_materials 150
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 0
+sappers_buildlimit palisade defending 0
+sappers_buildlimit shootingplatform attacking 0
+sappers_buildlimit shootingplatform defending 0
+population_verylow_playable false
+population_low_playable false
+population_medium_playable false
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#25 = Arendan River (Battlefield) - Calm | Afternoon (14) [Pop - Medium & High]
+!map_rotation start
+map_name arendanriver
+game_mode ArmyBattlefield
+round_time_minutes 20
+reinforcements_per_faction 505
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 14
+time_dynamic false
+weather_preset calm2
+weather_dynamic false
+faction_attacking prussian 
+faction_defending french
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable false
+population_low_playable false
+population_medium_playable true
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#26 = Spanish Farm (Conquest) - Calm | Morning (8) [Pop - Very Low, Low, Medium & High]
+!map_rotation start
+map_name spanishfarm
+game_mode ArmyConquest
+round_time_minutes 20
+wave_spawn_time_seconds 12
+wave_spawn_vehicle_time_seconds 22
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 8
+time_dynamic false
+weather_preset calm4
+weather_dynamic false
+conquest_tick_reward 1
+conquest_max_tickets 2500
+conquest_ticker_time_seconds 1
+conquest_tickets_per_capture 150
+faction_attacking british
+faction_defending prussian
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 70
+sappers_defending_starting_materials 70
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable true
+population_low_playable true
+population_medium_playable true
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#27 = Fort Christina (Siege) - Calm | Afternoon (15) [Pop - High]
+!map_rotation start
+map_name fortchristiana
+game_mode ArmySiege
+round_time_minutes 20
+reinforcements_per_faction 390
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 2
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 15
+time_dynamic false
+weather_preset calm3
+weather_dynamic false
+faction_attacking french
+faction_defending prussian
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 0
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable false
+population_low_playable false
+population_medium_playable false
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#28 = Tahir Desert (Battlefield) - Calm | Morning (8) [Pop - High]
+!map_rotation start
+map_name egypt
+game_mode ArmyBattlefield
+round_time_minutes 20
+reinforcements_per_faction 505
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 8
+time_dynamic false
+weather_preset calm2
+weather_dynamic false
+faction_attacking french 
+faction_defending prussian
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 0
+sappers_buildlimit palisade defending 0
+sappers_buildlimit shootingplatform attacking 0
+sappers_buildlimit shootingplatform defending 0
+population_verylow_playable false
+population_low_playable false
+population_medium_playable false
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#29 = Camp Salamanca (Siege) - Calm | Morning (9) [Pop - High]
+!map_rotation start
+map_name campsalamanca
+game_mode ArmySiege
+round_time_minutes 20
+reinforcements_per_faction 405
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 2
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 9
+time_dynamic false
+weather_preset calm3
+weather_dynamic false
+faction_attacking french
+faction_defending british
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 0
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable false
+population_low_playable false
+population_medium_playable false
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#--- Rotation Group 2 ---
+
+#30 = Cross Hills (Battlefield) - Calm | Afternoon (16) [Pop - Medium & High]
+!map_rotation start
+map_name crosshills
+game_mode ArmyBattlefield
+round_time_minutes 20
+reinforcements_per_faction 545
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 16
+time_dynamic false
+weather_preset calm3
+weather_dynamic false
+faction_attacking british
+faction_defending french
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable false
+population_low_playable false
+population_medium_playable true
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#31 = Highlands (Conquest) - Calm Rain | Morning (8) [Pop - Medium & High]
+!map_rotation start
+map_name highlands
+game_mode ArmyConquest
+round_time_minutes 20
+wave_spawn_time_seconds 12
+wave_spawn_vehicle_time_seconds 22
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 8
+time_dynamic false
+weather_preset calmrain
+weather_dynamic false
+conquest_tick_reward 1
+conquest_max_tickets 2500
+conquest_ticker_time_seconds 1
+conquest_tickets_per_capture 150
+faction_attacking prussian 
+faction_defending french
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable false
+population_low_playable false
+population_medium_playable true
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#32 = Linburg (Conquest) - Fog | Dynamic Time [Pop - Medium & High]
+!map_rotation start
+map_name linburg
+game_mode ArmyConquest
+round_time_minutes 20
+wave_spawn_time_seconds 12
+wave_spawn_vehicle_time_seconds 22
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 9
+time_dynamic true
+weather_preset fog
+weather_dynamic false
+conquest_tick_reward 1
+conquest_max_tickets 2500
+conquest_ticker_time_seconds 1
+conquest_tickets_per_capture 150
+faction_attacking prussian
+faction_defending british
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable false
+population_low_playable false
+population_medium_playable true
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#33 = Fort Christina (Battlefield) - Snowy | Afternoon (17) [Pop - Medium & High]
+!map_rotation start
+map_name fortchristiana
+game_mode ArmyBattlefield
+round_time_minutes 20
+reinforcements_per_faction 545
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 17
+time_dynamic false
+weather_preset snowy
+weather_dynamic false
+faction_attacking french 
+faction_defending prussian
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable false
+population_low_playable false
+population_medium_playable true
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#34 = Fort Salettes (Battlefield) - Calm | Afternoon (17) [Pop - Low, Medium & High]
+!map_rotation start
+map_name fortsalettes
+game_mode ArmyBattlefield
+round_time_minutes 20
+reinforcements_per_faction 545
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 2
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 17
+time_dynamic false
+weather_preset fog
+weather_dynamic false
+faction_attacking british
+faction_defending french
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 40
+sappers_defending_starting_materials 40
+sappers_buildlimit explosivebarrel attacking 2
+sappers_buildlimit explosivebarrel defending 2
+sappers_buildlimit palisade attacking 0
+sappers_buildlimit palisade defending 0
+sappers_buildlimit shootingplatform attacking 0
+sappers_buildlimit shootingplatform defending 0
+population_verylow_playable false
+population_low_playable true
+population_medium_playable true
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#35 = Tahir Desert (Conquest) - Calm | Afternoon (15) [Pop - Medium & High]
+!map_rotation start
+map_name egypt
+game_mode ArmyConquest
+round_time_minutes 20
+wave_spawn_time_seconds 12
+wave_spawn_vehicle_time_seconds 22
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 15
+time_dynamic false
+weather_preset calm2
+weather_dynamic false
+conquest_tick_reward 1
+conquest_max_tickets 2500
+conquest_ticker_time_seconds 1
+conquest_tickets_per_capture 150
+faction_attacking british 
+faction_defending prussian
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 0
+sappers_buildlimit palisade defending 0
+sappers_buildlimit shootingplatform attacking 0
+sappers_buildlimit shootingplatform defending 0
+population_verylow_playable false
+population_low_playable false
+population_medium_playable true
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#36 = King George (Battlefield) - Calm | Afternoon (15) [Pop - Low, Medium & High]
+!map_rotation start
+map_name kinggeorge
+game_mode ArmyBattlefield
+round_time_minutes 20
+reinforcements_per_faction 505
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 15
+time_dynamic false
+weather_preset calm3
+weather_dynamic false
+faction_attacking french
+faction_defending british
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable false
+population_low_playable true
+population_medium_playable true
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#37 = Causeways (Conquest) - Calm | Morning (8) [Pop - Medium & High]
+!map_rotation start
+map_name causeways
+game_mode ArmyConquest
+round_time_minutes 20
+wave_spawn_time_seconds 12
+wave_spawn_vehicle_time_seconds 22
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 8
+time_dynamic false
+weather_preset calm2
+weather_dynamic false
+conquest_tick_reward 1
+conquest_max_tickets 2500
+conquest_ticker_time_seconds 1
+conquest_tickets_per_capture 150
+faction_attacking prussian 
+faction_defending french
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 0
+sappers_buildlimit palisade defending 0
+sappers_buildlimit shootingplatform attacking 0
+sappers_buildlimit shootingplatform defending 0
+population_verylow_playable false
+population_low_playable false
+population_medium_playable true
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#38 = Fort Schwarz (Siege) - Calm | Day (12) [Pop - High]
+!map_rotation start
+map_name fortschwarz
+game_mode ArmySiege
+round_time_minutes 20
+reinforcements_per_faction 400
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 2
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 12
+time_dynamic false
+weather_preset calm2
+weather_dynamic false
+faction_attacking french 
+faction_defending british
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 0
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable false
+population_low_playable false
+population_medium_playable false
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#39 = Snowy Plains 5 (L) [Linebattle Map] (Battlefield) - Snowy | Morning (8) [Pop - High]
+!map_rotation start
+map_name snowyplainsv
+game_mode ArmyBattlefield
+round_time_minutes 20
+reinforcements_per_faction 505
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 8
+time_dynamic false
+weather_preset snowy
+weather_dynamic false
+faction_attacking british
+faction_defending french
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 150
+sappers_defending_starting_materials 150
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 0
+sappers_buildlimit palisade defending 0
+sappers_buildlimit shootingplatform attacking 0
+sappers_buildlimit shootingplatform defending 0
+population_verylow_playable false
+population_low_playable false
+population_medium_playable false
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#40 = Canyon (Battlefield) - Calm | Afternoon (15) [Pop - Very Low, Low & Medium] #Very Low & Low Pop Exception (Exclude)
+!map_rotation start
+map_name canyon
+game_mode ArmyBattlefield
+round_time_minutes 20
+reinforcements_per_faction 350
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 2
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 15
+time_dynamic false
+weather_preset calm4
+weather_dynamic false
+faction_attacking prussian 
+faction_defending french
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 40
+sappers_defending_starting_materials 40
+sappers_buildlimit explosivebarrel attacking 2
+sappers_buildlimit explosivebarrel defending 2
+sappers_buildlimit palisade attacking 0
+sappers_buildlimit palisade defending 0
+sappers_buildlimit shootingplatform attacking 0
+sappers_buildlimit shootingplatform defending 0
+population_verylow_playable false
+population_low_playable false
+population_medium_playable true
+population_high_playable false
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#41 = Lamarsh Fen (Battlefield) - Calm | Night (19) [Pop - Very Low, Low, Medium & High]
+!map_rotation start
+map_name lamarshfen
+game_mode ArmyBattlefield
+round_time_minutes 20
+reinforcements_per_faction 545
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 19
+time_dynamic false
+weather_preset calm3
+weather_dynamic false
+faction_attacking french
+faction_defending british
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 70
+sappers_defending_starting_materials 70
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable true
+population_low_playable true
+population_medium_playable true
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#42 = Fort Winston (Conquest) - Fog | Afternoon (16) [Pop - Medium & High]
+!map_rotation start
+map_name fortwinston
+game_mode ArmyConquest
+round_time_minutes 20
+wave_spawn_time_seconds 12
+wave_spawn_vehicle_time_seconds 22
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 16
+time_dynamic false
+weather_preset fog2
+weather_dynamic false
+conquest_tick_reward 1
+conquest_max_tickets 2500
+conquest_ticker_time_seconds 1
+conquest_tickets_per_capture 150
+faction_attacking british 
+faction_defending prussian
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable false
+population_low_playable false
+population_medium_playable true
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#43 = Fort Pierre (Siege) - Calm | Afternoon (15) [Pop - High]
+!map_rotation start
+map_name fortpierre
+game_mode ArmySiege
+round_time_minutes 20
+reinforcements_per_faction 400
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 2
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 15
+time_dynamic false
+weather_preset calm4
+weather_dynamic false
+faction_attacking prussian
+faction_defending french
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 0
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable false
+population_low_playable false
+population_medium_playable false
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#44 = Tahir Desert (Battlefield) - Calm | Afternoon (15) [Pop - High]
+!map_rotation start
+map_name egypt
+game_mode ArmyBattlefield
+round_time_minutes 20
+reinforcements_per_faction 505
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 15
+time_dynamic false
+weather_preset calm3
+weather_dynamic false
+faction_attacking french 
+faction_defending british
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 0
+sappers_buildlimit palisade defending 0
+sappers_buildlimit shootingplatform attacking 0
+sappers_buildlimit shootingplatform defending 0
+population_verylow_playable false
+population_low_playable false
+population_medium_playable false
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#45 = Camp Salamanca (Conquest) - Calm | Afternoon (16) [Pop - Medium & High]
+!map_rotation start
+map_name campsalamanca
+game_mode ArmyConquest
+round_time_minutes 20
+wave_spawn_time_seconds 12
+wave_spawn_vehicle_time_seconds 22
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 16
+time_dynamic false
+weather_preset calm2
+weather_dynamic false
+conquest_tick_reward 1
+conquest_max_tickets 2500
+conquest_ticker_time_seconds 1
+conquest_tickets_per_capture 150
+faction_attacking british 
+faction_defending prussian
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable false
+population_low_playable false
+population_medium_playable true
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#46 = Desert Ruins (Battlefield) - Calm | Afternoon (15) [Pop - Very Low, Low, Medium & High] #Very Low & Low Pop Exception (Only Include)
+!map_rotation start
+map_name desertruins
+game_mode ArmyBattlefield
+round_time_minutes 20
+reinforcements_per_faction 545
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 15
+time_dynamic false
+weather_preset calm3
+weather_dynamic false
+faction_attacking british 
+faction_defending prussian
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable true
+population_low_playable true
+population_medium_playable false
+population_high_playable false
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#47 = Sharpton (Battlefield) - Calm | Day (13) [Pop - Medium & High]
+!map_rotation start
+map_name sharpton
+game_mode ArmyBattlefield
+round_time_minutes 20
+reinforcements_per_faction 505
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 13
+time_dynamic false
+weather_preset calm3
+weather_dynamic false
+faction_attacking french 
+faction_defending prussian
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable false
+population_low_playable false
+population_medium_playable true
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#48 = Desert Ruins (Siege) - Calm | Dynamic Time [Pop - High]
+!map_rotation start
+map_name desertruins
+game_mode ArmySiege
+round_time_minutes 20
+reinforcements_per_faction 395
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 2
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 8
+time_dynamic true
+weather_preset calm4
+weather_dynamic false 
+faction_attacking french
+faction_defending british
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 0
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable false
+population_low_playable false
+population_medium_playable false
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#49 = Grassy Plains 3 (L) [Linebattle Map] (Battlefield) - Calm Rain | Afternoon (15) [Pop - High]
+!map_rotation start
+map_name grassyplainsiii
+game_mode ArmyBattlefield
+round_time_minutes 20
+reinforcements_per_faction 545
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 15
+time_dynamic true
+weather_preset calmrain
+weather_dynamic false
+faction_attacking french 
+faction_defending british
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 150
+sappers_defending_starting_materials 150
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 0
+sappers_buildlimit palisade defending 0
+sappers_buildlimit shootingplatform attacking 0
+sappers_buildlimit shootingplatform defending 0
+population_verylow_playable false
+population_low_playable false
+population_medium_playable false
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#50 = Arendan River (Conquest) - Fog | Morning (8) [Pop - Medium & High]
+!map_rotation start
+map_name arendanriver
+game_mode ArmyConquest
+round_time_minutes 20
+wave_spawn_time_seconds 12
+wave_spawn_vehicle_time_seconds 22
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 8
+time_dynamic false
+weather_preset fog
+weather_dynamic false
+conquest_tick_reward 1
+conquest_max_tickets 2500
+conquest_ticker_time_seconds 1
+conquest_tickets_per_capture 150
+faction_attacking prussian 
+faction_defending french
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable false
+population_low_playable false
+population_medium_playable true
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#51 = Ernest Ridge (Battlefield) - Calm | Afternoon (16) [Pop - Medium & High]
+!map_rotation start
+map_name ernestridge
+game_mode ArmyBattlefield
+round_time_minutes 20
+reinforcements_per_faction 505
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 16
+time_dynamic false
+weather_preset calm2
+weather_dynamic false
+faction_attacking french
+faction_defending prussian
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable false
+population_low_playable false
+population_medium_playable true
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#52 = Spanish Farm (Conquest) - Calm | Afternoon (15) [Pop - Very Low, Low, Medium & High] #Very Low & Low Pop Exception (Exclude)
+!map_rotation start
+map_name spanishfarm
+game_mode ArmyConquest
+round_time_minutes 20
+wave_spawn_time_seconds 12
+wave_spawn_vehicle_time_seconds 22
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 15
+time_dynamic false
+weather_preset calm3
+weather_dynamic false
+conquest_tick_reward 1
+conquest_max_tickets 2500
+conquest_ticker_time_seconds 1
+conquest_tickets_per_capture 150
+faction_attacking british 
+faction_defending french
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 70
+sappers_defending_starting_materials 70
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable false
+population_low_playable false
+population_medium_playable true
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#53 = Fort Christina (Siege) - Snowy | Afternoon (15) [Pop - High]
+!map_rotation start
+map_name fortchristiana
+game_mode ArmySiege
+round_time_minutes 20
+reinforcements_per_faction 390
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 2
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 15
+time_dynamic false
+weather_preset Snowy
+weather_dynamic false
+faction_attacking prussian
+faction_defending french
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 0
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable false
+population_low_playable false
+population_medium_playable false
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#54 = Dutch Canals (Battlefield) - Calm | Morning (9) [Pop - Medium & High]
+!map_rotation start
+map_name dutchcanals
+game_mode ArmyBattlefield
+round_time_minutes 20
+reinforcements_per_faction 505
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 9
+time_dynamic false
+weather_preset calm3
+weather_dynamic false
+faction_attacking french 
+faction_defending prussian
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable false
+population_low_playable false
+population_medium_playable true
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#--- Rotation Group 3 ---
+
+#55 = Tahir Desert (Battlefield) - Calm | Morning (8) [Pop - High]
+!map_rotation start
+map_name egypt
+game_mode ArmyBattlefield
+round_time_minutes 20
+reinforcements_per_faction 505
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 8
+time_dynamic false
+weather_preset calm2
+weather_dynamic false
+faction_attacking french 
+faction_defending prussian
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 0
+sappers_buildlimit palisade defending 0
+sappers_buildlimit shootingplatform attacking 0
+sappers_buildlimit shootingplatform defending 0
+population_verylow_playable false
+population_low_playable false
+population_medium_playable false
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#56 = Spanish Farm (Battlefield) - Calm Rain | Morning (8) [Pop - Very Low, Low, Medium & High]
+!map_rotation start
+map_name spanishfarm
+game_mode ArmyBattlefield
+round_time_minutes 20
+reinforcements_per_faction 545
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 8
+time_dynamic false
+weather_preset calmrain
+weather_dynamic false
+faction_attacking prussian 
+faction_defending french
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 70
+sappers_defending_starting_materials 70
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable true
+population_low_playable true
+population_medium_playable true
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#57 = Camp Salamanca (Siege) - Calm | Morning (9) [Pop - High]
+!map_rotation start
+map_name campsalamanca
+game_mode ArmySiege
+round_time_minutes 20
+reinforcements_per_faction 405
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 2
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 9
+time_dynamic false
+weather_preset calm3
+weather_dynamic false
+faction_attacking french
+faction_defending prussian
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 0
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable false
+population_low_playable false
+population_medium_playable false
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#58 = Fort Salettes (Battlefield) - Calm | Afternoon (15) [Pop - Low, Medium & High]
+!map_rotation start
+map_name fortsalettes
+game_mode ArmyBattlefield
+round_time_minutes 20
+reinforcements_per_faction 545
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 2
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 15
+time_dynamic false
+weather_preset calm4
+weather_dynamic false
+faction_attacking prussian 
+faction_defending french
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 40
+sappers_defending_starting_materials 40
+sappers_buildlimit explosivebarrel attacking 2
+sappers_buildlimit explosivebarrel defending 2
+sappers_buildlimit palisade attacking 0
+sappers_buildlimit palisade defending 0
+sappers_buildlimit shootingplatform attacking 0
+sappers_buildlimit shootingplatform defending 0
+population_verylow_playable false
+population_low_playable true
+population_medium_playable true
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#59 = Fort Schwarz (Siege) - Calm | Dynamic Time [Pop - High]
+!map_rotation start
+map_name fortschwarz
+game_mode ArmySiege
+round_time_minutes 20
+reinforcements_per_faction 400
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 2
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 8
+time_dynamic true
+weather_preset calm2
+weather_dynamic false
+faction_attacking british 
+faction_defending french
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 0
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable false
+population_low_playable false
+population_medium_playable false
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#60 = Cross Hills (Battlefield) - Calm | Afternoon (16) [Pop - Medium & High]
+!map_rotation start
+map_name crosshills
+game_mode ArmyBattlefield
+round_time_minutes 20
+reinforcements_per_faction 545
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 16
+time_dynamic false
+weather_preset calm3
+weather_dynamic false
+faction_attacking british
+faction_defending french
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable false
+population_low_playable false
+population_medium_playable true
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#61 = King George (Conquest) - Fog | Afternoon (17) [Pop - Low, Medium & High]
+!map_rotation start
+map_name kinggeorge
+game_mode ArmyConquest
+round_time_minutes 20
+wave_spawn_time_seconds 12
+wave_spawn_vehicle_time_seconds 22
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 17
+time_dynamic false
+weather_preset fog2
+weather_dynamic false
+conquest_tick_reward 1
+conquest_max_tickets 2500
+conquest_ticker_time_seconds 1
+conquest_tickets_per_capture 150
+faction_attacking prussian 
+faction_defending french
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable false
+population_low_playable true
+population_medium_playable true
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#62 = Fort Pierre (Siege) - Calm Rain | Afternoon (14) [Pop - High]
+!map_rotation start
+map_name fortpierre
+game_mode ArmySiege
+round_time_minutes 20
+reinforcements_per_faction 400
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 2
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 14
+time_dynamic false
+weather_preset calmrain
+weather_dynamic true
+faction_attacking british
+faction_defending prussian
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 0
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable false
+population_low_playable false
+population_medium_playable false
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#63 = Spanish Farm (Conquest) - Calm | Morning (8) [Pop - Very Low, Low, Medium & High] #Very Low & Low Pop Exception (Exclude)
+!map_rotation start
+map_name spanishfarm
+game_mode ArmyConquest
+round_time_minutes 20
+wave_spawn_time_seconds 12
+wave_spawn_vehicle_time_seconds 22
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 8
+time_dynamic false
+weather_preset calm4
+weather_dynamic false
+conquest_tick_reward 1
+conquest_max_tickets 2500
+conquest_ticker_time_seconds 1
+conquest_tickets_per_capture 150
+faction_attacking french
+faction_defending prussian
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 70
+sappers_defending_starting_materials 70
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable false
+population_low_playable false
+population_medium_playable true
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#64 = Causeways (Battlefield) - Calm | Morning (8) [Pop - Medium & High]
+!map_rotation start
+map_name causeways
+game_mode ArmyBattlefield
+round_time_minutes 20
+reinforcements_per_faction 545
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 8
+time_dynamic false
+weather_preset calm4
+weather_dynamic false
+faction_attacking british
+faction_defending french
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 0
+sappers_buildlimit palisade defending 0
+sappers_buildlimit shootingplatform attacking 0
+sappers_buildlimit shootingplatform defending 0
+population_verylow_playable false
+population_low_playable false
+population_medium_playable true
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#65 = Dutch Canals (Conquest) - Calm | Afternoon (17) [Pop - Medium & High]
+!map_rotation start
+map_name dutchcanals
+game_mode ArmyConquest
+round_time_minutes 20
+wave_spawn_time_seconds 12
+wave_spawn_vehicle_time_seconds 22
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 17
+time_dynamic false
+weather_preset calm2
+weather_dynamic false
+conquest_tick_reward 1
+conquest_max_tickets 2500
+conquest_ticker_time_seconds 1
+conquest_tickets_per_capture 150
+faction_attacking british 
+faction_defending prussian
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable false
+population_low_playable false
+population_medium_playable true
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#66 = Canyon (Conquest) - Fog | Morning (8) [Pop - Very Low, Low & Medium]
+!map_rotation start
+map_name canyon
+game_mode ArmyConquest
+round_time_minutes 20
+wave_spawn_time_seconds 12
+wave_spawn_vehicle_time_seconds 22
+spawn_immunity_timer 2
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 8
+time_dynamic false
+weather_preset fog2
+weather_dynamic false
+conquest_tick_reward 1
+conquest_max_tickets 1500
+conquest_ticker_time_seconds 1
+conquest_tickets_per_capture 150
+faction_attacking french 
+faction_defending british
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 40
+sappers_defending_starting_materials 40
+sappers_buildlimit explosivebarrel attacking 2
+sappers_buildlimit explosivebarrel defending 2
+sappers_buildlimit palisade attacking 0
+sappers_buildlimit palisade defending 0
+sappers_buildlimit shootingplatform attacking 0
+sappers_buildlimit shootingplatform defending 0
+population_verylow_playable true
+population_low_playable true
+population_medium_playable true
+population_high_playable false
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#67 = Ernest Ridge (Battlefield) - Dynamic Weather | Morning (9) [Pop - Medium & High]
+!map_rotation start
+map_name ernestridge
+game_mode ArmyBattlefield
+round_time_minutes 20
+reinforcements_per_faction 505
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 9
+time_dynamic false
+weather_preset calm4
+weather_dynamic true
+faction_attacking british
+faction_defending french
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable false
+population_low_playable false
+population_medium_playable true
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#68 = Sharpton (Siege) - Calm | Afternoon (16) [Pop - High]
+!map_rotation start
+map_name sharpton
+game_mode ArmySiege
+round_time_minutes 20
+reinforcements_per_faction 365
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 2
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 16
+time_dynamic false
+weather_preset calm4
+weather_dynamic false
+faction_attacking prussian 
+faction_defending british
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 0
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable false
+population_low_playable false
+population_medium_playable false
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#69 = Snowy Plains 4 (L) [Linebattle Map] (Battlefield) - Snowy | Morning (8) [Pop - High]
+!map_rotation start
+map_name snowyplainsiv
+game_mode ArmyBattlefield
+round_time_minutes 20
+reinforcements_per_faction 505
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 8
+time_dynamic false
+weather_preset snowy
+weather_dynamic false
+faction_attacking british 
+faction_defending prussian
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 150
+sappers_defending_starting_materials 150
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 0
+sappers_buildlimit palisade defending 0
+sappers_buildlimit shootingplatform attacking 0
+sappers_buildlimit shootingplatform defending 0
+population_verylow_playable false
+population_low_playable false
+population_medium_playable false
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#70 = Linburg (Battlefield) - Calm | Morning (9) [Pop - Medium & High]
+!map_rotation start
+map_name linburg
+game_mode ArmyBattlefield
+round_time_minutes 20
+reinforcements_per_faction 505
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 9
+time_dynamic false
+weather_preset calm2
+weather_dynamic false
+faction_attacking british
+faction_defending french
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable false
+population_low_playable false
+population_medium_playable true
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#71 = Lamarsh Fen (Battlefield) - Calm | Morning (8) [Pop - Very Low, Low, Medium & High]
+!map_rotation start
+map_name lamarshfen
+game_mode ArmyBattlefield
+round_time_minutes 20
+reinforcements_per_faction 545
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 8
+time_dynamic false
+weather_preset calm4
+weather_dynamic false
+faction_attacking british
+faction_defending prussian
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 70
+sappers_defending_starting_materials 70
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable true
+population_low_playable true
+population_medium_playable true
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#72 = Highlands (Conquest) - Calm | Afternoon (14) [Pop - Medium & High]
+!map_rotation start
+map_name highlands
+game_mode ArmyConquest
+round_time_minutes 20
+wave_spawn_time_seconds 12
+wave_spawn_vehicle_time_seconds 22
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 8
+time_dynamic false
+weather_preset calm3
+weather_dynamic false
+conquest_tick_reward 1
+conquest_max_tickets 2500
+conquest_ticker_time_seconds 1
+conquest_tickets_per_capture 150
+faction_attacking prussian 
+faction_defending french
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable false
+population_low_playable false
+population_medium_playable true
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#73 = Fort Schwarz (Conquest) - Snowy | Dawn (17) [Pop - Medium & High]
+!map_rotation start
+map_name fortschwarz
+game_mode ArmyConquest
+round_time_minutes 20
+wave_spawn_time_seconds 12
+wave_spawn_vehicle_time_seconds 22
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 17
+time_dynamic false
+weather_preset snowy
+weather_dynamic false
+conquest_tick_reward 1
+conquest_max_tickets 2500
+conquest_ticker_time_seconds 1
+conquest_tickets_per_capture 150
+faction_attacking british 
+faction_defending french
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable false
+population_low_playable false
+population_medium_playable true
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#74 = Desert Ruins (Battlefield) - Calm | Afternoon (15) [Pop - Very Low, Low, Medium & High]
+!map_rotation start
+map_name desertruins
+game_mode ArmyBattlefield
+round_time_minutes 20
+reinforcements_per_faction 545
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 15
+time_dynamic false
+weather_preset calm3
+weather_dynamic false
+faction_attacking british 
+faction_defending prussian
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable true
+population_low_playable true
+population_medium_playable true
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#75 = Fort Winston (Battlefield) - Calm | Afternoon (15) [Pop - Medium & High]
+!map_rotation start
+map_name fortwinston
+game_mode ArmyBattlefield
+round_time_minutes 20
+reinforcements_per_faction 505
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 15
+time_dynamic false
+weather_preset calm2
+weather_dynamic false
+faction_attacking british 
+faction_defending french
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable false
+population_low_playable false
+population_medium_playable true
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#--- Rotation Group 4 ---
+
+#76 = Tahir Desert (Conquest) - Calm | Afternoon (15) [Pop - Medium & High]
+!map_rotation start
+map_name egypt
+game_mode ArmyConquest
+round_time_minutes 20
+wave_spawn_time_seconds 12
+wave_spawn_vehicle_time_seconds 22
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 15
+time_dynamic false
+weather_preset calm2
+weather_dynamic false
+conquest_tick_reward 1
+conquest_max_tickets 2500
+conquest_ticker_time_seconds 1
+conquest_tickets_per_capture 150
+faction_attacking british 
+faction_defending prussian
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 0
+sappers_buildlimit palisade defending 0
+sappers_buildlimit shootingplatform attacking 0
+sappers_buildlimit shootingplatform defending 0
+population_verylow_playable false
+population_low_playable false
+population_medium_playable true
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#77 = Lamarsh Fen (Battlefield) - Calm | Morning (8) [Pop - Very Low, Low, Medium & High]
+!map_rotation start
+map_name lamarshfen
+game_mode ArmyBattlefield
+round_time_minutes 20
+reinforcements_per_faction 545
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 8
+time_dynamic false
+weather_preset calm2
+weather_dynamic false
+faction_attacking british
+faction_defending french
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 70
+sappers_defending_starting_materials 70
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable true
+population_low_playable true
+population_medium_playable true
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#78 = Fort Christina (Battlefield) - Snowy | Afternoon (17) [Pop - Medium & High]
+!map_rotation start
+map_name fortchristiana
+game_mode ArmyBattlefield
+round_time_minutes 20
+reinforcements_per_faction 545
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 17
+time_dynamic false
+weather_preset snowy
+weather_dynamic false
+faction_attacking french 
+faction_defending prussian
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable false
+population_low_playable false
+population_medium_playable true
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#79 = Spanish Farm (Battlefield) - Calm | Dynamic Time [Pop - Very Low, Low, Medium & High]
+!map_rotation start
+map_name spanishfarm
+game_mode ArmyBattlefield
+round_time_minutes 20
+reinforcements_per_faction 545
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 8
+time_dynamic true
+weather_preset calm
+weather_dynamic false
+faction_attacking french
+faction_defending british
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 70
+sappers_defending_starting_materials 70
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable true
+population_low_playable true
+population_medium_playable true
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#80 = Ernest Ridge (Conquest) - Calm | Morning (8) [Pop - Medium & High]
+!map_rotation start
+map_name ernestridge
+game_mode ArmyConquest
+round_time_minutes 20
+wave_spawn_time_seconds 12
+wave_spawn_vehicle_time_seconds 22
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 8
+time_dynamic false
+weather_preset calm
+weather_dynamic false
+conquest_tick_reward 1
+conquest_max_tickets 2500
+conquest_ticker_time_seconds 1
+conquest_tickets_per_capture 150
+faction_attacking british
+faction_defending french
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable false
+population_low_playable false
+population_medium_playable true
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#81 = Arendan River (Siege) - Calm | Afternoon (17) [Pop - High]
+!map_rotation start
+map_name arendanriver
+game_mode ArmySiege
+round_time_minutes 20
+reinforcements_per_faction 365
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 2
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 17
+time_dynamic false
+weather_preset calm2
+weather_dynamic false
+faction_attacking prussian 
+faction_defending british
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 0
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable false
+population_low_playable false
+population_medium_playable false
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#82 = Camp Salamanca (Battlefield) - Calm | Morning (8) [Pop - Medium & High]
+!map_rotation start
+map_name campsalamanca
+game_mode ArmyBattlefield
+round_time_minutes 20
+reinforcements_per_faction 545
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 8
+time_dynamic false
+weather_preset calm4
+weather_dynamic false
+faction_attacking prussian 
+faction_defending french
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable false
+population_low_playable false
+population_medium_playable true
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#83 = Desert Ruins (Battlefield) - Calm | Afternoon (12) [Pop - Very Low, Low, Medium & High] #Very Low Pop Exception (Exclude)
+!map_rotation start
+map_name desertruins
+game_mode ArmyBattlefield
+round_time_minutes 20
+reinforcements_per_faction 545
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 12
+time_dynamic false
+weather_preset calm3
+weather_dynamic false
+faction_attacking british 
+faction_defending prussian
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable false
+population_low_playable true
+population_medium_playable true
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#84 = Grassy Plains 2 (L) [Linebattle Map] (Battlefield) - Calm | Dynamic Time [Pop - High]
+!map_rotation start
+map_name grassyplainsii
+game_mode ArmyBattlefield
+round_time_minutes 20
+reinforcements_per_faction 545
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 8
+time_dynamic true
+weather_preset calm2
+weather_dynamic false
+faction_attacking french 
+faction_defending british
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 150
+sappers_defending_starting_materials 150
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 0
+sappers_buildlimit palisade defending 0
+sappers_buildlimit shootingplatform attacking 0
+sappers_buildlimit shootingplatform defending 0
+population_verylow_playable false
+population_low_playable false
+population_medium_playable false
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#85 = Fort Winston (Conquest) - Calm | Afternoon (14) [Pop - Medium & High]
+!map_rotation start
+map_name fortwinston
+game_mode ArmyConquest
+round_time_minutes 20
+wave_spawn_time_seconds 12
+wave_spawn_vehicle_time_seconds 22
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 16
+time_dynamic false
+weather_preset calm3
+weather_dynamic false
+conquest_tick_reward 1
+conquest_max_tickets 2500
+conquest_ticker_time_seconds 1
+conquest_tickets_per_capture 150
+faction_attacking british 
+faction_defending prussian
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable false
+population_low_playable false
+population_medium_playable true
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#86 = Fort Salettes (Siege) - Calm | Dynamic Time [Pop - High]
+!map_rotation start
+map_name fortsalettes
+game_mode ArmySiege
+round_time_minutes 20
+reinforcements_per_faction 355
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 2
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 8
+time_dynamic true
+weather_preset calm3
+weather_dynamic false
+faction_attacking british 
+faction_defending prussian
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 40
+sappers_defending_starting_materials 40
+sappers_buildlimit explosivebarrel attacking 2
+sappers_buildlimit explosivebarrel defending 0
+sappers_buildlimit palisade attacking 0
+sappers_buildlimit palisade defending 0
+sappers_buildlimit shootingplatform attacking 0
+sappers_buildlimit shootingplatform defending 0
+population_verylow_playable false
+population_low_playable false
+population_medium_playable false
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#87 = Cross Hills (Battlefield) - Calm | Afternoon (16) [Pop - Medium & High]
+!map_rotation start
+map_name crosshills
+game_mode ArmyBattlefield
+round_time_minutes 20
+reinforcements_per_faction 545
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 16
+time_dynamic false
+weather_preset calm3
+weather_dynamic false
+faction_attacking british
+faction_defending french
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable false
+population_low_playable false
+population_medium_playable true
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#88 = Canyon (Battlefield) - Calm | Morning (8) [Pop - Very Low, Low & Medium]
+!map_rotation start
+map_name canyon
+game_mode ArmyBattlefield
+round_time_minutes 20
+reinforcements_per_faction 350
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 2
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 8
+time_dynamic false
+weather_preset calm4
+weather_dynamic false
+faction_attacking prussian 
+faction_defending french
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 40
+sappers_defending_starting_materials 40
+sappers_buildlimit explosivebarrel attacking 2
+sappers_buildlimit explosivebarrel defending 2
+sappers_buildlimit palisade attacking 0
+sappers_buildlimit palisade defending 0
+sappers_buildlimit shootingplatform attacking 0
+sappers_buildlimit shootingplatform defending 0
+population_verylow_playable true
+population_low_playable true
+population_medium_playable true
+population_high_playable false
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#89 = Spanish Farm (Battlefield) - Calm | Morning (9) [Pop - Very Low, Low, Medium & High] #Very Low Pop Exception (Only Include)
+!map_rotation start
+map_name spanishfarm
+game_mode ArmyBattlefield
+round_time_minutes 20
+reinforcements_per_faction 545
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 9
+time_dynamic false
+weather_preset calm
+weather_dynamic false
+faction_attacking french
+faction_defending british
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 70
+sappers_defending_starting_materials 70
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable true
+population_low_playable false
+population_medium_playable false
+population_high_playable false
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#90 = Lamarsh Fen (Conquest) - Fog | Evening (18) [Pop - Very Low, Low, Medium & High]
+!map_rotation start
+map_name lamarshfen
+game_mode ArmyConquest
+round_time_minutes 20
+wave_spawn_time_seconds 12
+wave_spawn_vehicle_time_seconds 22
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 8
+time_dynamic false
+weather_preset fog2
+weather_dynamic false
+conquest_tick_reward 1
+conquest_max_tickets 2500
+conquest_ticker_time_seconds 1
+conquest_tickets_per_capture 150
+faction_attacking french
+faction_defending prussian
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 70
+sappers_defending_starting_materials 70
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable true
+population_low_playable true
+population_medium_playable true
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#91 = Desert Ruins (Battlefield) - Calm | Afternoon (12) [Pop - Very Low, Low, Medium & High] #Very Low Pop Exception (Only Include)
+!map_rotation start
+map_name desertruins
+game_mode ArmyBattlefield
+round_time_minutes 20
+reinforcements_per_faction 545
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 12
+time_dynamic false
+weather_preset calm3
+weather_dynamic false
+faction_attacking british 
+faction_defending prussian
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable true
+population_low_playable false
+population_medium_playable false
+population_high_playable false
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#92 = Highlands (Siege) - Calm | Morning (8) [Pop - High]
+!map_rotation start
+map_name highlands
+game_mode ArmySiege
+round_time_minutes 20
+reinforcements_per_faction 385
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 2
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 8
+time_dynamic false
+weather_preset calm3
+weather_dynamic false 
+faction_attacking prussian 
+faction_defending british
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 0
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable false
+population_low_playable false
+population_medium_playable false
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#93 = Linburg (Battlefield) - Calm | Morning (9) [Pop - Medium & High]
+!map_rotation start
+map_name linburg
+game_mode ArmyBattlefield
+round_time_minutes 20
+reinforcements_per_faction 505
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 9
+time_dynamic false
+weather_preset calm3
+weather_dynamic false
+faction_attacking british 
+faction_defending prussian
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable false
+population_low_playable false
+population_medium_playable true
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#94 = King George (Conquest) - Fog | Afternoon (17) [Pop - Low, Medium & High]
+!map_rotation start
+map_name kinggeorge
+game_mode ArmyConquest
+round_time_minutes 20
+wave_spawn_time_seconds 12
+wave_spawn_vehicle_time_seconds 22
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 17
+time_dynamic false
+weather_preset fog
+weather_dynamic false
+conquest_tick_reward 1
+conquest_max_tickets 2500
+conquest_ticker_time_seconds 1
+conquest_tickets_per_capture 150
+faction_attacking prussian 
+faction_defending french
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable false
+population_low_playable true
+population_medium_playable true
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#95 = Snowy Plains 3 (L) [Linebattle Map] (Battlefield) - Snowy | Morning (8) [Pop - High]
+!map_rotation start
+map_name snowyplainsiii
+game_mode ArmyBattlefield
+round_time_minutes 20
+reinforcements_per_faction 505
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 8
+time_dynamic false
+weather_preset snowy
+weather_dynamic false
+faction_attacking british 
+faction_defending prussian
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 150
+sappers_defending_starting_materials 150
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 0
+sappers_buildlimit palisade defending 0
+sappers_buildlimit shootingplatform attacking 0
+sappers_buildlimit shootingplatform defending 0
+population_verylow_playable false
+population_low_playable false
+population_medium_playable false
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#96 = Fort Pierre (Siege) - Calm | Afternoon (15) [Pop - High]
+!map_rotation start
+map_name fortpierre
+game_mode ArmySiege
+round_time_minutes 20
+reinforcements_per_faction 400
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 2
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 15
+time_dynamic false
+weather_preset calm4
+weather_dynamic false
+faction_attacking french
+faction_defending british
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 0
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable false
+population_low_playable false
+population_medium_playable false
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#97 = Sharpton (Conquest) - Calm | Afternoon (14) [Pop - Medium & High]
+!map_rotation start
+map_name sharpton
+game_mode ArmyConquest
+round_time_minutes 20
+wave_spawn_time_seconds 12
+wave_spawn_vehicle_time_seconds 22
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 14
+time_dynamic false
+weather_preset calm
+weather_dynamic false
+conquest_tick_reward 1
+conquest_max_tickets 2500
+conquest_ticker_time_seconds 1
+conquest_tickets_per_capture 150
+faction_attacking prussian 
+faction_defending french
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable false
+population_low_playable false
+population_medium_playable true
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#98 = Tahir Desert (Battlefield) - Calm | Afternoon (14) [Pop - High]
+!map_rotation start
+map_name egypt
+game_mode ArmyBattlefield
+round_time_minutes 20
+reinforcements_per_faction 505
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 14
+time_dynamic false
+weather_preset calm2
+weather_dynamic false
+faction_attacking french 
+faction_defending prussian
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 0
+sappers_buildlimit palisade defending 0
+sappers_buildlimit shootingplatform attacking 0
+sappers_buildlimit shootingplatform defending 0
+population_verylow_playable false
+population_low_playable false
+population_medium_playable false
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#99 = Ernest Ridge (Battlefield) - Dynamic Weather | Morning (9) [Pop - Medium & High]
+!map_rotation start
+map_name ernestridge
+game_mode ArmyBattlefield
+round_time_minutes 20
+reinforcements_per_faction 505
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 9
+time_dynamic false
+weather_preset calm4
+weather_dynamic true
+faction_attacking british
+faction_defending french
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable false
+population_low_playable false
+population_medium_playable true
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#100 = Fort Christina (Conquest) - Calm | Morning (8) [Pop - Medium & High]
+!map_rotation start
+map_name fortchristiana
+game_mode ArmyConquest
+round_time_minutes 20
+wave_spawn_time_seconds 12
+wave_spawn_vehicle_time_seconds 22
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 8
+time_dynamic false
+weather_preset calm3
+weather_dynamic false
+conquest_tick_reward 1
+conquest_max_tickets 2500
+conquest_ticker_time_seconds 1
+conquest_tickets_per_capture 150
+faction_attacking prussian
+faction_defending british
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable false
+population_low_playable false
+population_medium_playable true
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#101 = Causeways (Battlefield) - Fog | Evening (17) [Pop - Medium & High]
+!map_rotation start
+map_name causeways
+game_mode ArmyBattlefield
+round_time_minutes 20
+reinforcements_per_faction 545
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 17
+time_dynamic false
+weather_preset fog
+weather_dynamic false
+faction_attacking british
+faction_defending french
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 0
+sappers_buildlimit palisade defending 0
+sappers_buildlimit shootingplatform attacking 0
+sappers_buildlimit shootingplatform defending 0
+population_verylow_playable false
+population_low_playable false
+population_medium_playable true
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#102 = Dutch Canals (Battlefield) - Calm | Afternoon (17) [Pop - Medium & High]
+!map_rotation start
+map_name dutchcanals
+game_mode ArmyBattlefield
+round_time_minutes 20
+reinforcements_per_faction 505
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 17
+time_dynamic false
+weather_preset calm
+weather_dynamic false
+faction_attacking french 
+faction_defending british
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable false
+population_low_playable false
+population_medium_playable true
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#103 = Arendan River (Conquest) - Calm | Day (13) [Pop - Medium & High]
+!map_rotation start
+map_name arendanriver
+game_mode ArmyConquest
+round_time_minutes 20
+wave_spawn_time_seconds 12
+wave_spawn_vehicle_time_seconds 22
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 13
+time_dynamic false
+weather_preset calm2
+weather_dynamic false
+conquest_tick_reward 1
+conquest_max_tickets 2500
+conquest_ticker_time_seconds 1
+conquest_tickets_per_capture 150
+faction_attacking british 
+faction_defending prussian
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable false
+population_low_playable false
+population_medium_playable true
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#104 = Desert Ruins (Conquest) - Calm | Afternoon (14) [Pop - Medium & High]
+!map_rotation start
+map_name desertruins
+game_mode ArmyConquest
+round_time_minutes 20
+wave_spawn_time_seconds 12
+wave_spawn_vehicle_time_seconds 22
+spawn_immunity_timer 5
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 14
+time_dynamic false
+weather_preset calm
+weather_dynamic false
+conquest_tick_reward 1
+conquest_max_tickets 2500
+conquest_ticker_time_seconds 1
+conquest_tickets_per_capture 150
+faction_attacking prussian
+faction_defending british
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 3
+sappers_buildlimit palisade defending 3
+sappers_buildlimit shootingplatform attacking 3
+sappers_buildlimit shootingplatform defending 3
+population_verylow_playable false
+population_low_playable false
+population_medium_playable true
+population_high_playable true
+max_accumulated_faction_points -1
+!map_rotation end
+
+
+#--- Roation Group 5 (Non-Rotatable) ---
+
+#105 = Snowy Plains 1 (S) [Linebattle Map] (Conquest) - Snowy | Morning (8) [Pop - Non-Rotatable]
+!map_rotation start
+map_name snowyplainssmall
+game_mode ArmyConquest
+round_time_minutes 20
+wave_spawn_time_seconds 12
+wave_spawn_vehicle_time_seconds 22
+spawn_immunity_timer 2
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 8
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+time_hour 8
+time_dynamic false
+weather_preset snowy
+weather_dynamic false
+conquest_tick_reward 1
+conquest_max_tickets 1500
+conquest_ticker_time_seconds 1
+conquest_tickets_per_capture 150
+faction_attacking french
+faction_defending british
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 70
+sappers_defending_starting_materials 70
+sappers_buildlimit explosivebarrel attacking 3
+sappers_buildlimit explosivebarrel defending 3
+sappers_buildlimit palisade attacking 0
+sappers_buildlimit palisade defending 0
+sappers_buildlimit shootingplatform attacking 0
+sappers_buildlimit shootingplatform defending 0
+population_verylow_playable false
+population_low_playable false
+population_medium_playable false
+population_high_playable false
+max_accumulated_faction_points -1
+!map_rotation end

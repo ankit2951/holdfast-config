@@ -1,0 +1,207 @@
+###- Server & Steam Ports (All 3 ports must be unique per server instance).
+
+server_port 20103
+steam_communications_port 8703
+steam_query_port 27003
+
+
+
+###- Server Settings
+
+server_name New Holdfast NaW Server - Melee Arena
+server_welcome_message Welcome to my new game server!
+server_region usa
+server_admin_password ChangeThisPassword
+#server_password ChangeThisPassword
+
+
+
+###- Server Intro Message
+
+#server_intro_title Welcome To The Community!
+#server_intro_body Greetings ladies and gentleman. Welcome to the <b>community!</b><br><br>Come join us on our Discord. We look forward to seeing you there. <br><br><b><color=yellow>discord.gg/holdfastgame</color></b>
+
+
+
+###- Bandwidth & Performance Settings
+
+network_broadcast_mode HighAccuracy
+
+
+
+###- Global Gameplay & Map Settings
+
+artillery_fieldgun_respawn_timer 120
+artillery_rocketlauncher_respawn_timer 120
+map_rotation_start_randomise true
+
+
+
+###- Map Rotations
+
+#1 = Fort Arena (Melee Arena) - Calm Weather | Morning (10)
+!map_rotation start
+map_name fortarena
+game_mode MeleeArena
+game_type Standard
+round_time_minutes 12
+round_spawn_close_timer_seconds 35
+round_spawn_close_timer_seconds_between_rounds 20
+amount_of_rounds 15
+faction_balancing true
+faction_balancing_discrepancy_amount 2
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 20
+time_hour 10
+time_dynamic false
+weather_preset calm
+weather_dynamic false
+faction_attacking french
+faction_defending british
+friendly_fire false
+friendly_fire_melee_bounce true
+damage_split 50
+class_system_orders false
+!map_rotation end
+
+
+#2 = Palisade Arena (Melee Arena) - Calm Weather | Afternoon (14)
+!map_rotation start
+map_name palisadearena
+game_mode MeleeArena
+game_type Standard
+round_time_minutes 12
+round_spawn_close_timer_seconds 35
+round_spawn_close_timer_seconds_between_rounds 20
+amount_of_rounds 15
+faction_balancing true
+faction_balancing_discrepancy_amount 2
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 20
+time_hour 14
+time_dynamic false
+weather_preset calm
+weather_dynamic false
+faction_attacking prussian
+faction_defending french
+friendly_fire false
+friendly_fire_melee_bounce true
+damage_split 50
+class_system_orders false
+!map_rotation end
+
+
+#3 = Garrison Arena (Melee Arena) - Calm Weather | Morning (10)
+!map_rotation start
+map_name garrisonarena
+game_mode MeleeArena
+game_type Standard
+round_time_minutes 12
+round_spawn_close_timer_seconds 35
+round_spawn_close_timer_seconds_between_rounds 20
+amount_of_rounds 15
+faction_balancing true
+faction_balancing_discrepancy_amount 2
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 20
+time_hour 10
+time_dynamic false
+weather_preset calm2
+weather_dynamic false
+faction_attacking french
+faction_defending british
+friendly_fire false
+friendly_fire_melee_bounce true
+damage_split 50
+class_system_orders false
+!map_rotation end
+
+
+#4 = Watchtower Arena (Melee Arena) - Snowy Weather | Morning (8)
+!map_rotation start
+map_name watchtowerarena
+game_mode MeleeArena
+game_type Standard
+round_time_minutes 12
+round_spawn_close_timer_seconds 35
+round_spawn_close_timer_seconds_between_rounds 20
+amount_of_rounds 15
+faction_balancing true
+faction_balancing_discrepancy_amount 2
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 20
+time_hour 8
+time_dynamic false
+weather_preset snowy
+weather_dynamic false
+faction_attacking british
+faction_defending french
+friendly_fire false
+friendly_fire_melee_bounce true
+damage_split 50
+class_system_orders false
+!map_rotation end
+
+
+#5 = Sacred Arena (Melee Arena) - Calm Weather | Morning (10)
+!map_rotation start
+map_name sacredarena
+game_mode MeleeArena
+game_type Standard
+round_time_minutes 12
+round_spawn_close_timer_seconds 35
+round_spawn_close_timer_seconds_between_rounds 20
+amount_of_rounds 15
+faction_balancing true
+faction_balancing_discrepancy_amount 2
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 20
+time_hour 10
+time_dynamic false
+weather_preset calm2
+weather_dynamic false
+faction_attacking prussian
+faction_defending french
+friendly_fire false
+friendly_fire_melee_bounce true
+damage_split 50
+class_system_orders false
+!map_rotation end
+
+
+#6 = Castle Arena (Melee Arena) - Calm Weather | Morning (10)
+!map_rotation start
+map_name castlearena
+game_mode MeleeArena
+game_type Standard
+round_time_minutes 12
+round_spawn_close_timer_seconds 35
+round_spawn_close_timer_seconds_between_rounds 20
+amount_of_rounds 15
+faction_balancing true
+faction_balancing_discrepancy_amount 2
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 20
+time_hour 10
+time_dynamic false
+weather_preset calm3
+weather_dynamic false
+faction_attacking french
+faction_defending british
+friendly_fire false
+friendly_fire_melee_bounce true
+damage_split 50
+class_system_orders false
+!map_rotation end
