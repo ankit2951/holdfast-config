@@ -1,4 +1,4 @@
-###- Server & Steam Ports (All 3 ports must be unique per server instance).
+###- Server & Steam Ports - DO NOT EDIT
 
 server_port 20103
 steam_communications_port 8703
@@ -6,7 +6,7 @@ steam_query_port 27003
 
 
 
-###- Server Settings
+###- Server Settings - EDIT IN STARTUP TAB
 
 server_name New Holdfast NaW Server - Melee Arena
 server_welcome_message Welcome to my new game server!
