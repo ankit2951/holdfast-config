@@ -1,0 +1,394 @@
+﻿###- Server & Steam Ports (All 3 ports must be unique per server instance).
+
+server_port 20100
+steam_communications_port 8700
+steam_query_port 27000
+
+
+
+###- Server Settings
+
+server_name New Frontlines WW1 Server
+server_welcome_message Join the community Discord to participate in organised linebattle events! discord.gg/holdfastgame
+server_region europe
+server_admin_password ChangeThisPassword
+##server_password ChangeThisPassword
+
+
+###- Server Intro Message
+
+#server_intro_title Welcome To The Community!
+#server_intro_body Greetings ladies and gentleman. Welcome to the <b>community!</b><br><br>Come join us on our Discord. We look forward to seeing you there. <br><br><b><color=yellow>discord.gg/holdfastgame</color></b>
+
+
+###- Bandwidth & Performance Settings
+
+network_broadcast_mode LowBandwidth
+server_hibernation_enabled true
+server_hibernation_fps 1
+
+
+###- Player Population Settings
+
+population_low_min_players 30
+population_medium_min_players 75
+population_high_min_players 100
+
+
+###- Global Gameplay & Map Settings
+
+artillery_fieldgun_respawn_timer 120
+artillery_rocketlauncher_respawn_timer 120
+map_rotation_start_randomise true
+antigriefing_enabled false
+frontlines_mode true
+
+conquest_stealthcap_reqplayers_verylow 1
+conquest_stealthcap_reqplayers_low 2
+conquest_stealthcap_reqplayers_medium 3
+conquest_stealthcap_reqplayers_high 4
+
+map_voting_enabled true
+map_voting_duration 15
+map_voting_allow_same_map false
+map_voting_history_count 1
+map_voting_gameplay_modes FrontlinesOffensive FrontlinesOffensive
+
+
+
+###- Map Rotations
+
+#1 = Countryside (Offensive) [Pop - Very Low, Low, Medium & High]
+!map_rotation start
+map_name countryside
+game_mode FrontlinesOffensive
+round_time_minutes 30
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+wave_spawn_dynamic_time_seconds 15
+spawn_immunity_timer 8
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 5
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+nature_preset none
+faction_attacking allied
+faction_defending central
+faction_randomiser both
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit MachineGunAllied attacking 2
+sappers_buildlimit MachineGunAllied defending 2
+sappers_buildlimit MachineGunCentral attacking 2
+sappers_buildlimit MachineGunCentral defending 2
+class_system_orders true
+class_system_orders_reinforce true
+class_system_orders_reinforce_limit -1
+class_system_orders_reinforce_cooldown 30
+population_verylow_playable true
+population_low_playable true
+population_medium_playable true
+population_high_playable true
+max_accumulated_faction_points -1
+conquest_tick_reward 3
+conquest_ticker_time_seconds 1
+conquest_tickets_per_capture 100
+conquest_max_tickets 7500
+conquest_territory_lock_time_seconds 0
+frontline_offensive_domination_duration_seconds 120
+!map_rotation end
+
+
+#2 = St. Peter's (Offensive) [Pop - Very Low, Low, Medium & High]
+!map_rotation start
+map_name stpeters
+game_mode FrontlinesOffensive
+round_time_minutes 30
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+wave_spawn_dynamic_time_seconds 15
+spawn_immunity_timer 8
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 5
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+nature_preset none
+faction_attacking allied
+faction_defending central
+faction_randomiser both
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit MachineGunAllied attacking 2
+sappers_buildlimit MachineGunAllied defending 2
+sappers_buildlimit MachineGunCentral attacking 2
+sappers_buildlimit MachineGunCentral defending 2
+class_system_orders true
+class_system_orders_reinforce true
+class_system_orders_reinforce_limit -1
+class_system_orders_reinforce_cooldown 30
+population_verylow_playable true
+population_low_playable true
+population_medium_playable true
+population_high_playable true
+max_accumulated_faction_points -1
+conquest_tick_reward 3
+conquest_ticker_time_seconds 1
+conquest_tickets_per_capture 100
+conquest_max_tickets 7500
+conquest_territory_lock_time_seconds 0
+frontline_offensive_domination_duration_seconds 120
+!map_rotation end
+
+
+#3 = Mansion (Offensive) [Pop - High]
+!map_rotation start
+map_name mansion
+game_mode FrontlinesOffensive
+round_time_minutes 30
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+wave_spawn_dynamic_time_seconds 15
+spawn_immunity_timer 8
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 5
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+nature_preset none
+faction_attacking allied
+faction_defending central
+faction_randomiser both
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit MachineGunAllied attacking 3
+sappers_buildlimit MachineGunAllied defending 3
+sappers_buildlimit MachineGunCentral attacking 3
+sappers_buildlimit MachineGunCentral defending 3
+class_system_orders true
+class_system_orders_reinforce true
+class_system_orders_reinforce_limit -1
+class_system_orders_reinforce_cooldown 30
+population_verylow_playable false
+population_low_playable false
+population_medium_playable false
+population_high_playable true
+max_accumulated_faction_points -1
+conquest_tick_reward 3
+conquest_ticker_time_seconds 1
+conquest_tickets_per_capture 100
+conquest_max_tickets 7500
+conquest_territory_lock_time_seconds 0
+frontline_offensive_domination_duration_seconds 120
+!map_rotation end
+
+
+#4 = Marre (Offensive) [Pop - High]
+!map_rotation start
+map_name marre
+game_mode FrontlinesOffensive
+round_time_minutes 30
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+wave_spawn_dynamic_time_seconds 15
+spawn_immunity_timer 8
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 5
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+nature_preset none
+faction_attacking allied
+faction_defending central
+faction_randomiser both
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit MachineGunAllied attacking 3
+sappers_buildlimit MachineGunAllied defending 3
+sappers_buildlimit MachineGunCentral attacking 3
+sappers_buildlimit MachineGunCentral defending 3
+class_system_orders true
+class_system_orders_reinforce true
+class_system_orders_reinforce_limit -1
+class_system_orders_reinforce_cooldown 30
+population_verylow_playable false
+population_low_playable false
+population_medium_playable false
+population_high_playable true
+max_accumulated_faction_points -1
+conquest_tick_reward 3
+conquest_ticker_time_seconds 1
+conquest_tickets_per_capture 100
+conquest_max_tickets 7500
+conquest_territory_lock_time_seconds 0
+frontline_offensive_domination_duration_seconds 120
+!map_rotation end
+
+
+#5 = Freurlund (Offensive) [Pop - High]
+!map_rotation start
+map_name freurlund
+game_mode FrontlinesOffensive
+round_time_minutes 30
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+wave_spawn_dynamic_time_seconds 15
+spawn_immunity_timer 8
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 5
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+nature_preset none
+faction_attacking allied
+faction_defending central
+faction_randomiser both
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit MachineGunAllied attacking 3
+sappers_buildlimit MachineGunAllied defending 3
+sappers_buildlimit MachineGunCentral attacking 3
+sappers_buildlimit MachineGunCentral defending 3
+class_system_orders true
+class_system_orders_reinforce true
+class_system_orders_reinforce_limit -1
+class_system_orders_reinforce_cooldown 30
+population_verylow_playable false
+population_low_playable false
+population_medium_playable false
+population_high_playable true
+max_accumulated_faction_points -1
+conquest_tick_reward 3
+conquest_ticker_time_seconds 1
+conquest_tickets_per_capture 100
+conquest_max_tickets 7500
+conquest_territory_lock_time_seconds 0
+frontline_offensive_domination_duration_seconds 120
+!map_rotation end
+
+
+#6 = Foxhole (Offensive) [Pop - High]
+!map_rotation start
+map_name foxhole
+game_mode FrontlinesOffensive
+round_time_minutes 30
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+wave_spawn_dynamic_time_seconds 15
+spawn_immunity_timer 8
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 5
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+nature_preset none
+faction_attacking allied
+faction_defending central
+faction_randomiser both
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit MachineGunAllied attacking 3
+sappers_buildlimit MachineGunAllied defending 3
+sappers_buildlimit MachineGunCentral attacking 3
+sappers_buildlimit MachineGunCentral defending 3
+class_system_orders true
+class_system_orders_reinforce true
+class_system_orders_reinforce_limit -1
+class_system_orders_reinforce_cooldown 30
+population_verylow_playable false
+population_low_playable false
+population_medium_playable false
+population_high_playable true
+max_accumulated_faction_points -1
+conquest_tick_reward 3
+conquest_ticker_time_seconds 1
+conquest_tickets_per_capture 100
+conquest_max_tickets 7500
+conquest_territory_lock_time_seconds 0
+frontline_offensive_domination_duration_seconds 120
+!map_rotation end
+
+
+#7 = Wasteland (Offensive) [Pop - Medium & High]
+!map_rotation start
+map_name wasteland
+game_mode FrontlinesOffensive
+round_time_minutes 30
+wave_spawn_time_seconds 10
+wave_spawn_vehicle_time_seconds 20
+wave_spawn_dynamic_time_seconds 15
+spawn_immunity_timer 8
+max_player_respawns -1
+faction_balancing true
+faction_balancing_discrepancy_amount 5
+allow_midround_spawning true
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 150
+nature_preset none
+faction_attacking allied
+faction_defending central
+faction_randomiser both
+friendly_fire false
+friendly_fire_melee_bounce false
+damage_split 0
+sappers_attacking_starting_materials 100
+sappers_defending_starting_materials 100
+sappers_buildlimit MachineGunAllied attacking 3
+sappers_buildlimit MachineGunAllied defending 3
+sappers_buildlimit MachineGunCentral attacking 3
+sappers_buildlimit MachineGunCentral defending 3
+class_system_orders true
+class_system_orders_reinforce true
+class_system_orders_reinforce_limit -1
+class_system_orders_reinforce_cooldown 30
+population_verylow_playable false
+population_low_playable false
+population_medium_playable true
+population_high_playable true
+max_accumulated_faction_points -1
+conquest_tick_reward 3
+conquest_ticker_time_seconds 1
+conquest_tickets_per_capture 100
+conquest_max_tickets 7500
+conquest_territory_lock_time_seconds 0
+frontline_offensive_domination_duration_seconds 120
+!map_rotation end
